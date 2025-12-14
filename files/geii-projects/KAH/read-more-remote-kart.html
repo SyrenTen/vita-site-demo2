@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Remote Controlled Propeller Kart</title>
+
+    <!-- GitHub Pages FIX -->
+    <base href="/vita-site-demo2/">
+
     <link rel="stylesheet" href="../../rm-project.css">
     <link rel="stylesheet" href="../../../../inventory.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
@@ -14,7 +18,7 @@
         <div class="rm-in-info">
             
             <div class="go-back-wrapper top">
-                <a href="../../../../projects.html" class="go-back-btn">← Go Back</a>
+                <a href="../../../../projects.html" target="contentFrame" class="go-back-btn">← Go Back</a>
                 <button class="go-back-btn tech-btn">Tech Details</button>
             </div>
             
@@ -480,7 +484,7 @@
 
 
         <div class="go-back-wrapper bottom">
-            <a href="../../../../projects.html" class="go-back-btn">← Go Back</a>
+            <a href="../../../../projects.html" target="contentFrame" class="go-back-btn">← Go Back</a>
             <button class="go-back-btn tech-btn">Tech Details</button>
         </div>
         
@@ -496,14 +500,12 @@
     <script src="../../../../script.js"></script>
     <script>
         (function notifyParentOfPage() {
-        try {
-            // full relative path (keeps folders, avoids D:\ absolute paths)
-            const url = window.location.pathname
-            .replace(window.location.origin + '/', '') // strip domain
-            .replace(/^\//, ''); // remove leading slash
-
-            window.parent.postMessage({ type: "IFRAME_NAV", page: url }, "*");
-        } catch(e) {}
+            try {
+                const url = window.location.pathname
+                    .replace(window.location.origin + '/', '')
+                    .replace(/^\//, '');
+                window.parent.postMessage({ type: "IFRAME_NAV", page: url }, "*");
+            } catch(e) {}
         })();
     </script>
 </body>
