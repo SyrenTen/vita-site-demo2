@@ -1,0 +1,113 @@
+/*FUNNY INVENTORY*/
+/* Inventory Pop-up */
+.inventory-popup {
+    position: absolute;
+    background-color: var(--second-bg-color);
+    margin-top: 3px;
+    border-radius: 20px;
+    padding: 10px;
+    z-index: 2000;
+    display: none;
+}
+
+
+.inventory-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 15px;
+}
+
+.inventory-item {
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--main-color);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.inventory-item:hover {
+    transform: scale(1.05);
+}
+
+.inventory-item img {
+    width: 65px;
+    height: 65px;
+}
+
+/* Popped-up Radio Player */
+#radio-player-container {
+    position: fixed;
+    z-index: 2001; /* Must be higher than the pop-up */
+    display: none; /* Hidden by default */
+}
+
+#radio-player {
+    width: 90px;
+    height: 90px;
+    cursor: grab;
+    transition: all 0.3s ease;
+    padding: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#radio-player img {
+    width: 75px;
+    height: 75px;
+}
+
+/* YouTube Player (hidden) */
+#youtube-player {
+    position: absolute;
+    top: -9999px; /* Hides the player far off-screen */
+    left: -9999px;
+}
+
+/* Close button: always in the DOM, but fade in on hover */
+.close-button {
+  position: absolute;
+  top: -1px;          /* keep it inside the circle so hover isn't lost */
+  right: -1px;
+  border: 1px solid var(--main-color);
+  border-radius: 50%;
+  width: 24px;       /* slightly larger hit area */
+  height: 24px;
+  color: var(--main-color);
+  text-align: center;
+  line-height: 22px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  z-index: 5;
+
+  /* key: don’t toggle display; fade via opacity & control pointer-events */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .12s ease;
+}
+
+/* show it when radio is hovered OR when the button itself is hovered/focused */
+#radio-player:hover .close-button,
+.close-button:hover,
+.close-button:focus {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* Pulse animation for playing music */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.playing {
+    animation: pulse 1.5s infinite;
+}

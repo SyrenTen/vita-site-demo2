@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="'en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="inventory.css">
+        <link href='https://fonts.googleapis.com/css?family=Fira Code' rel='stylesheet'>
+    </head>
+    <body>
+        <!-- header -->
+        <header class="header">
+
+            <div class="head-button" id="inventory-button">Funny inventory</div>
+            <div id="funny-inventory" class="inventory-popup">
+                <div class="inventory-content">
+                    <div class="inventory-item" id="radio-inventory-item">
+                        <img src="D:\Projects\vitaliia-site\images\radio-inventory.svg" alt="Radio Icon">
+                    </div>
+                    </div>
+            </div>
+            <div id="radio-player-container">
+                <div id="radio-player">
+                    <img id="radio-image" src="D:\Projects\vitaliia-site\images\radio-inventory.svg" alt="Radio Player">
+                    <div id="youtube-player"></div>
+                    <div class="close-button" id="close-radio">&times;</div>
+                </div>
+            </div>
+
+
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="education.html">Education</a>
+                <a href="experience.html">Experience</a>
+                <a href="research.html">Research</a>
+                <a href="projects.html">Projects</a>
+            </nav>
+
+            <button class="head-button">Lang</button>
+        </header>
+
+        <!-- home -->
+        <section class="home" id="home">
+            <div class="home-content">
+                <div class="home-layout">
+                    <!-- cards area -->
+                     <div class="main-card-area">
+                        <!-- cards buttons -->
+                         <div class="tabs">
+                            <button class="tab-button active" data-tab="character">Character</button>
+                            <button class="tab-button" data-tab="skills">Skills</button>
+                            <button class="tab-button" data-tab="links">Links</button>
+                            <button class="tab-button" data-tab="contact">Contact</button>
+                         </div>
+
+                         <!-- tab content -->
+                          <div class="tab-content-container">
+
+                            <!-- character tab -->
+                             <div class="tab-content active" id="character">
+                                <div class="character-card">
+                                    <div class="character-header">
+                                        <div class="age-box">
+                                            <div class="age-top">1</div>
+                                            <div class="age">21</div>
+                                            <div class="age-time">20.34</div>
+                                            <div class="age-label">Age</div>
+                                        </div>
+
+                                        <div class="char-name">
+                                            <div class="name-label">Name</div>
+                                            <div class="my-name">Vitaliia Maslova</div>
+                                            <div class="description">
+                                                After completing the first quest in the Land of Intelligent and Robotic Systems, <span class="highlight">Vitaliia Maslova</span> began her second quest, guided by curiosity for new knowledge. Now, she journeys through new academic dungeons, trying to complete the grand quest by mastering electronics and automation
+                                            </div>
+                                            <div style="display: none;">THANK YOU MOTHER FOR EVERYTHING</div>
+                                        </div>
+
+                                        <div class="job-description">
+                                            <p><strong>Job</strong>: <span class="highlight">GEII</span></p>
+                                            <p><strong>Title</strong>: <span class="highlight">Student</span></p>
+                                            <p><strong>Level</strong>: <span class="highlight">2</span></p>
+                                        </div>
+                                    </div>
+
+                                    <dev class="main-info">
+
+                                        <div class="left-column">
+
+                                            <div class="equipment">
+                                            <div class="equip-label">Equipment</div>                                            
+                                            <div class="items">
+                                                <div class="item-box"><img src="images/images-home/laptop.svg" alt=""></div>
+                                                <div class="item-box"><a href="https://github.com/lilka-dev/lilka"><img src="images\images-home\lilka.png" alt="lilka"></a></div>
+                                                <div class="item-box"><img src="images/images-home/phone.svg" alt=""></div>
+                                                <div class="item-box"><img src="images/images-home/coffee.svg" alt=""></div>
+                                                <div class="item-box"><img src="images/images-home/tablet.svg" alt=""></div>
+                                                <div class="item-box"><img src="images/images-home/screwdriver.svg" alt=""></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="factions">
+                                            <dev class="faction-label">Factions</dev>                                   
+                                            <p>DU IA</p>
+                                            <p>KhPI graduate</p>
+                                            <a href="https://www.codewars.com/users/SyrenTen"><img src="https://www.codewars.com/users/SyrenTen/badges/micro" alt="codewars"> </a>
+                                        </div>
+                                        </div>
+
+                                        <div class="right-column">
+                                            <div class="quest-log">
+                                            <div class="quest-label">Quest Log</div>                                            
+                                            <ul>
+                                                <li>Build drone project</li>
+                                                <li>Improve website</li>
+                                                <li>Lear more about SPI</li>
+                                                <li>Learn Fourier series</li>
+                                            </ul>
+                                        </div>
+
+                                            <div class="stats-img">
+                                                <img src="images\images-home\radar-chart-char.svg" alt="Stats-Char">
+                                            </div>
+                                        </div>                    
+
+                                        <div class="character-column">
+                                        <div class="character-img">
+                                            <img src="images\images-home\vitaliia-image.webp" alt="Silhouette">
+                                        </div>
+
+                                        <div class="cv-button">
+                                            <a href="files\CV-Vitaliia-Maslova.pdf" download class="download-btn">Download CV</a>
+                                        </div>
+                                        </div>
+
+                                    </dev>
+
+                                </div>
+
+                             </div>
+
+                            <!-- skills tab -->
+                            <div class="tab-content" id="skills">
+                                <div class="skills-card">
+                                    <div class="skills-left-column">
+                                    <div class="programming-lang">
+                                            <div class="programming-lang-label">Programming Languages</div>                                            
+                                            <ul>
+                                                <li>Python</li>
+                                                <li>C++, Qt, Arduino</li>
+                                            </ul>
+                                    </div>
+
+                                    <div class="lang-skills">
+                                            <div class="lang-skills-label">Languages</div>                                            
+                                            <ul>
+                                                <li>Ukrainian: Native</li>
+                                                <li>English: Advanced</li>
+                                                <li>French: Upper Intermediate</li>
+                                            </ul>
+                                    </div>
+                                    </div>
+
+                                    <div class="skills-right-column">
+                                        <div class="other-skills">
+                                            <div class="other-skills-label">Other</div>                                            
+                                            <ul>
+                                                <li>Microsoft Office</li>
+                                                <li>ChatGPT</li>                                                
+                                                <li>Blender</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tools-skills">
+                                            <div class="tools-skills-label">T00ls</div>                                            
+                                            <ul>
+                                                <li>PyCharm</li>
+                                                <li>Visual Studio Code</li>
+                                                <li>ARES, ISIS</li>
+                                                <li>KiCad</li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>                                
+                            </div>
+
+                            <!--links card-->
+                            <div class="tab-content" id="links">
+                                <div class="links-card">
+                                    <div class="international-links">
+                                        <div class="international-label">International</div>
+                                        <div class="links-boxes">
+                                                <div class="l-box">
+                                                    <a href="https://github.com/SyrenTen">
+                                                    <img src="images\images-home\github-logo.svg" alt="github-logo">
+                                                    <div class="l-box-label">Github</div></a>
+                                                </div>
+
+                                                <div class="l-box">
+                                                    <a href="https://medium.com/@marichka_liia">
+                                                    <img src="images\images-home\medium-logo.svg" alt="medium-logo">
+                                                    <div class="l-box-label">Medium</div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="l-box">
+                                                    <a href="https://www.linkedin.com/in/vitaliia-maslova-3b703b223/">
+                                                    <img src="images\images-home\linkedin-logo.svg" alt="linkedin-logo">
+                                                    <div class="l-box-label">LinkedIn</div>
+                                                    </a>
+                                                </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="ukrainian-links">
+                                        <div class="ukr-label">Ukrainian</div>
+                                        <div class="links-boxes">
+                                                <div class="l-box">
+                                                    <a href="https://itc.ua/ua/author/syrenten/">
+                                                    <img src="images\images-home\itc-logo.svg" alt="itc-logo">
+                                                    <div class="l-box-label">Itc.ua</div>
+                                                    </a>
+                                                </div>                                                
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-content" id="contact">
+                                <div class="contact-card">
+                                    <div class="contact-info-box">
+                                        <div class="contact-info-label">Contact Info</div>
+                                        <ul>
+                                                <li>vitaliay04.1@gmail.com</li>
+                                                <li>vitaliia.maslova@etu.u-bordeaux.fr</li>
+                                            </ul>
+                                    </div>
+
+                                    <div class="console-zone">
+                                        <div class="console-name">Command Prompt</div>
+                                        <form action="https://api.web3forms.com/submit" method="POST" class="console-input">
+                                            <p><span class="dir">C:\Users\vitaliia\contact></span></p>
+                                            <input type="hidden" name="access_key" value="fc056db5-f5d4-426d-bbcf-9ca170b03959">
+
+                                            <p><span class="dir">C:\Users\vitaliia\contact\your-name></span> <input type="text" name="name" placeholder="enter your name"></p>
+                                            <p><span class="dir">C:\Users\vitaliia\contact\your-email></span> <input type="email" name="email" placeholder="enter your email"></p>
+                                            <p><span class="dir">C:\Users\vitaliia\contact\your-message-title></span> <input type="text" name="subject" placeholder="enter title"></p>
+                                            <p><span class="dir">C:\Users\vitaliia\contact\your-message></span></p>
+                                            <textarea name="message" placeholder="enter your message"></textarea>
+
+                                            <p><span class="dir">C:\Users\vitaliia\contact\send-message></span>
+                                                <input type="submit" value="Yes/No" class="send-btn">
+                                            </p>
+
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                          </div>
+
+                     </div>
+
+                     <!-- books area -->
+                    <div class="book-shelf">
+                        <div class="book-projects"><a href="projects.html"><img src="images\images-home\book1.svg" alt="book-projects"></a></div>
+                        <div class="book-experience"><a href="experience.html"><img src="images\images-home\book2.svg" alt="book-experience"></a></div>
+                        <div class="book-education"><a href="education.html"><img src="images\images-home\book3.svg" alt="book-education"></a></div>                      
+                    
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <p class="copyright">© Vitaliia Maslova | All rights reserved</p>
+        </footer>
+
+        <script src="script.js"></script>
+        <script src="funny-inventory.js"></script>
+    </body>
+</html>
