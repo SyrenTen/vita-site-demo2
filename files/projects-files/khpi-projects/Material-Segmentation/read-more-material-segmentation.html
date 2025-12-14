@@ -42,8 +42,8 @@
                 Nous avons également développé un logiciel pour traiter et analyser les données saisies. Une application web a été créée pour faciliter l'accès aux fonctionnalités du logiciel via une interface web. Le déploiement du logiciel basé sur Docker a été effectué afin d'assurer son isolation et son évolutivité.
             </div>
 
-            <!-- Simplified image -->
-            <img src="/images/images-projects/khpi/materials-segmentation/interface-example-ms.svg" alt="interface-example-ms" class="rm-project-image" >
+            <!-- Simplified image --> ../../../../images/images-projects/khpi/materials-segmentation/
+            <img src="../../../../images/images-projects/khpi/materials-segmentation/interface-example-ms.svg" alt="interface-example-ms" class="rm-project-image" >
             <div class="image-desctiption">Interface de l'application web développée</div>
 
 
@@ -52,7 +52,7 @@
             <div class="text-section">Tout au long du projet, j'ai travaillé sur la partie Modèles de segmentation d'images, dont vous pouvez consulter<a href="https://github.com/qubvel/segmentation_models" target="_blank"></a> le référentiel ici.</div>
             <div class="text-section">Vous trouverez ici un exemple des données fournies et du résultat obtenu à l'aide du modèle de segmentation entraîné :</div>
 
-            <img src="/images/images-projects/khpi/materials-segmentation/four-example-image-ms.svg" alt="four-example-ms" class="rm-project-image">
+            <img src="../../../../images/images-projects/khpi/materials-segmentation/four-example-image-ms.svg" alt="four-example-ms" class="rm-project-image">
             <div class="image-desctiption">Image d'entrée – Masque original – Masque fourni par le modèle développé – Trois classes définies</div>
 
         
@@ -67,14 +67,14 @@
                 <button class="carousel-btn prev" onclick="moveSlide(-1, this)">&#10094;</button>
                 <div class="carousel">
                     <div class="carousel-track">
-                        <img src="/images/images-projects/khpi/materials-segmentation/carbon-dataset-mgs.svg" alt="carbon-dataset">
-                        <img src="/images/images-projects/khpi/materials-segmentation/evaluation-ms.svg" alt="evaluation">
-                        <img src="/images/images-projects/khpi/materials-segmentation/functions-ms.svg" alt="functions">
-                        <img src="/images/images-projects/khpi/materials-segmentation/prediction-ms.svg" alt="prediction">
-                        <img src="/images/images-projects/khpi/materials-segmentation/test-ms.svg" alt="test-ms">
-                        <img src="/images/images-projects/khpi/materials-segmentation/testdataset-ms.svg" alt="test-dataset">
-                        <img src="/images/images-projects/khpi/materials-segmentation/transforms-ms.svg" alt="transforms">
-                        <img src="/images/images-projects/khpi/materials-segmentation/unet-ms.svg" alt="unet-ms">
+                        <img src="../../../../images/images-projects/khpi/materials-segmentation/carbon-dataset-mgs.svg" alt="carbon-dataset">
+                        <img src="../../../../images/images-projects/khpi/materials-segmentation/evaluation-ms.svg" alt="evaluation">
+                        <img src="../../../../images/images-projects/khpi/materials-segmentation/functions-ms.svg" alt="functions">
+                        <img src="../../../../images/images-projects/khpi/materials-segmentation/prediction-ms.svg" alt="prediction">
+                        <img src="../../../../images/images-projects/khpi/materials-segmentation/test-ms.svg" alt="test-ms">
+                        <img src="../../../../images/images-projects/khpi/materials-segmentation/testdataset-ms.svg" alt="test-dataset">
+                        <img src="../../../../images/images-projects/khpi/materials-segmentation/transforms-ms.svg" alt="transforms">
+                        <img src="../../../../images/images-projects/khpi/materials-segmentation/unet-ms.svg" alt="unet-ms">
                     </div>
 
                 </div>
@@ -91,7 +91,7 @@
                 U-Net a une forme en U et se compose de deux parties principales : un encodeur et un décodeur.
             </div>
 
-            <img src="/images/images-projects/khpi/materials-segmentation/unet-arch-ms.svg" alt="unet-architecture" class="rm-project-image tech-content">
+            <img src="../../../../images/images-projects/khpi/materials-segmentation/unet-arch-ms.svg" alt="unet-architecture" class="rm-project-image tech-content">
             <div class="image-desctiption tech-content">Architecture U-Net</div>
 
             <div class="text-section tech-content">
@@ -106,7 +106,7 @@
             <div class="text-section">Différentes classes et fonctions ont été écrites, telles qu'une classe pour charger des images et des masques, ou des fonctions pour enregistrer et charger le modèle, ainsi qu'une fonction pour entraîner le modèle pendant un nombre d'époches indiqué et enregistrer les images résultantes dans leur propre répertoire. Toutes ces fonctions ont été combinées dans la fonction principale.</div>
 
             <div class="text-section tech-content">Plus précisément, la classe CarbonDataset a été créée pour charger les images et les masques correspondants, puis elle prépare les données chargées pour l'entraînement, en appliquant des transformations et en les convertissant en tableaux.</div>
-            <img src="/images/images-projects/khpi/materials-segmentation/training-flowchart-ms.svg" alt="training-flowchart" class="rm-project-image tech-content">
+            <img src="../../../../images/images-projects/khpi/materials-segmentation/training-flowchart-ms.svg" alt="training-flowchart" class="rm-project-image tech-content">
             <div class="image-desctiption tech-content">Organigramme de la formation du modèle</div>
             <div class="text-section tech-content">La fonction nommée get_model configure le modèle conformément à la documentation de la bibliothèque Segmentation Models. Le réseau U-Net est également initialisé, et ResNet18 a été utilisé comme encodeur pour cette partie du projet. La fonction get_dataloaders est chargée de charger les ensembles de données d'entraînement et de validation.</div>
             <div class="text-section tech-content">La fonction train_fn effectue une période d'apprentissage du modèle, suivie de la fonction validate_fn qui effectue la validation du modèle. La perte et le score Dice sont calculés. Les résultats sous forme de masques et de prédictions sont ensuite stockés.</div>
@@ -114,19 +114,19 @@
             <div class="text-section"><b>Passons au deuxième fichier : test du modèle de segmentation.</b></div>
             <div class="text-section">À l'origine, l'ensemble de données de départ était divisé en différentes parties. Certaines images ont été placées dans un répertoire destiné uniquement à tester le modèle déjà entraîné. Leurs masques ont également été stockés afin de les comparer aux résultats que le modèle nous donnera lors des tests. Nous calculons également le score Dice, qui correspond à la similarité entre le résultat du modèle et les masques pour chaque classe. Un exemple du fonctionnement du modèle est présenté ci-dessous :</div>
 
-            <img src="/images/images-projects/khpi/materials-segmentation/original-image-ms.svg" alt="three-orig-images-ms" class="rm-project-image">
+            <img src="../../../../images/images-projects/khpi/materials-segmentation/original-image-ms.svg" alt="three-orig-images-ms" class="rm-project-image">
             <div class="image-desctiption">Trois images d'entrée originales</div>
 
-            <img src="/images/images-projects/khpi/materials-segmentation/original-mask-ms.svg" alt="three-orig-masks-ms" class="rm-project-image">
+            <img src="../../../../images/images-projects/khpi/materials-segmentation/original-mask-ms.svg" alt="three-orig-masks-ms" class="rm-project-image">
             <div class="image-desctiption">Trois masques correspondants provenant de l'ensemble de données</div>
 
-            <img src="/images/images-projects/khpi/materials-segmentation/model-mask-ms.svg" alt="three-model-masks-ms" class="rm-project-image">
+            <img src="../../../../images/images-projects/khpi/materials-segmentation/model-mask-ms.svg" alt="three-model-masks-ms" class="rm-project-image">
             <div class="image-desctiption">Trois masques correspondants, obtenus par logiciel [par modèle de segmentation]</div>
 
             <div class="text-section tech-content">Pour ce code, comme précédemment, je définis tout d'abord des paramètres tels que la taille des images, les chemins d'accès aux images, le chemin d'accès au modèle et l'emplacement où stocker les prédictions. La classe TestDataset était chargée de créer un ensemble de données pour tester le modèle. Autrement dit, elle accepte les chemins d'accès aux images et à leurs masques, qui sont ensuite utilisés pour déterminer le score Dice, effectue des transformations simples sur les images, après quoi une image avec un masque est renvoyée.</div>
             <div class="text-section tech-content">La fonction get_transforms transforme l'ensemble de données utilisé pour les tests : un redimensionnement et une normalisation sont effectués. La fonction get_model crée un modèle U-Net, et la fonction suivante charge le point de contrôle du modèle enregistré.</div>
 
-            <img src="/images/images-projects/khpi/materials-segmentation/testing-flowchart-ms.svg" alt="testing-flowchart-ms" class="rm-project-image tech-content flowchart-img">
+            <img src="../../../../images/images-projects/khpi/materials-segmentation/testing-flowchart-ms.svg" alt="testing-flowchart-ms" class="rm-project-image tech-content flowchart-img">
             <div class="image-desctiption tech-content">Organigramme des essais sur modèle</div>
             <div class="text-section tech-content">La fonction dice_score effectue le calcul du score Dice. Vient ensuite la fonction make_predictions, qui effectue des prédictions pour l'ensemble de données de test donné et stocke également le résultat final. Un score Dice est calculé pour chaque image, et à la fin, le score Dice moyen s'affiche à l'écran.</div>
 
@@ -135,27 +135,27 @@
             <div class="text-section tech-content">Comme mentionné précédemment, dans ce projet, la perte et le score aux dés ont été utilisés.</div>
             <div class="text-section tech-content">La perte est une valeur numérique qui mesure l'écart entre les prédictions du modèle et les valeurs cibles réelles. Si la perte est faible, cela signifie que les prédictions sont proches des valeurs réelles, tandis qu'une perte élevée indique que les prédictions sont inexactes.</div>
             <div class="text-section tech-content">Ci-dessous, vous pouvez voir le graphique des pertes pour les ensembles d'entraînement et de validation, où le bleu représente la perte d'entraînement et l'orange la perte de validation :</div>
-            <img src="/images/images-projects/khpi/materials-segmentation/loss-graph-ms.svg" alt="loss-graph-ms" class="rm-project-image tech-content">
+            <img src="../../../../images/images-projects/khpi/materials-segmentation/loss-graph-ms.svg" alt="loss-graph-ms" class="rm-project-image tech-content">
             <div class="image-desctiption tech-content">Graphique des pertes pour les ensembles de données d'entraînement et de validation</div>
 
             <div class="text-section">Pour évaluer toutes les méthodes développées pour ce projet, nous avions besoin d'un système de notation. Après recherche, le score des dés a été calculé à la fin des tests et utilisé pour la comparaison avec d'autres méthodes.</div>
             <div class="text-section tech-content">Nous avons également calculé le score Dice pendant l'entraînement et la validation, comme vous pouvez le voir sur le graphique ci-dessous, où le bleu correspond au score Dice de l'entraînement et l'orange au score Dice de la validation :</div>
-            <img src="/images/images-projects/khpi/materials-segmentation/dice-score-graph-ms.svg" alt="dice-graph-ms" class="rm-project-image tech-content">
+            <img src="../../../../images/images-projects/khpi/materials-segmentation/dice-score-graph-ms.svg" alt="dice-graph-ms" class="rm-project-image tech-content">
             <div class="image-desctiption tech-content">Graphique des scores Dice pour les ensembles de données d'entraînement et de validation</div>
 
             <div class="text-section">La formule de calcul des points aux dés est simple et vous pouvez la consulter ici :</div>
-            <img src="/images/images-projects/khpi/materials-segmentation/dsc-formula.svg" alt="dice-score-formula" class="rm-project-image">
+            <img src="../../../../images/images-projects/khpi/materials-segmentation/dsc-formula.svg" alt="dice-score-formula" class="rm-project-image">
             <div class="image-desctiption">Formule de calcul du score aux dés</div>
 
             <div class="text-section">Il est égal à 2 multiplié par le nombre d'éléments communs, divisé par le nombre d'éléments dans l'ensemble X plus le nombre d'éléments dans l'ensemble Y. Pour simplifier, X est la prédiction, c'est-à-dire le résultat de mon modèle, et Y est le masque provenant de l'ensemble de données d'origine.</div>
             <div class="text-section">Vous trouverez ci-dessous le score obtenu pour l'ensemble de données de test utilisé lors du test du modèle :</div>
 
-            <img src="/images/images-projects/khpi/materials-segmentation/testing-dice-score-ms.svg" alt="testing-dsc-ms" class="rm-project-image">
+            <img src="../../../../images/images-projects/khpi/materials-segmentation/testing-dice-score-ms.svg" alt="testing-dsc-ms" class="rm-project-image">
             <div class="image-desctiption">Score Dice de l'ensemble de données de test</div>
 
             <div class="text-section">Pour ce test, nous ne disposions que de 50 images. Le graphique montre des résultats mitigés, étant donné que la valeur maximale possible pour le score au dé est 1, ce qui signifie la perfection et est impossible à obtenir. À la fin du test, nous avons obtenu le score moyen au dé pour ce test :</div>
 
-            <img src="/images/images-projects/khpi/materials-segmentation/checkpoint-ms.svg" alt="checkpoint-ms" class="rm-project-image">
+            <img src="../../../../images/images-projects/khpi/materials-segmentation/checkpoint-ms.svg" alt="checkpoint-ms" class="rm-project-image">
             <div class="image-desctiption">Score moyen aux dés - résultat direct après avoir effectué le test</div>
 
             <div class="text-section">Le modèle a été entraîné pendant environ 2 heures et a obtenu un score de 0,89, ce qui est un bon résultat et le plus élevé parmi les trois méthodes développées. Dans le même temps, mon modèle a été celui qui a nécessité le plus de temps pour être entraîné.</div>
@@ -201,3 +201,4 @@
 
 </body>
 </html>
+
