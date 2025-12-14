@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Bath Thermometer</title>
+    <link rel="stylesheet" href="../../rm-project.css">
+    <link rel="stylesheet" href="../../../../inventory.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
+</head>
+<body>
+
+    <section class="read-more-article" id="readmore">
+        <div class="rm-in-info">
+
+            <div class="go-back-wrapper top">
+                <a href="../../../../projects.html" class="go-back-btn">← Go Back</a>
+                <button class="go-back-btn tech-btn">Tech Details</button>
+            </div>
+            
+            
+            <div class="rm-project-title">Baby Bath Thermometer</div>            
+            <div class="used-tech-section"><i>Used tech: ARES, ISIS, Arduino, C, knowledge gained during 1st year in GEII</i></div>
+            <div class="text-section tech-content"><h5><i>More tech detailes were added, read them if you are interested! If not, you can return to the 'Simple Version' anytime!</i></h5></div>
+
+            <img src="/images/images-projects/geii/TDB/TDB-logo.svg" alt="tdb-logo-image" class="rm-project-image flowchart-img">
+
+            <div class="text-section-title">Introduction</div>
+
+            <!-- Simplified version -->
+            <div class="text-section">
+                During our studies at subject SAE - Situation d’Apprentissage et d’Évaluation or “Learning and Assessment Situation” we worked on creating Baby Bath Thermometer (BBT) which can detect cold, hot and warm water with autonomy of at least 24 hours and low cost. To achieve this, firstly we made a preliminary and detailed design of the product, next manufactured the card and finally did the product verification.
+            </div>
+
+            <div class="text-section-title">Work distribution</div>
+            <div class="text-section">
+                We worked in group of 4. We had 4 main modules: energy, information acquisition, information processing and action. To work with them, we were divided in pairs, where first pair would work at energy and acquisition side, and second pair would work at information processing and action. However, during verification of developed product prototype, we switched modules in order to verify part at which other pair was working all this time.
+            </div>
+
+            <div class="text-section-title">Project description</div>
+            <div class="text-section">
+                In details, thermometer should have had next characteristics:
+                <ul>
+                    <li>● Detection of water that is too cold (< 36.0°C)</li>
+                    <li>● Detection of water that is too hot (> 39.0°C)</li>
+                    <li>● Good battery life (> 24 hours of operation)</li>
+                    <li>● Low purchase price (discount type) (< €20)</li>
+                </ul>
+            </div>
+
+            <div class="text-section">
+                It should have been double-sided printed circuit board, with length of 100 mm (±0.5 mm) and width of 60 mm (±0.5 mm).
+            </div>
+
+            <div class="text-section tech-content">
+                It also had a condition for fixing holes: 4 holes of 4mm (±0.2mm) with centers located in the corners 5mm (±0.5mm) from each edge.
+            </div>
+
+            <div class="text-section">
+                The accumulator wasn’t supposed to be fixed on the board, so it didn’t occupy any surface area on the board.
+            </div>
+
+
+            <div class="text-section-title tech-content">Energy module</div>
+            <div class="text-section tech-content">
+                There were two requirements.
+            </div>
+            <div class="text-section tech-content">
+                Autonomy: The “thermometer" board must be powered by a 2S LiPo battery, ensuring a minimum operating autonomy of 24 hours.
+            </div>
+            <div class="text-section tech-content">
+                Turning on/off: the "thermometer" board must have a two-position switch allowing the entire thermometer to be turned on and off.
+            </div>
+
+            <div class="text-section-title tech-content">Information acquisition module</div>
+            <div class="text-section tech-content">
+                There were two requirements.
+            </div>
+            <div class="text-section tech-content">
+                Measurement: the "thermometer" board integrates a temperature measurement stage that provides electrical "Temperature" information to the processing core.
+            </div>
+            <div class="text-section tech-content">
+                Thresholds: the "Cold Temperature" and "Hot Temperature" temperature thresholds are set at +36.0°C (±5%) and +39.0°C (±5%), respectively.
+            </div>
+
+
+            <div class="text-section-title tech-content">Information processing module</div>
+            <div class="text-section tech-content">
+                There was only one requirement.
+            </div>
+            <div class="text-section tech-content">
+                Comparison: the "thermometer" board integrates a processing core that generates the following three pieces of information:
+                <ul>
+                    <li>● "Cold Water": information is active if the measured "Temperature" information is below the "Cold Temperature" temperature threshold, otherwise the information is inactive.</li>
+                    <li>● "Warm Water": information is active if the measured "Temperature" information is simultaneously above the "Cold Temperature" temperature threshold and below the "Hot Temperature" temperature threshold, otherwise the information is inactive.</li>
+                    <li>● "Hot Water": information is active if the measured "Temperature" information is above the "Hot Temperature" temperature threshold, otherwise the information is inactive.</li>
+                </ul>
+            </div>
+
+
+            <div class="text-section-title tech-content">Action module</div>
+            <div class="text-section tech-content">
+                Also had two requirements.
+            </div>
+
+            <div class="text-section tech-content">
+                Ignitions: the "thermometer" board includes three indicator lights that illuminate as follows:
+                <ul>
+                    <li>● Blue indicator light on when the "Cold Water" indicator is active, otherwise off</li>
+                    <li>● Green indicator light on when the "Warm Water" indicator is active, otherwise off</li>
+                    <li>● Red indicator light on when the "Hot Water" indicator is active, otherwise off</li>
+                </ul>
+            </div>
+
+            <div class="text-section tech-content">
+                Intensities: the light intensity of each indicator light is 50 mcd (-/+10%) when the indicator light is on and the battery is at its nominal voltage.
+            </div>
+            <div class="text-section">
+                Except four mentioned modules, we also monitored the fulfillment of price and time requirements. All project, including stages of designing, producing and verifying board, should have taken maximum 40h. We had a graph provided by professor to track time and our progress, and so we can see where we're falling behind if that case happens. As already noticed, the total cost of all components (excluding the battery) required to manufacture a single prototype of the thermometer is less than 20 euros including tax.
+            </div>
+
+            
+            <div class="text-section-title">Task distribution</div>
+            <div class="text-section">
+                Pair “Blue” worked on acquisition and energy parts, while “Red”, my pair, worked on action and information processing modules.
+            </div>
+            <div class="text-section">
+                This meant, that our tasks and “Red” pair were:
+                <ul>
+                    <li>● Definition of the electronic architecture for the processing and action sections of the project</li>
+                    <li>● Electronic design of the processing and action sections of the project</li>
+                    <li>● Redaction of the preliminary and detailed design documents</li>
+                    <li>● Electronic verification of the acquisition and energy sections of the project</li>
+                    <li>● Redaction of the verification documents</li>
+                </ul>
+            </div>
+            <div class="text-section">
+                Preliminary design implies designing without any calculations, while detailed design implies going through all calculations for modules and making final electronic design, combining it with design from “Blue” pair.
+            </div>
+
+            <div class="text-section-title"><b>Realization</b></div>
+            <div class="text-section-title">Designing board</div>
+            <img src="/images/images-projects/geii/TDB/architecute-diagram-tdb.svg" alt="tdb-architecute" class="rm-project-image">
+            <div class="image-desctiption">Synoptic architecture of the developed product</div>
+
+            <div class="text-section">
+                First of all, we determined components for each module.
+            </div>
+            <img src="/images/images-projects/geii/TDB/nor-gates.svg" alt="nor-gate" class="rm-project-image resize">
+            <div class="image-desctiption">NOR gate</div>
+
+            <div class="text-section">
+                For <b>information processing</b> part, named “Traitement d’informations” on architecture image above, we chose operational amplifier MCP 6002 and logic gate NOR 74HC02, assembling them in two-threshold comparator (or window comparator).
+            </div>
+            <div class="text-section"><i>
+                An operational amplifier (often op amp) is an analog circuit block that takes a differential voltage input and produces a single-ended voltage output.
+            </i></div>
+            <div class="text-section">
+                We did so because of the acceptable input voltages and the fact that the requirements didn’t impose a response time. MCP6002 is also ideal for battery-powered applications. For the fact that we have a signal that needs to be compared with two thresholds, we chose a window comparator setup.
+            </div>
+
+            <img src="/images/images-projects/geii/TDB/info-process-part.svg" alt="info-processing-scheme" class="rm-project-image">
+            <div class="image-desctiption">Information processing scheme</div>
+
+            <div class="text-section">
+                In the end we stopped on this design. Chosen amplifier actually has two amplifiers under its box, that’s why on the scheme above you can see two AOP: A and B. Same goes to the gate – all others gates were later connected to the ground, this way disabling them.
+            </div>
+            <div class="text-section tech-content">
+                Diving a little deeper into operation of this part, we can see that if the captured signal is greater than 0.39V ±5%, we will have 5V at the output of the upper AOP and 0V at the output of the lower AOP, and the red LED will light up.
+            </div>
+            <div class="text-section tech-content">
+                If the captured signal is less than 0.36V ±5%, we will have 5V at the output of the lower AOP and 0V at the output of the upper AOP, and the blue LED will light up. Knowing that there is a third case where the captured signal can be at the same time lower than 0.39V and higher than 0.36V, 0.36V < captured signal < 0.39V, we use a NOR logic gate to light a green LED, there will only be 5V at the output of the logic gate when there is 0V in the two outputs of the OP AMP.
+            </div>
+
+            <div class="text-section">
+                For <b>ignitions</b>, we needed to use three LEDs: Red (MCL034RHC) for hot water, Green (MCL034SGC) for warm water, and Blue (MCL034SBLC) for cold water. Two of them will be connected directly to the output of the operational amplifier (Red and Blue LEDs) and the third will be connected to the output of the NOR logic gate (Green LED).
+            </div>
+            <div class="text-section">
+                Basically, we have a temperature sensor, and the value read by the sensor must be compared to two thresholds: 39°C and 36°C. If the temperature is below 36°C, we want to light the blue LED, so the output of the comparison with 36°C must have a voltage; otherwise, there must be 0 volts at the output. If the temperature is above 39°C, we need to light the red LED, so the output of the comparison with 39°C must have a voltage; otherwise, there must be 0 volts at the output. When the temperature is neither below 36°C nor above 39°C, we want to light the green LED. Exactly for this we use a NOR logic gate.
+            </div>
+
+            <div class="text-section tech-content">To complete this part, we had to determine the resistance values, we used the following formula:</div>
+            <img src="/images/images-projects/geii/TDB/formula-ignitions-part.svg" alt="ignitions-formula" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">Where we had Voh = Vcc – 25mV, while Vcc = 5V</div>
+
+            <div class="text-section tech-content">
+                In documentation to each LED we found next information about Vf:
+                <ul>
+                    <li>● Red LED: Vf = 1.5V</li>
+                    <li>● Green LED: Vf = 1.86V</li>
+                    <li>● Blue LED: Vf = 2.22V</li>
+                </ul>
+            </div>
+
+            <div class="text-section">
+                Resistance must be connected to LED in order to protect it from self-destruction. So, after calculations we determined different resistances for three LEDs.
+            </div>
+            <div class="text-section tech-content">
+                We took resistance of series E24 of 27kohm for Red LED, resistance of series E24 of 6.8kohm for Green LED and resistance of series E24 of 120kohm for Blue LED.
+            </div>
+            <div class="text-section">
+                We also did simulations in order to understand if our solutions will actually work. We did all schemas and simulations in software ISIS.
+            </div>
+
+            <img src="/images/images-projects/geii/TDB/red-test-tdb.svg" alt="red-led-test" class="rm-project-image">
+            <div class="image-desctiption">Simulation - Red LED lighting at 40°C</div>
+
+            <img src="/images/images-projects/geii/TDB/green-test-tdb.svg" alt="green-led-test" class="rm-project-image">
+            <div class="image-desctiption">Simulation - Green LED lighting at 37°C</div>
+
+            <img src="/images/images-projects/geii/TDB/blue-test-tdb.svg" alt="blue-led-test" class="rm-project-image">
+            <div class="image-desctiption">Simulation - Blue LED lighting at 35°C</div>
+
+            <div class="text-section">
+                On these images you can see different inputs from acquisition part and how comparison part works in all three cases, lightning up the correct LED.
+            </div>
+
+            <div class="text-section">
+                To obtain the required <b>intensities</b> for LEDs, there must be a relationship between the electrical intensity (in Amperes) and the luminous intensity (in Candela).
+            </div>
+
+            <div class="text-section">We prepared a formula like the one presented above:</div>
+            <img src="/images/images-projects/geii/TDB/intensities-formula.svg" alt="intensities-formula" class="rm-project-image resize-small">
+            <div class="image-desctiption">Relationship for Red LED</div>
+            <div class="text-section">Where we changed values depending on the component documents and graphs in them.</div>
+            <div class="text-section tech-content">
+                So, Ix was demanded in task 50 mcd, and the divisor changed based on LED in question. In the end, we gained next values:
+                <ul>
+                    <li>● Red LED: If = 0.13 mA</li>
+                    <li>● Green LED: If = 0.44 mA</li>
+                    <li>● Blue LED: If = 0.022 mA</li>
+                </ul>
+            </div>
+
+            <div class="text-section">
+                In the end of designing process, we obtained next schematic, completed from files from both pairs.
+            </div>
+
+            <img src="/images/images-projects/geii/TDB/full-schema-tdb.svg" alt="full-isis" class="rm-project-image">
+            <div class="image-desctiption">Detailed electrical diagram of the developed product</div>
+
+            <div class="text-section"><i><b>If you want to see layout diagram, please click ‘Tech Details’ button on the top</b></i></div>
+
+            <img src="/images/images-projects/geii/TDB/ares-full-schema-tdb.svg" alt="full-ares" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">Detailed layout diagram</div>
+
+            <div class="text-section tech-content">
+                We did accurate layout design for the board and checked that we kept the dimensions as specified in the requirements section. As you can see, we have length of 100mm and 60mm in width. The fixing holes were the size of 4 mm (±0.2 mm) and their centers were located in the corners at 5 mm (±0.5 mm) from each edge.
+            </div>
+
+            <div class="text-section-title">Price</div>
+            <div class="text-section">
+                In total, project costed €6.18, which is less than €20 including tax as required.
+            </div>
+
+            <div class="text-section-title">Producing prototype</div>
+            <div class="text-section">
+                Prototype board was produced by using materials and tech provided by university. All components and PCB (Printed Circuit Board), as well instruments, for example for drilling, pliers or multimeters were given us by university and we were accompanied by professors during all processes. Some of them, like sticking copper in the holes, where happens transition from one side of board to another, were done only by professor.
+            </div>
+
+            <div class="text-section">
+                To be able produce board with our design, we exported our schema from software ARES, from top and bottom sides, which were after printed on PCB.
+            </div>
+
+            <img src="/images/images-projects/geii/TDB/top-tdb.svg" alt="top-typon" class="rm-project-image">
+            <div class="image-desctiption">Top of the card "Baby Bath Thermometer" (with mirror effect)</div>
+
+            <img src="/images/images-projects/geii/TDB/bottom-tdb.svg" alt="bottom-typon" class="rm-project-image">
+            <div class="image-desctiption">Bottom of the "Baby Bath Thermometer" card (without mirror effect)</div>
+
+            <div class="text-section">
+                That’s our main schematics, that were printed on the board. Lines are connections between components, and all holes are intended for components to be placed there. We also exported schematics for drilling mentioned holes and for components placement.
+            </div>
+
+            <img src="/images/images-projects/geii/TDB/drilling-tdb.svg" alt="drilling-typon" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">Drilling Plan for the "Baby Bath Thermometer" Card</div>
+
+            <div class="text-section tech-content">
+                30th ≈ 0.8mm; 40th ≈ 1mm. The 1mm holes are used for J1, resistors, switch SW1, capacitors C1 and C2, and for some holes of OP AMP U1 and NOR logic gate U3. The 0.8mm holes are used for all other components and are used on logic gate and amplifier.
+            </div>
+
+            <img src="/images/images-projects/geii/TDB/layout-tdb.svg" alt="layout-typon" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">Layout plan of the "Baby Bath Thermometer" card</div>
+
+            <div class="text-section tech-content">
+                Some components are polarized, so we had to be careful about the mounting direction of these components. These include: the LEDs, the temperature sensor and the battery (which is not on the board).
+            </div>
+
+            <div class="text-section">
+                All production process was done by following the instructions we received during one of our subjects in university.
+            </div>
+
+            <div class="text-section-title">Verification</div>
+            <div class="text-section">
+                After producing prototype, we need to verify it, by doing some tests. In this part, pairs switched modules, meaning that we, as “Red” pair, must have verify modules of “Blue” team, while they are checking our part.
+            </div>
+
+            <div class="text-section">
+                First, we verified autonomy of board – it should have worked minimum 24 hours. For this test, we used generator and multimeter.
+            </div>
+
+            <img src="/images/images-projects/geii/TDB/generator-tdb.svg" alt="generator" class="rm-project-image resize">
+            <div class="image-desctiption">Generator</div>
+
+            <img src="/images/images-projects/geii/TDB/multimeter.svg" alt="multimeter" class="rm-project-image resize">
+            <div class="image-desctiption">Multimeter</div>
+
+            <div class="text-section">
+                We connected the bath thermometer card to the current generator and using a multimeter we checked what currents passes through each LED when they are lightning up.
+            </div>
+            
+            <div class="text-section tech-content">
+                In each case, we found different current consumption:
+                <ul>
+                    <li>● 4.36 mA when the green LED is on</li>
+                    <li>● 3.98 mA when the red LED is on</li>
+                    <li>● 3.86 mA when the blue LED is on</li>
+                </ul>
+            </div>
+            <div class="text-section tech-content">
+                To calculate the autonomy, we took the maximum possible current consumption value, which corresponds to when the green LED is on, and we also took the energy capacity of our accumulator and took it by 0.8 (error 20%, since not all accumulator actually gives us charge).
+            </div>
+
+            <img src="/images/images-projects/geii/TDB/autonomie-formula.svg" alt="verification-formula" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">Used formula for calculations</div>
+
+            <div class="text-section">
+                As result of calculations, we obtained value of 64 hours, which meets the specified requirements for project.
+            </div>
+
+            <div class="text-section">
+                Next, we checked thresholds. For this we used generator and special oven, that could simulate different temperature conditions.
+            </div>
+
+            <img src="/images/images-projects/geii/TDB/oven-tdb.svg" alt="oven-tdb" class="rm-project-image">
+            <div class="image-desctiption">Oven</div>
+
+            <div class="text-section">
+                After mounting board in the oven, and turned on the current generator, with a current of 0.12 A and a voltage of 12V. We chose different temperatures to test cold and hot conditions, within their thresholds. In general, we waited to needed LED to turn on and noted temperature value, at which these events happened.
+            </div>
+
+            <div class="text-section">
+                The values of 35.1°C were found for the cold water detection threshold and 38.4°C for the hot water detection threshold. Between them green LED was turned on, indicating warm temperature.
+            </div>
+
+            <div class="text-section tech-content">
+                We had requirement for error, which was +-5%. So, we calculated errors for both values:
+            </div>
+
+            <img src="/images/images-projects/geii/TDB/error-formula-tdb.svg" alt="error-formula" class="rm-project-image">
+            <div class="image-desctiption">First formula for cold temperature, second is for hot temperature</div>
+
+            <div class="text-section tech-content">
+                As you can see, error is in error range, which means this part of project meets requirements given by client.
+            </div>
+
+            <div class="text-section">
+                At last, we checked switch: turning board on/off. For this test we needed only generator. Basically, when the switch is turned on, one of the LEDs must lit depending on captured temperature, since we did the test outside the oven. When the switch is turned off, the LED should turn off, indicating that there is no power.
+            </div>
+
+            <div class="text-section">
+                Here some images during test:
+            </div>
+
+            <img src="/images/images-projects/geii/TDB/swithc-on-tdb.svg" alt="switch-on" class="rm-project-image">
+            <div class="image-desctiption">The switch is turned on</div>
+
+            <img src="/images/images-projects/geii/TDB/switch-off-tdb.svg" alt="switch-off" class="rm-project-image">
+            <div class="image-desctiption">The switch is turned off</div>
+
+            <div class="text-section tech-content">
+                We also could test passing current with multimeter, but we didn’t do it since it was our first serious project and we didn’t have enough knowledge.
+            </div>
+
+            <div class="text-section-title">Conclusion</div>
+            <div class="text-section">
+                In the end, we met requirements of the duration of project, been done before 40 hours could expire. Only two parts didn’t meet client’s requirements: intensities and board dimensions. Apparently, during test, our “Blue” partners discovered, that intensity for Green LED exceed the permissible error limits, and recommended to use two resistances in series to fix this problem.
+            </div>
+
+            <div class="text-section tech-content">
+                This also should be noted to the future, since we theoretically could discover this problem during simulations in detailed designing stage, by taking inverse calculations with values that we found.
+            </div>
+
+            <div class="text-section">
+                This project also pointed out some places, in where I should improve my knowledge and approaches to posed tasks. Since I didn’t work at energy part, I had reduced knowledge in this regard, which must be fixed.
+            </div>
+
+            <div class="text-section">
+                Overall, it was interesting project that allowed me to use new gained knowledge in this sphere and to apply it on practice, as well as give me important skills, and a possibility to improve my work in team.
+            </div>
+
+            <div class="text-section"><h5><i>If you are interested in reading more detailed technical information about the project, please click on 'Tech Details' button on the top</i></h5></div>
+
+            <div class="file-buttons">
+                <a href="/files/projects-files/geii-projects/TDB/TDB_DDC_EQ23.pdf" target="_blank" class="btn-read">Designing document</a>
+                <a href="/files/projects-files/geii-projects/TDB/TDB_DDF_EQ23.pdf" target="_blank" class="btn-read">Production document</a>
+                <a href="/files/projects-files/geii-projects/TDB/TDB_DDV_EQ23.pdf" target="_blank" class="btn-read">Verification document</a>
+            </div>
+
+            <!--Modal-->
+            <div id="lightbox-modal">
+                <button id="lightbox-prev" class="lightbox-nav-btn">&#10094;</button>
+                <img id="lightbox-img" src="" alt="Expanded image" />
+                <button id="lightbox-next" class="lightbox-nav-btn">&#10095;</button>
+                <span class="lightbox-close">&times;</span>
+            </div>
+        </div>
+
+        <div class="go-back-wrapper bottom">
+            <a href="../../../../projects.html" class="go-back-btn">← Go Back</a>
+            <button class="go-back-btn tech-btn">Tech Details</button>
+        </div>
+        
+        
+    </section>
+
+    <button id="scrollTopBtn" title="Go to top">↑</button>
+
+    <footer class="footer">
+            <p class="copyright">© Vitaliia Maslova | All rights reserved</p>
+    </footer>
+    
+    <script src="../../../../script.js"></script>
+    <script>
+        (function notifyParentOfPage() {
+        try {
+            // full relative path (keeps folders, avoids D:\ absolute paths)
+            const url = window.location.pathname
+            .replace(window.location.origin + '/', '') // strip domain
+            .replace(/^\//, ''); // remove leading slash
+
+            window.parent.postMessage({ type: "IFRAME_NAV", page: url }, "*");
+        } catch(e) {}
+        })();
+    </script>
+</body>
+</html>
