@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Controlled Propeller Kart</title>
+    <link rel="stylesheet" href="../../rm-project.css">
+    <link rel="stylesheet" href="../../../../inventory.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
+</head>
+<body>
+
+    <section class="read-more-article" id="readmore">
+        <div class="rm-in-info">
+            
+            <div class="go-back-wrapper top">
+                <a href="../../../../projects.html" class="go-back-btn">← Go Back</a>
+                <button class="go-back-btn tech-btn">Tech Details</button>
+            </div>
+            
+            <div class="rm-project-title">Remote Controlled Propeller Kart</div>            
+            <div class="used-tech-section"><i>Used tech: ARES, ISIS, Arduino, C, knowledge gained during 1st year in GEII</i></div>
+            <div class="text-section tech-content"><h5><i>More tech detailes were added, read them if you are interested! If not, you can return to the 'Simple Version' anytime!</i></h5></div>
+
+            <img src="/images/images-projects/geii/KAH/KAH-logo.svg" alt="tdb-KAH-image" class="rm-project-image">
+
+            <div class="text-section-title">Introduction</div>
+
+            <!-- Simplified version -->
+            <div class="text-section">
+                During our studies at subject SAE - Situation d’Apprentissage et d’Évaluation or “Learning and Assessment Situation” we worked on Remote Controlled Propeller Kart, more precisely we worked on two boards for it: the transmitter and receiver in the team of 8 people. We had to design transmitter, that can send signals with direction and speed of Kart; and receiver, that would receive these signals and apply changes to connected motors for directions and speed.
+            </div>
+            <div class="text-section">
+                To complete this task, we needed to explode datasheets of components, to design electronics schema, produce prototype and verify it by doing several tests. For this we had 60 hours and total cost less than 160 euros.
+            </div>
+
+
+            <div class="text-section-title">Work distribution</div>
+            <div class="text-section">
+                We had two boards to design and 8 people in team – this way, we divided in two sub-teams of 4, named “Red” and “Blue”, where first did receiver and second did transmitter. In this sub-teams we divided into pairs, each with their tasks, working on 2 modules from 4: there were energy, information acquisition, information processing and actions modules.
+            </div>
+            <div class="text-section">
+                I with my teammate worked on transmitter at the acquisition and action.
+            </div>
+            <div class="text-section">
+                We did electronics design, but aside this we also needed to do informatics architecture in order to program boards. After prototype production and its programming, we needed to verify boards functionality – at this stage, we exchanged boards, verifying other’s sub-team prototype.
+            </div>
+
+
+            <div class="text-section-title">Project description</div>
+            <div class="text-section">
+                Our task is to design two boards for kart. For transmitter board, we had next requirements:
+                <ul>
+                    <li>● Minimum battery life of 60 minutes</li>
+                    <li>● Two human-machine interfaces to control directions and speed</li>
+                    <li>● Push-button for horn</li>
+                    <li>● Two infrared transmitters</li>
+                    <li>● Green LED that will indicates that board was powered on</li>
+                    <li>● Programming: it had to encode frames according to NEC protocol</li>
+                </ul>
+            </div>
+
+            <div class="text-section">
+                NEC PROTOCOL DESCRIPTION
+            </div>
+
+            <div class="text-section">
+                The accumulator wasn’t supposed to be fixed on the board, so it didn’t occupy any surface area on the board.
+            </div>
+
+            <div class="text-section tech-content">
+                If going into details, here full requirements for transmitter board:
+                <ul>
+                    <li>● Dimensions: board must be equal to 120mm (±1mm) in width and 80mm (±1mm) in length. It has 3mm (±0.5mm) mounting holes located in each corner to secure it to the rest of the transmitter's mechanical components. The centers of these holes are positioned 5mm (±0.5mm) from the edges of the PCB.</li>
+                    <li>● Logo: it also should contain visible name of Bordeaux GEII department and the name of the design team.</li>
+                </ul>
+            </div>
+
+            <div class="text-section-title tech-content">Energy module</div>
+            <div class="text-section tech-content">
+                <ul>
+                    <li>● Must use a 2S lithium-polymer battery to operate. This battery has a capacity that ensures the transmitter's operating autonomy is at least 60 minutes.</li>
+                    <li>● Board must include a switch to turn its electronic circuit on and off.</li>
+                </ul>
+            </div>
+
+
+            <div class="text-section-title tech-content">Information acquisition module</div>
+            <div class="text-section tech-content">
+                <ul>
+                    <li>● Transmitter includes two human-machine interfaces that control the kart's engine power and front wheel direction, respectively. These two interfaces are rotary and/or linear potentiometers with a tolerance of -/+1/32 of the stage's supply voltage. They must be ergonomically positioned on the transmitter to facilitate kart control.</li>
+                    <li>● Klaxon: the transmitter includes a push button that the user can press to indicate that they wish to sound the kart's horn.</li>
+                </ul>
+            </div>
+
+            <div class="text-section-title tech-content">Information processing module</div>
+            <div class="text-section tech-content">
+                The transmitter includes a digital processing core that allows:
+                <ul>
+                    <li>● to acquire analog information from the human-machine interfaces,</li>
+                    <li>● to digitize this analog information and transform it into digital information,</li>
+                    <li>● to encode the push button's digital data in 1 bit and the team's digital value in 7 bits, in order to create the "address" byte of the NEC protocol,</li>
+                    <li>● to encode the engine power digital data in 3 bits and the wheel direction digital data in 5 bits, in order to create the "data" byte of the NEC protocol,</li>
+                    <li>● to construct the transmission frames in accordance with the NEC protocol by integrating the previously calculated "address" and "data" bytes.</li>
+                </ul>
+            </div>
+            <div class="text-section tech-content">
+                Repetitively: transmitter transmits an NEC frame each time the data is new (i.e., different from the previous frame), without any delay other than the minimum inter-frame delay imposed by the NEC protocol (frame transmission period of 108 ms). If the data in consecutive NEC frames is identical, the NEC frame transmission period is then set to 333 ms. The tolerance for these two frame transmission periods is -/+10%.
+            </div>
+
+
+            <div class="text-section-title tech-content">Action module</div>
+            <div class="text-section tech-content">
+                Power: the transmitter transmits protocol frames using an infrared transmission component. The peak infrared transmission power ensures that the transmitter can transmit infrared signals decodable by the receiver at a minimum distance of 10 m.
+            </div>
+            <div class="text-section tech-content">
+                To ensure this transmission distance, it is necessary to apply a peak current greater than 200 mA per LED to at least two 5 mm infrared LEDs. Since the emission of an infrared LED is relatively directional, the LEDs are carefully placed and oriented on the transmitter's PCB to optimize the transmission distance and angle.
+            </div>
+            <div class="text-section tech-content">
+                Indicator: the kart transmitter includes a light indicator (50mcd -/+20%) informing the user that the transmitter is powered on.
+            </div>
+
+
+            <div class="text-section-title">Task distribution</div>
+            <div class="text-section">
+                As first pair in “Blue” pair, we worked on action and information acquisition modules for transmitter and we did informatics concept of this modules and their verification on prototype of receiver. Thus, our tasks were:
+                <ul>
+                    <li>● Definition of the electronic architecture for the acquisition and action sections of transmitter</li>
+                    <li>● Electronic design of the acquisition and action sections</li>
+                    <li>● Redaction of preliminary and detailed design documents</li>
+                    <li>● Informatics (program) design and programming of the receiver</li>
+                    <li>● Electronic verification of the receiver</li>
+                    <li>● Redaction of verification and manufacturing documents</li>
+                </ul>
+            </div>
+
+
+
+
+
+            <div class="text-section-title"><b>Realization</b></div>
+            <div class="text-section-title">Designing board</div>
+            <img src="/images/images-projects/geii/KAH/Diagramme d'Architecture Emetteur.svg" alt="kah-t-architecute" class="rm-project-image">
+            <div class="image-desctiption">Synoptic architecture of the developed product</div>
+
+            <div class="text-section">
+                First step is to choose components for the project. We read datasheets of proposed components, choosing some of them like possible components for project. For example, for <b>information acquisition</b>, we chose two linear potentiometers PTA4543.
+            </div>
+            <img src="/images/images-projects/geii/KAH/PTA.svg" alt="potar-pta" class="rm-project-image resize">
+            <div class="image-desctiption">PTA4543</div>
+            <div class="text-section">
+                We needed to chose two potentiometers and had choice: take two linear potentiometers, two rotary or one of each. As you can see on architecture synoptic, we decided to stop on two same potentiometers, since it should be more comfortable to control direction and speed with them.
+            </div>
+
+            <div class="text-section tech-content">
+                Functionality is next: for the power (speed) potentiometer, if it (lever pin 2) is in the low position (pin 1), there is no power in the motor (zero power), if the lever is in the high position (pin 3), there is maximum power in the motor. For the wheel steering (direction) potentiometer, if it (lever, pin 2) is in the middle, the wheels do not turn, if it is on the left (pin 1), the wheels turn left, and if it is on the right (pin 3), the wheels turn right.
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/potar-schema-kah.svg" alt="potar-schema-kah" class="rm-project-image tech-content resize">
+            <div class="image-desctiption tech-content">Final potentiometer diagram</div>
+
+            <div class="text-section tech-content">
+                Value of this potentiometers is 10kohm. To stabilize the voltage, we need to add a capacitor. To choose the capacitor value, we used the cutoff frequency formula:
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/formula-capacitor.svg" alt="formula-capacitor" class="rm-project-image tech-content resize-small">
+
+            <div class="text-section tech-content">
+                Our frequency is 10Hz since signals will be sent every 100 milliseconds. Using this information and values that we have, we found value of capacitor C=1.591 μF. With this, we took capacitor of 1 μF ±20%.
+            </div>
+
+            <div class="text-section tech-content">
+                We also performed some simulations, viewing expected results, like when we have potentiometer in low position of 0%, we got 0V on output. Or if we had it in position of 50%, in the middle, then we got 2.5V on output.
+            </div>
+
+            <div class="text-section">We also chose simple push-button MCDTS6-3K.</div>
+
+            <div class="text-section tech-content">
+                Since this button would be connected to the MCU, ATMEGA328P, we needed to include it into our calculations for resistor.
+            </div>
+
+            <div class="text-section tech-content">
+                Microcontroller has its own voltage Vil that equals to 0.3*Vcc and a leakage current equal to 1µΩ. If the voltage exceeds Vil, the microcontroller will read a logic "1" from the input, so we have to make sure that the voltage produced by the leakage current in the resistor is not higher than this value.
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/push-button-kah.svg" alt="horn-kah" class="rm-project-image tech-content resize">
+            <div class="image-desctiption tech-content">The final horn assembly</div>
+            <div class="text-section tech-content">
+                Using formula that we get to know during our studies in university, we get a value of 1.5 𝑀Ω. In order not to have interference with the human hand we took resistance of 100KΩ. With this, if there is no pressure on the button, 0V will be on output, and there will be 5V if button is pressed.
+            </div>
+
+            <div class="text-section">
+                For <b>actions</b> part we chose two TSAL6200 infrared LEDs to send signals to receiver. Green LED HLM-CM3A-Z10DD was chosen to indicate that board is turned on.
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/action-schema-kah.svg" alt="power-schema-kah" class="rm-project-image tech-content resize">
+            <div class="image-desctiption tech-content">Final power stage schematic</div>
+
+            <div class="text-section tech-content">
+                In details, TSAL6200 met the requirements in size and its peak current was 200mA. In the same time, the maximum current delivered by the chosen MCU, is 40 mA (per I/O pin). With this value, we cannot actually light up two infrared LEDs.
+            </div>
+            <div class="text-section tech-content">
+                To resolve this issue, it was proposed to use assembly of NPN transistor with resistors (that were placed in series with the LEDs in the collector section and one in the MCU output that goes to the base).
+            </div>
+            <div class="text-section tech-content">
+                During detailed design stage we chose BC337 transistor. Chosen values for resistor you can see on schematic above. We also took a capacitor to store current. Aside of successful simulations, we recalculated current, that should have been 200mA minimum. Result was 250mA that satisfied requirements.
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/green-led-kah.svg" alt="green-led-t-kah" class="rm-project-image tech-content resize">
+            <div class="image-desctiption tech-content">Green LED assembly</div>
+
+            <div class="text-section tech-content">
+                For Green LED, we decided to not connect it to the MCU, and do usual assembly with resistor in order to protect it and adjust the light intensity. Looking in the datasheet of LED, we got intensity value for 20mA and recalculated values to get current for 50mcd.
+            </div>
+            <div class="text-section tech-content">
+                Unfortunately, we forgot to do inverse calculation for intensity, so we couldn’t see our error before verification stage. We passed requirements and so this part was not confirmed in the end.
+            </div>
+
+            <div class="text-section">
+                In the end of designing of board, we obtained next schematic of transmitter board:
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/transmitter-kah.svg" alt="elec-diag-transmitter-kah" class="rm-project-image">
+            <div class="image-desctiption">Detailed electrical diagram of the developed product</div>
+
+            <div class="text-section"><b><i>If you want to see layout diagram, please click ‘Tech Details’ button on the top</i></b></div>
+
+            <img src="/images/images-projects/geii/KAH/ares-transmitter-kah.svg" alt="ares-schema-kah" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">Detailed layout diagram</div>
+
+
+            <div class="text-section-title">Programming receiver</div>
+            <div class="text-section">
+                Me and my partner worked on programming of receiver’s actions and acquisition part.
+            </div>
+            <div class="text-section">
+                For first they did connectors for motors of direction and power (speed); two LEDs, one that showed user that signal was truly received by sensor and one that indicated that board is turned on. Last, they placed a buzzer on board. For second they had a sensor that will receive sent signals.
+            </div>
+            <div class="text-section">
+                First, we did a flowchart diagram of how receiver must function.
+            </div>
+            <img src="/images/images-projects/geii/KAH/recepteur-kah-fon.svg" alt="receiver-informatics-flowchart" class="rm-project-image flowchart-img">
+            <div class="image-desctiption">Receiver processing algorithm</div>
+
+            <div class="text-section">
+                Flowchart passed through different changes, while we were going through programming process and trying to understand how actually it should work.
+            </div>
+            <div class="text-section">
+                All programming was done in Arduino.io using C (Arduino) language. We used connectors on board and special programming cable from professor to load our programs into microprocessor later.
+            </div>
+
+            <div class="text-section tech-content">
+                Later we finished programming with next code sections:
+            </div>
+            <img src="/images/images-projects/geii/KAH/informatics-general-kah.svg" alt="initiation-info-receiver" class="rm-project-image tech-content resize">
+            <div class="image-desctiption tech-content">Initiation of files and declaration of pins and functions</div>
+
+            <div class="text-section tech-content">
+                Before coding, we defined all the libraries we'll use in the project, all the pins to which the components are connected, and we also declared all the program functions.
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/main-receiver-kah.svg" alt="main-loop-receiver-kah" class="rm-project-image tech-content resize">
+            <div class="image-desctiption tech-content">Main code function void loop()</div>
+
+            <div class="text-section tech-content">
+                Main is an acquisition part. The AcquireNECFrame() function is part of the NEC library and checks for errors in the received NEC frame. This function retrieves the address and data contained in the NEC frame.
+            </div>
+            <div class="text-section tech-content">
+                If the error is zero (no error in the NEC frame), we check whether the team number is correct. If so, we light up the blue LED, indicating that the received NEC frame is valid. We can then call the functions that will calculate the values to use to control the kart. These functions are located in the processing section (below), and to send commands to the kart, we use the action section functions (below).
+            </div>
+            <div class="text-section tech-content">
+                And finally, <b>action</b> part. You can see example of programming of buzzer and one of motors below:
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/piloterservomoteur-kah.svg" alt="piloterservomoteur-function" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">function code DriveServoMotor()</div>
+
+            <div class="text-section tech-content">
+                This DriveServo() function is dedicated to generating a PWM signal that we will send to a servo motor using the .write() function from the Servo library, which allows boards to control a variety of servo motors. We also map() the direction between the servo limits. The map() function remaps a number from one range to another.
+            </div>
+            <div class="text-section tech-content">Power motor wasn’t in fact servo-motor, but we programmed it like it, following similar logic.</div>
+
+            <img src="/images/images-projects/geii/KAH/PiloterBuzzer-kah.svg" alt="PiloterBuzzer" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">function code PiloterBuzzer()</div>
+
+            <div class="text-section tech-content">
+                The PiloterBuzzer() function is dedicated to generating a 4kHz square wave signal. The input value is either 1 or 0. If the buzzer state value is 1, the signal is generated for 0.125 milliseconds.
+            </div>
+            <div class="text-section tech-content">
+                To do this, we use the tone() function, which generates a square wave of the specified frequency on a pin.
+            </div>
+            <div class="text-section tech-content">
+                If the received value is 0, we do nothing, so we don't generate the sound. To do this, we use the noTone() function, which stops the generation of a square wave triggered by the tone() function. It has no effect if no tone is generated.
+            </div>
+
+            <div class="text-section-title">Price</div>
+            <div class="text-section">Transmitter costed 13,11 euros and receiver costed 11,772 euro, which were prices according to our requirements.</div>
+
+            <div class="text-section-title">Producing prototype</div>
+            <div class="text-section">
+                Prototype board was produced by using materials and tech provided by university. All components and PCB (Printed Circuit Board), as well instruments, for example for drilling, pliers or multimeters were given us by university and we were accompanied by professors during all processes.
+            </div>
+            <div class="text-section">
+                To be able produce board with our design, we exported our schema from software ARES, from top and bottom sides, which were after printed on PCB.
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/typontopemetteur.svg" alt="top-typon" class="rm-project-image">
+            <div class="image-desctiption">Top of the Transmitter card (with mirror effect)</div>
+
+            <img src="/images/images-projects/geii/KAH/typonbottomemmeteur.svg" alt="bottom-typon" class="rm-project-image">
+            <div class="image-desctiption">Bottom of the Transmitter card (without mirror effect)</div>
+            <div class="text-section">
+                That’s our main schematics, that were printed on the board. Lines are connections between components, and all holes are intended for components to be placed there. We also exported schematics for drilling mentioned holes and for components placement.
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/planpercageemmeteur.svg" alt="drilling-transmitter" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">Transmitter Card Drilling Plan</div>
+
+            <div class="text-section tech-content">
+                30th ≈ 0,8 mm ; 40 th ≈ 1 mm ; 50 th ≈ 1,2 mm ; 60 th ≈ 1,5 mm; 80th ≈ 2 mm. The 3mm holes are the fixing holes.
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/plan implantation emmeteur.svg" alt="layout-transmitter" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">Transmitter card layout plan</div>
+            <div class="text-section tech-content">
+                Some components were polarized, so we payed attention to the mounting direction of these components. These include the two infrared LEDs, the LED that indicates the board's power-on status, and the battery (which is not on the board).
+            </div>
+            <div class="text-section">
+                All production process was done by following the instructions we received during one of our subjects in university.
+            </div>
+
+
+            <div class="text-section-title">Verification</div>
+            <div class="text-section">
+                After producing prototype, we need to verify it, by doing some tests. In this part, we verified same modules of opposite board, the one we programmed before. So, me and my partner checked action and acquisition modules of receiver.
+            </div>
+            <div class="text-section">
+                Firstly, we tested the receiver LED. For this, we needed generator, to turn on boards: developed receiver and transmitter, and oscilloscope.
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/generator-kah.svg" alt="generator-kah" class="rm-project-image resize">
+            <div class="image-desctiption">Generator</div>
+
+            <img src="/images/images-projects/geii/KAH/transmitter-board-kah.svg" alt="transmitter-board" class="rm-project-image resize">
+            <div class="image-desctiption">Transmitter board</div>
+
+            <img src="/images/images-projects/geii/KAH/motors-receiver.svg" alt="motors-receiver-kah" class="rm-project-image resize">
+            <div class="image-desctiption">Receiver board connected to the motors</div>
+
+            <div class="text-section">
+                What we wanted, is to see on the screen of oscilloscope received signals. We sent the same signal all over again, checking NEC signal sent by the transmitter first, and then checking the one that receiver got.
+            </div>
+
+            <div class="text-section tech-content">
+                For this, we followed next procedure: at the start, powered channel 2 of the generator with 5V and channel 1 with 7.4V. Take the black and red wires, connect the black wire to ground and the red wire to Vcc. 5V is assigned to the receiver, and 7.4V to the transmitter.
+            </div>
+            <div class="text-section tech-content">
+                Take the wires and connect the boards. Each board has a connector with the ground and voltage markings. If the board is powered, a green LED should be lit.
+            </div>
+            <div class="text-section tech-content">
+                Turn on the oscilloscope and connect the probe to channel 1. Move it to the pin where the infrared sensor is connected. The number of this pin can be seen on the receiver schematic.
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/connection-broche.svg" alt="testing-infrared-procedure" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">Checking the signal on the infrared receiver pin</div>
+
+            <div class="text-section">Here we can see the signal sent by transmitter:</div>
+
+            <img src="/images/images-projects/geii/KAH/transmitter-nec-infrared.svg" alt="infrared-t-nec" class="rm-project-image">
+            <div class="image-desctiption">NEC frame sent</div>
+
+            <div class="text-section">
+                What we must see on the receiver, is the inverse of this NEC frame. Then we can tell, if receiver works properly or not.
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/receiver-nec-infrared.svg" alt="infrared-r-nec" class="rm-project-image">
+            <div class="image-desctiption">Received NEC frame</div>
+
+            <div class="text-section">
+                So, as you can see, the signal is actually inversed to the one that was sent. This meant that receiver LED works properly.
+            </div>
+            <div class="text-section">
+                Second, we verified motors: is there PWM signal generation from calculated values. We did it as the same way before, but checking only signal on the receiver.
+            </div>
+            <div class="text-section tech-content">
+                We took a wire that allows us to observe the signals on an oscilloscope and used it on the MCU pin where we connected the signal pin of the needed motor.
+            </div>
+            <div class="text-section">
+                During the test, we changed the position of the potentiometer responsible for the speed/direction on the transmitter to change the information sent to the motor.
+            </div>
+            <div class="text-section">
+                We consulted documents on servomotor behavior to find out what values we should find based on the potentiometer positions, and we understood that the signal's high-state time would change depending on the lever position.
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/potar-speed-kah.svg" alt="potar-speed" class="rm-project-image">
+            <div class="image-desctiption">The frame received with speed potentiometer in low position</div>
+
+            <div class="text-section">
+                Here for example, on image above you can see received signal for speed (power) motor. The length of signal was just 1 millisecond, exactly value that we expected according to the documents we consulted – here potentiometer had low position, meaning it sent speed value of 0.
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/potar-direction-kah.svg" alt="potar-direction" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">The received frame with potentiometer of direction in the middle position</div>
+
+            <div class="text-section tech-content">
+                This is example of signal of direction potentiometer, with length of 1.520 milliseconds, when position is somewhere in the middle. According to documents, we should expect value of 1.5ms in this case. So, we calculated error:
+            </div>
+            
+            <img src="/images/images-projects/geii/KAH/error-direction.svg" alt="error-direction" class="rm-project-image tech-content">
+            <div class="text-section tech-content">Error percentage was 1.3%, in the possible error range of ±5% that we had.</div>
+
+            <div class="text-section">Next, we verified light intensity of LEDs.</div>
+            <div class="text-section">
+                For this, we took the multimeter in voltmeter mode and connect it in parallel with the resistor that was placed in series with the Green or Blue LED to measure its voltage.
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/test-procedure.svg" alt="test-led-kah-r" class="rm-project-image">
+            <div class="image-desctiption">Test procedure</div>
+
+            <div class="text-section">
+                Before calculations, we verified value of the resistor by turning board off and measuring value with the multimeter in ohmmeter mode.
+            </div>
+            <div class="text-section">
+                To calculate intensity, we referred to the Ohm’s law, calculating current with values obtained during test. Using data from the datasheet of LED that we verified, we, using a rule of three, calculated values of intensity. For example, for Green LED we got value of the 79.2 mcd, that was too above the required value of the 50 mcd.
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/error-green-led-r-kah.svg" alt="green-led-r-error" class="rm-project-image tech-content">
+            <div class="text-section tech-content">
+                We also calculated error value for Green LED, which was 58.4%, exceeding the ±20% required by task. For Blue LED error was 62.4%. We also found out that the “Red” team made mistakes during calculations for LEDs assembly as well as during redaction of the designing document of these parts.
+            </div>
+
+            <div class="text-section">
+                Last, we verified horn functionality, since it should have generated square signal of 4kHz with duty cycle of 50%. We did same procedure, as for verifying motors.
+            </div>
+
+            <img src="/images/images-projects/geii/KAH/horn-signal-kah.svg" alt="horn-receiver" class="rm-project-image">
+            <div class="image-desctiption">The horn signal pattern</div>
+
+            <div class="text-section">
+                As you can see, we got square signal as result, and oscilloscope said it has frequency of demanded 4kHz. Duty cycle was 50.7, which was in range of possible error percentage ±10%.
+            </div>
+
+
+            <div class="text-section-title">Conclusion</div>
+            <div class="text-section">
+                In the end, we met requirements of the duration of project, it was done before 60 hours could expire. Whole project didn’t meet 4 requirements, including two that we with partner verified – the LEDs of receiver.
+            </div>
+            <div class="text-section">
+                We did a little race with propeller kart using our designed and produced boards.
+            </div>
+            <img src="/images/images-projects/geii/KAH/all-boards-kart.svg" alt="completed-kah" class="rm-project-image">
+            <div class="image-desctiption">Receiver in the kart</div>
+            <div class="image-desctiption">Transmitter with attached battery</div>
+            <div class="image-desctiption">Second transmitter is professor's, used during some tests</div>
+
+            <div class="text-section">
+                This project also pointed out some places, in where I should improve my knowledge and approaches to the posed tasks. In this project I didn’t work at energy part at all, and this leads to my reduced knowledge in this regard, which must be fixed.
+            </div>
+            <div class="text-section">
+                Overall, it was very interesting and fun project that allowed me to use gained in university knowledge and to apply it on practice, as well as give me important skills, and a possibility to improve my work in bigger team of 8 people.
+            </div>
+
+
+            <div class="text-section"><h5><i>If you are interested in reading more detailed technical information about the project, please click on 'Tech Details' button on the top</i></h5></div>
+
+            <div class="file-buttons">
+                <a href="/files/projects-files/geii-projects/KAH/KAH_DDC_EQ22.docx.pdf" target="_blank" class="btn-read">Designing document</a>
+                <a href="/files/projects-files/geii-projects/KAH/KAH_DDF_EMTT_EQ22.pdf" target="_blank" class="btn-read">Production document</a>
+                <a href="/files/projects-files/geii-projects/KAH/KAH_DDV_EQUIPE_22.pdf" target="_blank" class="btn-read">Verification document</a>
+            </div>
+
+            <!--Modal-->
+            <div id="lightbox-modal">
+                <button id="lightbox-prev" class="lightbox-nav-btn">&#10094;</button>
+                <img id="lightbox-img" src="" alt="Expanded image" />
+                <button id="lightbox-next" class="lightbox-nav-btn">&#10095;</button>
+                <span class="lightbox-close">&times;</span>
+            </div>
+        </div>
+
+
+        <div class="go-back-wrapper bottom">
+            <a href="../../../../projects.html" class="go-back-btn">← Go Back</a>
+            <button class="go-back-btn tech-btn">Tech Details</button>
+        </div>
+        
+        
+    </section>
+
+    <button id="scrollTopBtn" title="Go to top">↑</button>
+
+    <footer class="footer">
+            <p class="copyright">© Vitaliia Maslova | All rights reserved</p>
+    </footer>
+    
+    <script src="../../../../script.js"></script>
+    <script>
+        (function notifyParentOfPage() {
+        try {
+            // full relative path (keeps folders, avoids D:\ absolute paths)
+            const url = window.location.pathname
+            .replace(window.location.origin + '/', '') // strip domain
+            .replace(/^\//, ''); // remove leading slash
+
+            window.parent.postMessage({ type: "IFRAME_NAV", page: url }, "*");
+        } catch(e) {}
+        })();
+    </script>
+</body>
+</html>
