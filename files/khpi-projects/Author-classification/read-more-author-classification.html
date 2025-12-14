@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development of a neural network for classifying authorial texts</title>
+    <link rel="stylesheet" href="../../rm-project.css">
+    <link rel="stylesheet" href="../../../../inventory.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
+</head>
+<body>
+
+    <section class="read-more-article" id="readmore">
+        <div class="rm-in-info">
+
+            <div class="go-back-wrapper top">
+                <a href="../../../../projects.html" class="go-back-btn">← Go Back</a>
+                <button class="go-back-btn tech-btn">Tech Details</button>
+            </div>
+            
+            
+            <div class="rm-project-title">Development of a neural network for classifying authorial texts</div>
+                   
+            <div class="used-tech-section"><i>Used technologies: Python, PyTorch, BERT, XLM-RoBERTa, numpy, scikit-learn, tkinter, PyCharm</i></div>
+            <div class="text-section tech-content"><h5><i>More tech detailes were added, read them if you are interested! If not, you can return to the 'Simple Version' anytime!</i></h5></div>
+
+            <div class="text-section-title">Introduction</div>
+
+            <!-- Simplified version -->
+            <div class="text-section">
+                This was my qualification work, needed to get a diploma — bachelor degree. Originally it was coursework, where the idea was in development of a neural network, that can classify given texts by authorship, taking in attention their stylistic and linguistic characteristics. It uses dataset, created by myself using texts of classic authors, that are available in internet. Original used only BERT for English texts.
+            </div>
+
+            <div class="text-section">
+                Qualification work was evolved version, using XLM-RoBERTa, working with English and Ukrainian texts translations. Also, task of creation of a software application was added. Were used texts by writers such as:
+                <ul>
+                    <li>● Shakespeare</li>
+                    <li>● Shevchenko</li>
+                    <li>● Lesya Ukrainka</li>
+                    <li>● Bradbury</li>
+                    <li>● Dickens</li>
+                    <li>● Franko</li>
+                    <li>● Orwell</li>
+                </ul>
+            </div>
+
+            <div class="text-section">
+                Firstly, I performed analysis of data to understand its volume, quality and characteristics of each author and their style. Next the data was prepared for training and testing model. Next neural network model was developed using programming language Python and other tools. Model was trained on texts, divided into training and validation samples.
+            </div>
+
+            <div class="text-section">
+                Next methods for model evaluation were used to evaluate the results. Model testing was performed on texts that model never seen. After that application was created with simple interface, so user can have comfort interaction with model.
+            </div>
+
+            <div class="text-section">
+                In the end of work, detailed analysis of results was performed and I made conclusions with setting possible goals for further development directions. All project was done by me.
+            </div>
+
+            <!-- Simplified image -->
+
+            <div class="text-section-title">Dataset</div>
+            <div class="text-section">
+                As mentioned in the introduction, I created dataset that was used during project. For that, I searched in internet the free accessible texts of mentioned authors. Their different works in English were saved in txt files, in their own directories.
+            </div>
+            <img src="/images/images-projects/khpi/author-class/csv-fille-screenshot-ac.svg" alt="csv-file" class="rm-project-image">
+            <div class="image-desctiption">Column 1: lines of text by authors</div>
+            <div class="image-desctiption">Column 2: name of the author of the text</div>
+
+            <div class="text-section">
+                After that, I found Ukrainian versions of texts and also saved them. To automate process, program was created, that separated all provided texts from all authors into csv files for training and validation. Some files were separated in order to use them during model testing.
+            </div>
+            <div class="text-section tech-content"> All texts got tags [ENG] or [UKR] to simplify work.</div>
+        
+            <!-- Technical details (hidden by default) -->
+            <div class="text-section-title tech-content">PyTorch Image Segmentation Models</div>
+            <div class="text-section tech-content">
+                It is an extension to the PyTorch library designed for working with images in the context of computer vision and image processing tasks. This extension provides a wide range of tools and functions for image processing, augmentation, visualization, and evaluation. PyTorch Image includes a variety of image processing modules and classes, such as transformations, datasets, models, loss functions, and optimizers. Using this extension simplifies the development and training of computer vision models in the PyTorch environment.
+            </div>
+
+            <div class="text-section-title">Math preparation</div>
+            <div class="text-section">
+                The posed task of classification of authored texts is a multi-class classification problem, where each text x belongs to one of the authors C, i.e. classes. The goal is to construct a prediction function that maximizes the probability of correctly classifying a text for all texts in the dataset.
+            </div>
+            <div class="text-section tech-content">All input texts gone through XLM-RoBERTa tokenizer according to its technology.</div>
+            <div class="text-section tech-content">A layer was added to the output of the model to convert the hidden states into logits — the so-called raw output of the model before it is converted into a probability. Loss function also was used in project, and the optimization of the weights was done by the AdamW algorithm using gradient descent.</div>
+            <div class="text-section">
+                For model evaluation I used the f-1 score, a classification method that combines precision and recall. It was very useful, considering that by itself it is useful in cases when the data is unbalanced. Its formula is next:
+            </div>
+            <img src="/images/images-projects/khpi/author-class/f1score-formula.svg" alt="f1-score" class="rm-project-image">
+            <div class="image-desctiption">F1-score formula</div>
+            <div class="text-section">
+                Where Precision is the number of positive cases predicted by the model that are actually correct. Recall is the number of how many of all real positive cases the model correctly identified.
+            </div>
+
+            <div class="text-section-title tech-content">PyTorch</div>
+            <div class="text-section tech-content">
+                PyTorch is an open source software for machine learning and deep learning. It provides a wide range of tools for implementing and training neural networks.
+            </div>
+            <div class="text-section tech-content">
+                In this project, PyTorch was used to create and train a classification model based on BERT. It was used to initialize the model: use built-in classes to load BERT and configure it for class classification; optimization with automatic updating of model weights and automatic differentiation were implemented.
+            </div>
+            <div class="text-section tech-content">
+                PyTorch provided the necessary flexibility and efficiency for working with large text data, which made it the most important tool in the implementation of this project.
+            </div>
+
+            <div class="text-section-title">BERT</div>
+            <div class="text-section">
+                BERT or “Bidirectional Encoder Representations from Transformers” is an innovative natural language processing model that uses bidirectional text analysis to consider the context on both sides of a word. BERT is one of the most popular tools in the field of natural language processing (NLP) and has demonstrated high accuracy in text classification tasks.
+            </div>
+            <img src="/images/images-projects/khpi/author-class/BERT.svg" alt="bert-diagram" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">High-level schematic diagram of BERT</div>
+
+            <div class="text-section-title">XLM-RoBERTa</div>
+            <div class="text-section">
+                XLM-RoBERTa is a multilingual model that has been trained on 100 different languages, including Ukrainian. It uses the techniques of RoBERTa, but does not apply the goal of translational language modeling. Instead, it only applies the modeling masking task to sentences originating from a single language.
+            </div>
+            <img src="/images/images-projects/khpi/author-class/roberta-ac.svg" alt="roberta-image" class="rm-project-image">
+            <div class="image-desctiption">BERT and RoBERTa work</div>
+
+            <div class="text-section">
+                The RoBERTa model itself (Robustly Optimized BERT Pre-training Approach) is based on the BERT and changes key hyperparameters, training with significantly larger mini-batch sizes and training speed. The model was trained on a dataset of 160 GB of text, which is approximately 10 times larger than the dataset used to train BERT.
+            </div>
+            <div class="text-section tech-content">
+                In this project, XLM-RoBERTa was the basis for classifying texts by author. The model was downloaded from the Hugging Face library and adapted for the project task. The main steps of using XLM-RoBERTa were text tokenization, taking into account the context of the provided texts, their classification - a fully connected layer was added to the output of XLM-RoBERTa, which predicts the probability of the text belonging to each class.
+            </div>
+            <div class="text-section tech-content">
+                Despite the fact that it doesn’t really need them, language labels were used in project, like small “hints” in the form of [ENG] and [UKR] to allow the model to better consider stylistic and grammatical differences. And also, to prevent the possibility that the model will incorrectly determine the language or confuse translations, while increasing stability when training on mixed data and overall control over the model.
+            </div>
+
+
+            <div class="text-section-title">Tkinter</div>
+            <div class="text-section">
+                Tkinter is a cross-platform graphical user interface library based on the Tk tools, widely used in the GNU/Linux world, also ported to and for Windows, distributed as open source. It is part of the Python standard library for creating GUIs.
+            </div>
+            <div class="text-section">
+                In this project, the library was used to create an interface for interacting with the author text classifier model. The interface allows the user to: enter text; select the language of the text from a list; and obtain the classification result — the name of the predicted author.
+            </div>
+
+
+            <div class="text-section-title">Realization</div>
+            <div class="text-section">
+                Considering that project started with coursework, that was using only BERT, before deciding and confirming theme for qualification work, the whole project got divided into three stages.
+            </div>
+            <div class="text-section">First one was creation of working prototype using BERT. It was done only with two authors: Shakespeare and Shevchenko. It was designed to test possibilities, to understand how BERT works and in what direction I should go.</div>
+            <div class="text-section tech-content">
+                This was it was determined that there was a possibility of the model's performance deteriorating due to the difference in the number of authors' texts in the training set, and optimization was also made for a faster model training process.
+            </div>
+            <div class="text-section">
+                Second stage was final for coursework. Based on the experience of working on the prototype and the analysis of it, further development of the project was carried out with the addition of all other specified authors (except Lesya Ukrainka) and their English texts. The retraining threshold was determined, errors in text classification were found, and optimization was improved, since during operation the program stopped working with an error due to the large size of the training data.
+            </div>
+            <div class="text-section tech-content">
+                All class diagrams of this part are presented below:
+            </div>
+
+            <div class="carousel-wrapper tech-content" data-carousel="1">
+                <button class="carousel-btn prev" onclick="moveSlide(-1, this)">&#10094;</button>
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <img src="/images/images-projects/khpi/author-class/author-classifier-bert.svg" alt="author-classifier-bert">
+                        <img src="/images/images-projects/khpi/author-class/author-dataset-bert.svg" alt="author-dataset-bert">
+                        <img src="/images/images-projects/khpi/author-class/test-model-bert.svg" alt="test-bert">
+                        <img src="/images/images-projects/khpi/author-class/train-bert.svg" alt="train-bert">
+                    </div>
+
+                </div>
+                <button class="carousel-btn next" onclick="moveSlide(1, this)">&#10095;</button>
+            </div>
+            <div class="image-desctiption tech-content">Class diagrams of project using only BERT</div>
+
+            <div class="text-section">
+                After confirming theme for qualification work, I expanded project with ability to train model that can work with texts in different languages, making Ukrainian as my goal.
+            </div>
+            <img src="/images/images-projects/khpi/author-class/franko-preparation.svg" alt="franko-texts" class="rm-project-image flowchart-img">
+            <div class="image-desctiption">Prepared Franco's works</div>
+
+            <div class="text-section">
+                With this, further development of the project was carried out: additional texts in two languages were added, language markers were added, and the model was changed to XLM-RoBERTa. Relevant code changes were made, errors in the training algorithm were fixed, and optimization and training data collection were improved, which helped during the development process. As well was expanded dataset for this stage.
+            </div>
+
+            <div class="carousel-wrapper tech-content" data-carousel="2">
+                <button class="carousel-btn prev" onclick="moveSlide(-1, this)">&#10094;</button>
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <img src="/images/images-projects/khpi/author-class/author-class-final.svg" alt="author-classifier-final">
+                        <img src="/images/images-projects/khpi/author-class/author-dataset-final.svg" alt="author-dataset-final">
+                        <img src="/images/images-projects/khpi/author-class/test-model-final.svg" alt="test-final">
+                        <img src="/images/images-projects/khpi/author-class/train-final.svg" alt="train-final">
+                    </div>
+
+                </div>
+                <button class="carousel-btn next" onclick="moveSlide(1, this)">&#10095;</button>
+            </div>
+            <div class="image-desctiption tech-content">Final class diagrams of project</div>
+
+            <div class="text-section">Lest go deeper into details of this final stage.</div>
+            
+            <div class="text-section tech-content">
+                The <b>model</b> file. It has AuthorClassifier class that is a neural network class for classifying authored texts. It uses the transformer model XLM-RoBERTa. The model is loaded from pre-trained Hugging Face weights.
+            </div>
+            <div class="text-section tech-content">
+                Next, it contains a Dropout regularization layer (with probability 0.3) that prevents overfitting. With a final linear layer that transforms the output hidden vectors of the transformer into logits. Logits can be considered values for each class (i.e. author). Returns the output layer with the number of classes. Due to its architecture, the class does not require manual feature extraction and can independently learn dependencies and patterns in the text.
+            </div>
+            <div class="text-section tech-content">
+                The <b>dataset</b> file. The AuthorDataset class is needed for data preparation. It loads data from files in .csv format, where each line contains texts and author labels, and then uses AutoTokenizer to tokenize the texts. The class generates input_ids (token identifiers) and attention_mask (attention masks) to feed them to the model. Textual author labels are converted to numeric using label_map.
+            </div>
+            <div class="text-section tech-content">
+                After processing, the data is returned as PyTorch tensors, which contain attention masks, numeric author labels, tokenized and original texts. Original texts are useful here for error analysis during testing.
+            </div>
+
+            <div class="text-section">
+                The <b>train</b> file. This is where the full model training cycle is implemented. First, the basic parameters such as the number of training epochs, batch size, maximum text length, and learning rate are set, along with the paths to the test and training samples. For optimization, AdamW was used, which is a specially designed optimizer for transformer models, that has an additional scheduler.
+            </div>
+
+            <img src="/images/images-projects/khpi/author-class/train-flowchart.svg" alt="train-flowchart" class="rm-project-image tech-content flowchart-img">
+            <div class="image-desctiption tech-content">Flowchart of the model training algorithm</div>
+
+            <div class="text-section tech-content"> After the model is initialized, the following processes occur during each training epoch cycle: forward pass, loss calculation using CrossEntropyLoss, backward pass, and weight update.</div>
+            <div class="text-section tech-content">
+                Forward pass is the process where data is fed to the model input (in this project, these are tokenized texts), after which the model passes them through layers, such as the Dropout layer mentioned above, and the logits are obtained as a result.
+            </div>
+            <div class="text-section">
+                Since we know the real author for each text, we can compare the model’s prediction, the resulting logits, with our correct labels. To do this, during training, the CrossEntropyLoss loss function is used, which indicates how well the model works. We want to see a smaller value.
+            </div>
+
+            <img src="/images/images-projects/khpi/author-class/cross-entropy-ac.svg" alt="cross-entropy" class="rm-project-image">
+            <div class="image-desctiption">Cross Entropy Loss is a function used to measure the performance of a classification model</div>
+            <div class="image-desctiption">It measures the difference between the discovered probability distribution of a classification model and the predicted values</div>
+
+            <div class="text-section tech-content">
+                The backtracking calculates the derivatives (gradients) for each model weight to understand how exactly the weights need to be adjusted to get a better prediction next time. When updating the weights, an optimizer is used, which changes the model weights after calculation. This is done at each step (batch) and is repeated throughout all epochs.
+            </div>
+            <div class="text-section">
+                After each epoch, model.eval (model evaluation) occurs. The model is evaluated on the test sample, and misclassified texts are also analyzed. Throughout the entire process, metrics are stored, and after training is complete, they are converted into graphs and additionally stored in a file. This is necessary to facilitate and speed up model analysis. Graphs allowed to visually examine the learning process. At the end, the model is also saved in .pth format so that it can be used in the test interface.
+            </div>
+            <div class="text-section">
+                The part of the project responsible for testing the model after training received a simple interface instead of interacting with a text box in the code. A text box for entering text, a list allowing to select the language of the text, a place for displaying the result, and buttons for interaction were created. It was written in python using Tkinter library.
+            </div>
+
+            <img src="/images/images-projects/khpi/author-class/test-flowchart.svg" alt="test-flowchart" class="rm-project-image tech-content flowchart-img">
+            <div class="image-desctiption tech-content">Flowchart of the model testing algorithm</div>
+
+            <div class="text-section tech-content">
+                Basically, test_model file loads the model that was saved after training. The predict_author function performs author prediction for new input text provided in the code that needs to be classified by author. It tokenizes the text, passes it to the trained model and AuthorClassifier, and then returns the prediction — the author's name based on the predicted class index.
+            </div>
+
+            <img src="/images/images-projects/khpi/author-class/program-example-ac.svg" alt="program-example-ac" class="rm-project-image">
+            <div class="image-desctiption">Input text (author: Shakespeare) – Model prediction (Result: Shakespeare)</div>
+
+            <img src="/images/images-projects/khpi/author-class/example_program.gif" alt="gif-animation-program" class="rm-project-image">
+            <div class="image-desctiption">Animation of the program working</div>
+            <div class="text-section">Texts used in the animation are "Titus Andronicus" by Shakespeare and "To My Piano" by Lesya Ukrainka.</div>
+
+            <div class="text-section-title">Results</div>
+            <div class="text-section">
+                Prototype was trained around 20 minutes. First version based on BERT was trained around 1 hour. The final version of model was trained during 6 hours 20 minutes, during 5 epochs.
+            </div>
+            <div class="text-section tech-content">
+                However, as can be viewed at the graph below, after 2-3 epochs, an early training stop could be used, which would reduce training time without losing its quality.
+            </div>
+
+            <img src="/images/images-projects/khpi/author-class/train-graph.svg" alt="training-time-graph" class="rm-project-image">
+            <div class="image-desctiption">Training time graph in seconds per epoch</div>
+
+            <div class="text-section tech-content">
+                As can be seen, during training, the train accuracy increases steadily over five epochs, while the test accuracy increases until the fourth epoch, then decreases slightly in the fifth. This suggests that the model generalizes well and does not show signs of overfitting. However, with more training epochs, we would likely see a degradation in quality on the test data.
+            </div>
+
+            <img src="/images/images-projects/khpi/author-class/accuracy-graph-ac.svg" alt="accuracy-graph" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">Training and test set accuracy graph</div>
+
+            <div class="text-section tech-content">
+                On next one, we can see that the train loss drops rapidly, which is a sign of effective training. The testing loss also drops, but starts to increase slightly in the last epoch. This usually indicates the beginning of overtraining, which could have happened if training had been going on for more than 5 epochs.
+            </div>
+
+            <img src="/images/images-projects/khpi/author-class/loss-graph-ac.svg" alt="loss-graph" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">Loss graph for training and test sets</div>
+
+            <div class="text-section">
+                After analysis of the obtained values, it was concluded that the works of Shakespeare, Dickens and Orwell are ideally classified, since their f1-score reaches 0.99. For Franko and Shevchenko, it is slightly lower, about 0.97, which is a sign of high classification quality.
+            </div>
+            <div class="text-section">
+                The lowest value belongs to the texts of Lesya Ukrainka, due to the smaller number of texts provided in the training dataset. This means that the set of Ukrainian texts must be expanded to improve their balance.
+            </div>
+            <div class="text-section">
+                Thus, the obtained results demonstrated the high efficiency of the developed model for the task of classifying authorial texts. Even on a limited amount of data, the model is capable of generalization, providing high accuracy.
+            </div>
+            <div class="text-section">
+                A basic interface for interacting with the model was created, and tt serves its purpose well, while also having potential for improvement, both in functionality and design.
+            </div>
+            <div class="text-section">
+                In theory, the project results have practical value in the areas of text analysis automation, especially for tasks related to copyright and plagiarism.
+            </div>
+
+            <div class="text-section"><h5><i>If you are interested in reading more detailed technical information about the project, please click on 'Tech Details' button on the top</i></h5></div>
+
+            <!--Modal-->
+            <div id="lightbox-modal">
+                <button id="lightbox-prev" class="lightbox-nav-btn">&#10094;</button>
+                <img id="lightbox-img" src="" alt="Expanded image" />
+                <button id="lightbox-next" class="lightbox-nav-btn">&#10095;</button>
+                <span class="lightbox-close">&times;</span>
+            </div>
+        </div>
+
+        <div class="go-back-wrapper bottom">
+            <a href="../../../../projects.html" class="go-back-btn">← Go Back</a>
+            <button class="go-back-btn tech-btn">Tech Details</button>
+        </div>
+        
+        
+    </section>
+
+    <button id="scrollTopBtn" title="Go to top">↑</button>
+
+    <footer class="footer">
+            <p class="copyright">© Vitaliia Maslova | All rights reserved</p>
+    </footer>
+    
+    <script src="../../../../script.js"></script>
+    <script>
+        (function notifyParentOfPage() {
+        try {
+            // full relative path (keeps folders, avoids D:\ absolute paths)
+            const url = window.location.pathname
+            .replace(window.location.origin + '/', '') // strip domain
+            .replace(/^\//, ''); // remove leading slash
+
+            window.parent.postMessage({ type: "IFRAME_NAV", page: url }, "*");
+        } catch(e) {}
+        })();
+    </script>
+</body>
+</html>
