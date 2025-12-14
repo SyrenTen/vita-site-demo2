@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Development of a neural network for classifying authorial texts</title>
+    <title>Développement d'un réseau neuronal pour classfication les textes d'auteur</title>
     <link rel="stylesheet" href="../../rm-project.css">
     <link rel="stylesheet" href="../../../../inventory.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
@@ -14,25 +14,25 @@
         <div class="rm-in-info">
 
             <div class="go-back-wrapper top">
-                <a href="../../../../projects.html" class="go-back-btn">← Go Back</a>
-                <button class="go-back-btn tech-btn">Tech Details</button>
+                <a href="../../../../projects.html" class="go-back-btn">← Retour</a>
+                <button class="go-back-btn tech-btn">Détails techniques</button>
             </div>
             
             
-            <div class="rm-project-title">Development of a neural network for classifying authorial texts</div>
+            <div class="rm-project-title">Développement d'un réseau neuronal pour classfication les textes d'auteur</div>
                    
-            <div class="used-tech-section"><i>Used technologies: Python, PyTorch, BERT, XLM-RoBERTa, numpy, scikit-learn, tkinter, PyCharm</i></div>
-            <div class="text-section tech-content"><h5><i>More tech detailes were added, read them if you are interested! If not, you can return to the 'Simple Version' anytime!</i></h5></div>
+            <div class="used-tech-section"><i>Technologies utilisées: Python, PyTorch, BERT, XLM-RoBERTa, numpy, scikit-learn, tkinter, PyCharm</i></div>
+            <div class="text-section tech-content"><h5><i>Plus de détails techniques ont été ajoutés, lisez-les si cela vous intéresse ! Sinon, vous pouvez revenir à la « Version Simplifiée » à tout moment !</i></h5></div>
 
             <div class="text-section-title">Introduction</div>
 
             <!-- Simplified version -->
             <div class="text-section">
-                This was my qualification work, needed to get a diploma — bachelor degree. Originally it was coursework, where the idea was in development of a neural network, that can classify given texts by authorship, taking in attention their stylistic and linguistic characteristics. It uses dataset, created by myself using texts of classic authors, that are available in internet. Original used only BERT for English texts.
+                Il s'agissait de mon travail de qualification, nécessaire pour obtenir un diplôme (licence). À l'origine, il s'agissait d'un travail de cours dont l'idée était de développer un réseau neuronal capable de classer des textes donnés par auteur, en tenant compte de leurs caractéristiques stylistiques et linguistiques. Il utilise un ensemble de données que j'ai créé moi-même à partir de textes d'auteurs classiques disponibles sur Internet. À l'origine, seul BERT était utilisé pour les textes en anglais.
             </div>
 
             <div class="text-section">
-                Qualification work was evolved version, using XLM-RoBERTa, working with English and Ukrainian texts translations. Also, task of creation of a software application was added. Were used texts by writers such as:
+                Le travail de qualification a été amélioré grâce à l'utilisation de XLM-RoBERTa, qui fonctionne avec des traductions de textes en anglais et en ukrainien. De plus, la création d'une application logicielle a été ajoutée. Des textes d'auteurs suivants ont été utilisés :
                 <ul>
                     <li>● Shakespeare</li>
                     <li>● Shevchenko</li>
@@ -45,111 +45,111 @@
             </div>
 
             <div class="text-section">
-                Firstly, I performed analysis of data to understand its volume, quality and characteristics of each author and their style. Next the data was prepared for training and testing model. Next neural network model was developed using programming language Python and other tools. Model was trained on texts, divided into training and validation samples.
+                Tout d'abord, une analyse des données a été effectuée afin de comprendre leur volume, leur qualité et les caractéristiques de chaque auteur et leur style. Ensuite, les données ont été préparées pour l'entraînement et le test du modèle. Puis, un modèle de réseau neuronal a été développé à l'aide du langage de programmation Python et d'autres outils. Le modèle a été entraîné sur des textes, divisés en échantillons d'entraînement et de validation.
             </div>
 
             <div class="text-section">
-                Next methods for model evaluation were used to evaluate the results. Model testing was performed on texts that model never seen. After that application was created with simple interface, so user can have comfort interaction with model.
+                Ensuite, des méthodes d'évaluation du modèle ont été utilisées pour évaluer les résultats. Les tests du modèle ont été effectués sur des textes que le modèle n'avait jamais vus. Après cela, une application a été créée avec une interface simple, afin que l'utilisateur puisse interagir confortablement avec le modèle.
             </div>
 
             <div class="text-section">
-                In the end of work, detailed analysis of results was performed and I made conclusions with setting possible goals for further development directions. All project was done by me.
+                À la fin du travail, une analyse détaillée des résultats a été effectuée et j'ai tiré des conclusions en fixant des objectifs possibles pour les orientations futures du développement.
             </div>
 
             <!-- Simplified image -->
 
-            <div class="text-section-title">Dataset</div>
+            <div class="text-section-title">Ensemble de données</div>
             <div class="text-section">
-                As mentioned in the introduction, I created dataset that was used during project. For that, I searched in internet the free accessible texts of mentioned authors. Their different works in English were saved in txt files, in their own directories.
+                Comme mentionné dans l'introduction, j'ai créé l'ensemble de données qui a été utilisé pendant le projet. Pour cela, j'ai recherché sur Internet les textes librement accessibles des auteurs mentionnés. Leurs différents travaux en anglais ont été enregistrés dans des fichiers txt, dans leurs propres répertoires.
             </div>
-            <img src="/images/images-projects/khpi/author-class/csv-fille-screenshot-ac.svg" alt="csv-file" class="rm-project-image">
-            <div class="image-desctiption">Column 1: lines of text by authors</div>
-            <div class="image-desctiption">Column 2: name of the author of the text</div>
+            <img src="images\images-projects\khpi\author-class\csv-fille-screenshot-ac.svg" alt="csv-file" class="rm-project-image">
+            <div class="image-desctiption">Colonne 1 : lignes de texte par auteurs</div>
+            <div class="image-desctiption">Colonne 2 : nom de l'auteur du texte</div>
 
             <div class="text-section">
-                After that, I found Ukrainian versions of texts and also saved them. To automate process, program was created, that separated all provided texts from all authors into csv files for training and validation. Some files were separated in order to use them during model testing.
+                Après cela, j'ai trouvé des versions ukrainiennes des textes et je les ai également enregistrées. Afin d'automatiser le processus, un programme a été créé pour séparer tous les textes fournis par tous les auteurs dans des fichiers CSV à des fins de formation et de validation. Certains fichiers ont été séparés afin de pouvoir les utiliser lors des tests du modèle.
             </div>
-            <div class="text-section tech-content"> All texts got tags [ENG] or [UKR] to simplify work.</div>
+            <div class="text-section tech-content"> Tous les textes ont été marqués [ENG] ou [UKR] afin de simplifier le travail.</div>
         
             <!-- Technical details (hidden by default) -->
             <div class="text-section-title tech-content">PyTorch Image Segmentation Models</div>
             <div class="text-section tech-content">
-                It is an extension to the PyTorch library designed for working with images in the context of computer vision and image processing tasks. This extension provides a wide range of tools and functions for image processing, augmentation, visualization, and evaluation. PyTorch Image includes a variety of image processing modules and classes, such as transformations, datasets, models, loss functions, and optimizers. Using this extension simplifies the development and training of computer vision models in the PyTorch environment.
+                Il s'agit d'une extension de la bibliothèque PyTorch conçue pour travailler avec des images dans le cadre de tâches de vision par ordinateur et de traitement d'images. Cette extension fournit un large éventail d'outils et de fonctions pour le traitement, l'augmentation, la visualisation et l'évaluation des images. PyTorch Image comprend une variété de modules et de classes de traitement d'images, tels que des transformations, des ensembles de données, des modèles, des fonctions de perte et des optimiseurs. L'utilisation de cette extension simplifie le développement et l'entraînement de modèles de vision par ordinateur dans l'environnement PyTorch.
             </div>
 
-            <div class="text-section-title">Math preparation</div>
+            <div class="text-section-title">Préparation mathématiques</div>
             <div class="text-section">
-                The posed task of classification of authored texts is a multi-class classification problem, where each text x belongs to one of the authors C, i.e. classes. The goal is to construct a prediction function that maximizes the probability of correctly classifying a text for all texts in the dataset.
+                La tâche posée de classification des textes rédigés est un problème de classification multi-classes, où chaque texte x appartient à l'un des auteurs C, c'est-à-dire à l'une des classes. L'objectif est de construire une fonction de prédiction qui maximise la probabilité de classer correctement un texte pour tous les textes du jeu de données.
             </div>
-            <div class="text-section tech-content">All input texts gone through XLM-RoBERTa tokenizer according to its technology.</div>
-            <div class="text-section tech-content">A layer was added to the output of the model to convert the hidden states into logits — the so-called raw output of the model before it is converted into a probability. Loss function also was used in project, and the optimization of the weights was done by the AdamW algorithm using gradient descent.</div>
+            <div class="text-section tech-content">Tous les textes saisis ont été traités par le tokenizer XLM-RoBERTa conformément à sa technologie.</div>
+            <div class="text-section tech-content">Une couche a été ajoutée à la sortie du modèle afin de convertir les états cachés en logits, c'est-à-dire la sortie brute du modèle avant qu'elle ne soit convertie en probabilité. Une fonction de perte a également été utilisée dans le projet, et l'optimisation des poids a été réalisée par l'algorithme AdamW à l'aide de la descente de gradient.</div>
             <div class="text-section">
-                For model evaluation I used the f-1 score, a classification method that combines precision and recall. It was very useful, considering that by itself it is useful in cases when the data is unbalanced. Its formula is next:
+                Pour évaluer le modèle, j'ai utilisé le F1-score, une méthode de classification qui combine précision et rappel. Elle s'est avérée très utile, d'autant plus qu'elle est particulièrement efficace lorsque les données sont déséquilibrées. Sa formule est la suivante :
             </div>
             <img src="/images/images-projects/khpi/author-class/f1score-formula.svg" alt="f1-score" class="rm-project-image">
-            <div class="image-desctiption">F1-score formula</div>
+            <div class="image-desctiption">Formule du F1-score</div>
             <div class="text-section">
-                Where Precision is the number of positive cases predicted by the model that are actually correct. Recall is the number of how many of all real positive cases the model correctly identified.
+                La précision correspond au nombre de cas positifs prédits par le modèle qui sont effectivement corrects. Le rappel correspond au nombre de cas positifs réels que le modèle a correctement identifiés.
             </div>
 
             <div class="text-section-title tech-content">PyTorch</div>
             <div class="text-section tech-content">
-                PyTorch is an open source software for machine learning and deep learning. It provides a wide range of tools for implementing and training neural networks.
+                PyTorch est un logiciel open source dédié à l'apprentissage automatique et à l'apprentissage profond. Il fournit une large gamme d'outils pour la mise en œuvre et l'entraînement de réseaux neuronaux.
             </div>
             <div class="text-section tech-content">
-                In this project, PyTorch was used to create and train a classification model based on BERT. It was used to initialize the model: use built-in classes to load BERT and configure it for class classification; optimization with automatic updating of model weights and automatic differentiation were implemented.
+                Dans le cadre de ce projet, PyTorch a été utilisé pour créer et entraîner un modèle de classification basé sur BERT. Il a été utilisé pour initialiser le modèle : utilisation de classes intégrées pour charger BERT et le configurer pour la classification des classes ; optimisation avec mise à jour automatique des poids du modèle et différenciation automatique.
             </div>
             <div class="text-section tech-content">
-                PyTorch provided the necessary flexibility and efficiency for working with large text data, which made it the most important tool in the implementation of this project.
+                PyTorch a fourni la flexibilité et l'efficacité nécessaires pour travailler avec de grandes quantités de données textuelles, ce qui en a fait l'outil le plus important dans la mise en œuvre de ce projet.
             </div>
 
             <div class="text-section-title">BERT</div>
             <div class="text-section">
-                BERT or “Bidirectional Encoder Representations from Transformers” is an innovative natural language processing model that uses bidirectional text analysis to consider the context on both sides of a word. BERT is one of the most popular tools in the field of natural language processing (NLP) and has demonstrated high accuracy in text classification tasks.
+                BERT, ou « Bidirectional Encoder Representations from Transformers », est un modèle innovant de traitement du langage naturel qui utilise l'analyse bidirectionnelle du texte pour prendre en compte le contexte des deux côtés d'un mot. BERT est l'un des outils les plus populaires dans le domaine du traitement du langage naturel (NLP) et a démontré une grande précision dans les tâches de classification de texte.
             </div>
             <img src="/images/images-projects/khpi/author-class/BERT.svg" alt="bert-diagram" class="rm-project-image tech-content">
-            <div class="image-desctiption tech-content">High-level schematic diagram of BERT</div>
+            <div class="image-desctiption tech-content">Schéma de haut niveau du BERT</div>
 
             <div class="text-section-title">XLM-RoBERTa</div>
             <div class="text-section">
-                XLM-RoBERTa is a multilingual model that has been trained on 100 different languages, including Ukrainian. It uses the techniques of RoBERTa, but does not apply the goal of translational language modeling. Instead, it only applies the modeling masking task to sentences originating from a single language.
+                XLM-RoBERTa est un modèle multilingue qui a été entraîné sur 100 langues différentes, dont l'ukrainien. Il utilise les techniques de RoBERTa, mais n'applique pas l'objectif de modélisation linguistique translationnelle. Au lieu de cela, il applique uniquement la tâche de modélisation par masquage à des phrases provenant d'une seule langue.
             </div>
             <img src="/images/images-projects/khpi/author-class/roberta-ac.svg" alt="roberta-image" class="rm-project-image">
-            <div class="image-desctiption">BERT and RoBERTa work</div>
+            <div class="image-desctiption">BERT et RoBERTa fonctionnent</div>
 
             <div class="text-section">
-                The RoBERTa model itself (Robustly Optimized BERT Pre-training Approach) is based on the BERT and changes key hyperparameters, training with significantly larger mini-batch sizes and training speed. The model was trained on a dataset of 160 GB of text, which is approximately 10 times larger than the dataset used to train BERT.
+                Le modèle RoBERTa lui-même (Robustly Optimized BERT Pre-training Approach) est basé sur le modèle BERT et modifie les hyperparamètres clés, s'entraînant avec des mini-lots et une vitesse d'entraînement nettement plus importants. Le modèle a été entraîné sur un ensemble de données de 160 Go de texte, soit environ 10 fois plus que l'ensemble de données utilisé pour entraîner BERT.
             </div>
             <div class="text-section tech-content">
-                In this project, XLM-RoBERTa was the basis for classifying texts by author. The model was downloaded from the Hugging Face library and adapted for the project task. The main steps of using XLM-RoBERTa were text tokenization, taking into account the context of the provided texts, their classification - a fully connected layer was added to the output of XLM-RoBERTa, which predicts the probability of the text belonging to each class.
+                Dans ce projet, XLM-RoBERTa a servi de base pour classer les textes par auteur. Le modèle a été téléchargé depuis la bibliothèque Hugging Face et adapté à la tâche du projet. Les principales étapes de l'utilisation de XLM-RoBERTa ont été la tokenisation du texte, en tenant compte du contexte des textes fournis, leur classification - une couche entièrement connectée a été ajoutée à la sortie de XLM-RoBERTa, qui prédit la probabilité que le texte appartienne à chaque classe.
             </div>
             <div class="text-section tech-content">
-                Despite the fact that it doesn’t really need them, language labels were used in project, like small “hints” in the form of [ENG] and [UKR] to allow the model to better consider stylistic and grammatical differences. And also, to prevent the possibility that the model will incorrectly determine the language or confuse translations, while increasing stability when training on mixed data and overall control over the model.
+                Bien qu'elles ne soient pas vraiment nécessaires, des étiquettes linguistiques ont été utilisées dans le projet, sous forme de petites « indications » telles que [ENG] et [UKR], afin de permettre au modèle de mieux prendre en compte les différences stylistiques et grammaticales. Elles ont également permis d'éviter que le modèle ne détermine incorrectement la langue ou ne confonde les traductions, tout en augmentant la stabilité lors de l'entraînement sur des données mixtes et le contrôle global du modèle.
             </div>
 
 
             <div class="text-section-title">Tkinter</div>
             <div class="text-section">
-                Tkinter is a cross-platform graphical user interface library based on the Tk tools, widely used in the GNU/Linux world, also ported to and for Windows, distributed as open source. It is part of the Python standard library for creating GUIs.
+                Tkinter est une bibliothèque d'interface utilisateur graphique multiplateforme basée sur les outils Tk, largement utilisée dans le monde GNU/Linux, également portée vers et pour Windows, distribuée en open source. Elle fait partie de la bibliothèque standard Python pour la création d'interfaces graphiques.
             </div>
             <div class="text-section">
-                In this project, the library was used to create an interface for interacting with the author text classifier model. The interface allows the user to: enter text; select the language of the text from a list; and obtain the classification result — the name of the predicted author.
+                Dans le cadre de ce projet, la bibliothèque a été utilisée pour créer une interface permettant d'interagir avec le modèle de classification des auteurs de textes. L'interface permet à l'utilisateur : de saisir du texte ; de sélectionner la langue du texte dans une liste ; et d'obtenir le résultat de la classification, à savoir le nom de l'auteur prédit.
             </div>
 
 
-            <div class="text-section-title">Realization</div>
+            <div class="text-section-title">Réalisation</div>
             <div class="text-section">
-                Considering that project started with coursework, that was using only BERT, before deciding and confirming theme for qualification work, the whole project got divided into three stages.
+                Étant donné que le projet a débuté par des travaux pratiques utilisant uniquement BERT, avant de décider et de confirmer le thème du travail de qualification, l'ensemble du projet a été divisé en trois étapes.
             </div>
-            <div class="text-section">First one was creation of working prototype using BERT. It was done only with two authors: Shakespeare and Shevchenko. It was designed to test possibilities, to understand how BERT works and in what direction I should go.</div>
+            <div class="text-section">La première consistait à créer un prototype fonctionnel à l'aide de BERT. Elle a été réalisée par deux auteurs seulement : Shakespeare et Shevchenko. Elle avait pour but de tester les possibilités, de comprendre le fonctionnement de BERT et de déterminer la direction à suivre.</div>
             <div class="text-section tech-content">
-                This was it was determined that there was a possibility of the model's performance deteriorating due to the difference in the number of authors' texts in the training set, and optimization was also made for a faster model training process.
+                Il a été déterminé qu'il existait un risque de détérioration des performances du modèle en raison de la différence entre le nombre de textes des auteurs dans l'ensemble d'apprentissage, et une optimisation a également été effectuée afin d'accélérer le processus d'apprentissage du modèle.
             </div>
             <div class="text-section">
-                Second stage was final for coursework. Based on the experience of working on the prototype and the analysis of it, further development of the project was carried out with the addition of all other specified authors (except Lesya Ukrainka) and their English texts. The retraining threshold was determined, errors in text classification were found, and optimization was improved, since during operation the program stopped working with an error due to the large size of the training data.
+                La deuxième étape était la dernière pour les travaux pratiques. Sur la base de l'expérience acquise lors de la réalisation du prototype et de son analyse, le projet a été développé davantage avec l'ajout de tous les autres auteurs spécifiés (à l'exception de Lesya Ukrainka) et de leurs textes en anglais. Le seuil de recyclage a été déterminé, des erreurs dans la classification des textes ont été détectées et l'optimisation a été améliorée, car pendant son fonctionnement, le programme cessait de fonctionner en raison d'une erreur liée à la taille importante des données d'apprentissage.
             </div>
             <div class="text-section tech-content">
-                All class diagrams of this part are presented below:
+                Tous les diagrammes de classes de cette partie sont présentés ci-dessous :
             </div>
 
             <div class="carousel-wrapper tech-content" data-carousel="1">
@@ -165,16 +165,16 @@
                 </div>
                 <button class="carousel-btn next" onclick="moveSlide(1, this)">&#10095;</button>
             </div>
-            <div class="image-desctiption tech-content">Class diagrams of project using only BERT</div>
+            <div class="image-desctiption tech-content">Diagrammes de classes du projet utilisant uniquement BERT</div>
 
             <div class="text-section">
-                After confirming theme for qualification work, I expanded project with ability to train model that can work with texts in different languages, making Ukrainian as my goal.
+                Après avoir confirmé le thème du travail de qualification, j'ai élargi le projet en y ajoutant la possibilité de former un modèle capable de traiter des textes dans différentes langues, en me fixant comme objectif l'ukrainien.
             </div>
             <img src="/images/images-projects/khpi/author-class/franko-preparation.svg" alt="franko-texts" class="rm-project-image flowchart-img">
-            <div class="image-desctiption">Prepared Franco's works</div>
+            <div class="image-desctiption">Œuvres préparées par Franco</div>
 
             <div class="text-section">
-                With this, further development of the project was carried out: additional texts in two languages were added, language markers were added, and the model was changed to XLM-RoBERTa. Relevant code changes were made, errors in the training algorithm were fixed, and optimization and training data collection were improved, which helped during the development process. As well was expanded dataset for this stage.
+                Dans la foulée, le projet a été développé davantage : des textes supplémentaires en deux langues ont été ajoutés, des marqueurs linguistiques ont été ajoutés et le modèle a été remplacé par XLM-RoBERTa. Des modifications ont été apportées au code, des erreurs dans l'algorithme d'apprentissage ont été corrigées et l'optimisation et la collecte des données d'apprentissage ont été améliorées, ce qui a facilité le processus de développement. L'ensemble de données a également été élargi pour cette étape.
             </div>
 
             <div class="carousel-wrapper tech-content" data-carousel="2">
@@ -190,108 +190,108 @@
                 </div>
                 <button class="carousel-btn next" onclick="moveSlide(1, this)">&#10095;</button>
             </div>
-            <div class="image-desctiption tech-content">Final class diagrams of project</div>
+            <div class="image-desctiption tech-content">Diagrammes de classes finaux du projet</div>
 
-            <div class="text-section">Lest go deeper into details of this final stage.</div>
+            <div class="text-section">Approfondissons les détails de cette dernière étape.</div>
             
             <div class="text-section tech-content">
-                The <b>model</b> file. It has AuthorClassifier class that is a neural network class for classifying authored texts. It uses the transformer model XLM-RoBERTa. The model is loaded from pre-trained Hugging Face weights.
+                Le fichier <b>model</b>. Il dispose d'une classe AuthorClassifier qui est une classe de réseau neuronal permettant de classer les textes rédigés. Il utilise le modèle de transformateur XLM-RoBERTa. Le modèle est chargé à partir des poids pré-entraînés de Hugging Face.
             </div>
             <div class="text-section tech-content">
-                Next, it contains a Dropout regularization layer (with probability 0.3) that prevents overfitting. With a final linear layer that transforms the output hidden vectors of the transformer into logits. Logits can be considered values for each class (i.e. author). Returns the output layer with the number of classes. Due to its architecture, the class does not require manual feature extraction and can independently learn dependencies and patterns in the text.
+                Ensuite, il contient une couche de régularisation Dropout (avec une probabilité de 0,3) qui empêche le surajustement. Avec une couche linéaire finale qui transforme les vecteurs cachés de sortie du transformateur en logits. Les logits peuvent être considérés comme des valeurs pour chaque classe (c'est-à-dire l'auteur). Renvoie la couche de sortie avec le nombre de classes. En raison de son architecture, la classe ne nécessite pas d'extraction manuelle des caractéristiques et peut apprendre de manière indépendante les dépendances et les modèles dans le texte.
             </div>
             <div class="text-section tech-content">
-                The <b>dataset</b> file. The AuthorDataset class is needed for data preparation. It loads data from files in .csv format, where each line contains texts and author labels, and then uses AutoTokenizer to tokenize the texts. The class generates input_ids (token identifiers) and attention_mask (attention masks) to feed them to the model. Textual author labels are converted to numeric using label_map.
+                Le fichier <b>dataset</b>. La classe AuthorDataset est nécessaire pour la préparation des données. Elle charge les données à partir de fichiers au format .csv, où chaque ligne contient des textes et des étiquettes d'auteur, puis utilise AutoTokenizer pour tokeniser les textes. La classe génère des input_ids (identifiants de tokens) et des attention_mask (masques d'attention) pour les transmettre au modèle. Les étiquettes d'auteur textuelles sont converties en valeurs numériques à l'aide de label_map.
             </div>
             <div class="text-section tech-content">
-                After processing, the data is returned as PyTorch tensors, which contain attention masks, numeric author labels, tokenized and original texts. Original texts are useful here for error analysis during testing.
+                Après traitement, les données sont renvoyées sous forme de tenseurs PyTorch, qui contiennent des masques d'attention, des étiquettes numériques d'auteur, des textes tokenisés et des textes originaux. Les textes originaux sont utiles ici pour l'analyse des erreurs pendant les tests.
             </div>
 
             <div class="text-section">
-                The <b>train</b> file. This is where the full model training cycle is implemented. First, the basic parameters such as the number of training epochs, batch size, maximum text length, and learning rate are set, along with the paths to the test and training samples. For optimization, AdamW was used, which is a specially designed optimizer for transformer models, that has an additional scheduler.
+                Le fichier <b>train</b>. C'est ici que le cycle complet d'entraînement du modèle est mis en œuvre. Tout d'abord, les paramètres de base tels que le nombre d'époches d'entraînement, la taille des lots, la longueur maximale du texte et le taux d'apprentissage sont définis, ainsi que les chemins d'accès aux échantillons de test et d'entraînement. Pour l'optimisation, AdamW a été utilisé, un optimiseur spécialement conçu pour les modèles de transformateurs, qui dispose d'un planificateur supplémentaire.
             </div>
 
             <img src="/images/images-projects/khpi/author-class/train-flowchart.svg" alt="train-flowchart" class="rm-project-image tech-content flowchart-img">
-            <div class="image-desctiption tech-content">Flowchart of the model training algorithm</div>
+            <div class="image-desctiption tech-content">Organigramme de l'algorithme d'apprentissage du modèle</div>
 
-            <div class="text-section tech-content"> After the model is initialized, the following processes occur during each training epoch cycle: forward pass, loss calculation using CrossEntropyLoss, backward pass, and weight update.</div>
+            <div class="text-section tech-content"> Une fois le modèle initialisé, les processus suivants se déroulent à chaque cycle d'apprentissage : passage en avant, calcul de la perte à l'aide de CrossEntropyLoss, passage en arrière et mise à jour des poids.</div>
             <div class="text-section tech-content">
-                Forward pass is the process where data is fed to the model input (in this project, these are tokenized texts), after which the model passes them through layers, such as the Dropout layer mentioned above, and the logits are obtained as a result.
+                Le passage vers l'avant est le processus par lequel les données sont transmises à l'entrée du modèle (dans ce projet, il s'agit de textes tokenisés), après quoi le modèle les fait passer à travers des couches, telles que la couche Dropout mentionnée ci-dessus, et les logits sont obtenus comme résultat.
             </div>
             <div class="text-section">
-                Since we know the real author for each text, we can compare the model’s prediction, the resulting logits, with our correct labels. To do this, during training, the CrossEntropyLoss loss function is used, which indicates how well the model works. We want to see a smaller value.
+                Comme nous connaissons l'auteur réel de chaque texte, nous pouvons comparer la prédiction du modèle, les logits obtenus, avec nos étiquettes correctes. Pour ce faire, pendant l'entraînement, nous utilisons la fonction de perte CrossEntropyLoss, qui indique la qualité du fonctionnement du modèle. Nous voulons obtenir une valeur plus petite.
             </div>
 
             <img src="/images/images-projects/khpi/author-class/cross-entropy-ac.svg" alt="cross-entropy" class="rm-project-image">
-            <div class="image-desctiption">Cross Entropy Loss is a function used to measure the performance of a classification model</div>
-            <div class="image-desctiption">It measures the difference between the discovered probability distribution of a classification model and the predicted values</div>
+            <div class="image-desctiption">La Cross Entropy Loss est une fonction utilisée pour mesurer les performances d'un modèle de classification.</div>
+            <div class="image-desctiption">Il mesure la différence entre la distribution de probabilité découverte d'un modèle de classification et les valeurs prédites.</div>
 
             <div class="text-section tech-content">
-                The backtracking calculates the derivatives (gradients) for each model weight to understand how exactly the weights need to be adjusted to get a better prediction next time. When updating the weights, an optimizer is used, which changes the model weights after calculation. This is done at each step (batch) and is repeated throughout all epochs.
+                Le backtracking calcule les dérivées (gradients) pour chaque poids du modèle afin de comprendre comment exactement les poids doivent être ajustés pour obtenir une meilleure prédiction la prochaine fois. Lors de la mise à jour des poids, un optimiseur est utilisé, qui modifie les poids du modèle après le calcul. Cela se fait à chaque étape (lot) et est répété tout au long des époques.
             </div>
             <div class="text-section">
-                After each epoch, model.eval (model evaluation) occurs. The model is evaluated on the test sample, and misclassified texts are also analyzed. Throughout the entire process, metrics are stored, and after training is complete, they are converted into graphs and additionally stored in a file. This is necessary to facilitate and speed up model analysis. Graphs allowed to visually examine the learning process. At the end, the model is also saved in .pth format so that it can be used in the test interface.
+                Après chaque époque, model.eval (évaluation du modèle) a lieu. Le modèle est évalué sur l'échantillon de test, et les textes mal classés sont également analysés. Tout au long du processus, les métriques sont stockées, et une fois la formation terminée, elles sont converties en graphiques et stockées dans un fichier. Cela est nécessaire pour faciliter et accélérer l'analyse du modèle. Les graphiques permettent d'examiner visuellement le processus d'apprentissage. À la fin, le modèle est également enregistré au format .pth afin de pouvoir être utilisé dans l'interface de test.
             </div>
             <div class="text-section">
-                The part of the project responsible for testing the model after training received a simple interface instead of interacting with a text box in the code. A text box for entering text, a list allowing to select the language of the text, a place for displaying the result, and buttons for interaction were created. It was written in python using Tkinter library.
+                La partie du projet chargée de tester le modèle après la formation a reçu une interface simple au lieu d'interagir avec une zone de texte dans le code. Une zone de texte pour saisir du texte, une liste permettant de sélectionner la langue du texte, un emplacement pour afficher le résultat et des boutons pour interagir ont été créés. Elle a été écrite en python à l'aide de la bibliothèque Tkinter.
             </div>
 
             <img src="/images/images-projects/khpi/author-class/test-flowchart.svg" alt="test-flowchart" class="rm-project-image tech-content flowchart-img">
-            <div class="image-desctiption tech-content">Flowchart of the model testing algorithm</div>
+            <div class="image-desctiption tech-content">Organigramme de l'algorithme de test du modèle</div>
 
             <div class="text-section tech-content">
-                Basically, test_model file loads the model that was saved after training. The predict_author function performs author prediction for new input text provided in the code that needs to be classified by author. It tokenizes the text, passes it to the trained model and AuthorClassifier, and then returns the prediction — the author's name based on the predicted class index.
+                En gros, le fichier test_model charge le modèle qui a été enregistré après l'entraînement. La fonction predict_author effectue la prédiction de l'auteur pour le nouveau texte saisi dans le code qui doit être classé par auteur. Elle tokenise le texte, le transmet au modèle entraîné et à AuthorClassifier, puis renvoie la prédiction, c'est-à-dire le nom de l'auteur basé sur l'index de classe prédit.
             </div>
 
             <img src="/images/images-projects/khpi/author-class/program-example-ac.svg" alt="program-example-ac" class="rm-project-image">
-            <div class="image-desctiption">Input text (author: Shakespeare) – Model prediction (Result: Shakespeare)</div>
+            <div class="image-desctiption">Texte saisi (auteur : Shakespeare) – Prédiction du modèle (résultat : Shakespeare)</div>
 
             <img src="/images/images-projects/khpi/author-class/example_program.gif" alt="gif-animation-program" class="rm-project-image">
-            <div class="image-desctiption">Animation of the program working</div>
-            <div class="text-section">Texts used in the animation are "Titus Andronicus" by Shakespeare and "To My Piano" by Lesya Ukrainka.</div>
+            <div class="image-desctiption">Animation du fonctionnement du programme</div>
+            <div class="text-section">Les textes utilisés dans l'animation sont « Titus Andronicus » de Shakespeare et « À mon piano » de Lesya Ukrainka.</div>
 
-            <div class="text-section-title">Results</div>
+            <div class="text-section-title">Résultats</div>
             <div class="text-section">
-                Prototype was trained around 20 minutes. First version based on BERT was trained around 1 hour. The final version of model was trained during 6 hours 20 minutes, during 5 epochs.
+                Le prototype a été entraîné pendant environ 20 minutes. La première version basée sur BERT a été entraînée pendant environ 1 heure. La version finale du modèle a été entraînée pendant 6 heures et 20 minutes, au cours de 5 époques.
             </div>
             <div class="text-section tech-content">
-                However, as can be viewed at the graph below, after 2-3 epochs, an early training stop could be used, which would reduce training time without losing its quality.
+                Cependant, comme le montre le graphique ci-dessous, après 2 ou 3 époques, un arrêt précoce de l'entraînement pourrait être utilisé, ce qui réduirait le temps d'entraînement sans en compromettre la qualité.
             </div>
 
             <img src="/images/images-projects/khpi/author-class/train-graph.svg" alt="training-time-graph" class="rm-project-image">
-            <div class="image-desctiption">Training time graph in seconds per epoch</div>
+            <div class="image-desctiption">Graphique du temps d'entraînement en secondes par époque</div>
 
             <div class="text-section tech-content">
-                As can be seen, during training, the train accuracy increases steadily over five epochs, while the test accuracy increases until the fourth epoch, then decreases slightly in the fifth. This suggests that the model generalizes well and does not show signs of overfitting. However, with more training epochs, we would likely see a degradation in quality on the test data.
+                Comme on peut le constater, pendant l'entraînement, la précision du train augmente régulièrement au cours des cinq époques, tandis que la précision du test augmente jusqu'à la quatrième époque, puis diminue légèrement au cours de la cinquième. Cela suggère que le modèle généralise bien et ne montre aucun signe de surajustement. Cependant, avec davantage d'époques d'entraînement, nous assisterions probablement à une dégradation de la qualité des données de test.
             </div>
 
             <img src="/images/images-projects/khpi/author-class/accuracy-graph-ac.svg" alt="accuracy-graph" class="rm-project-image tech-content">
-            <div class="image-desctiption tech-content">Training and test set accuracy graph</div>
+            <div class="image-desctiption tech-content">Graphique représentant la précision de l'ensemble d'entraînement et de test</div>
 
             <div class="text-section tech-content">
-                On next one, we can see that the train loss drops rapidly, which is a sign of effective training. The testing loss also drops, but starts to increase slightly in the last epoch. This usually indicates the beginning of overtraining, which could have happened if training had been going on for more than 5 epochs.
+                Sur le graphique suivant, on constate que la perte d'entraînement diminue rapidement, ce qui est le signe d'un entraînement efficace. La perte de test diminue également, mais commence à augmenter légèrement au cours de la dernière époque. Cela indique généralement le début d'un surapprentissage, qui aurait pu se produire si l'entraînement avait duré plus de 5 époques.
             </div>
 
             <img src="/images/images-projects/khpi/author-class/loss-graph-ac.svg" alt="loss-graph" class="rm-project-image tech-content">
-            <div class="image-desctiption tech-content">Loss graph for training and test sets</div>
+            <div class="image-desctiption tech-content">Graphique des pertes pour les ensembles d'entraînement et de test</div>
 
             <div class="text-section">
-                After analysis of the obtained values, it was concluded that the works of Shakespeare, Dickens and Orwell are ideally classified, since their f1-score reaches 0.99. For Franko and Shevchenko, it is slightly lower, about 0.97, which is a sign of high classification quality.
+                Après analyse des valeurs obtenues, il a été conclu que les œuvres de Shakespeare, Dickens et Orwell sont classées de manière idéale, puisque leur score f1 atteint 0,99. Pour Franko et Shevchenko, il est légèrement inférieur, environ 0,97, ce qui est un signe de haute qualité de classification.
             </div>
             <div class="text-section">
-                The lowest value belongs to the texts of Lesya Ukrainka, due to the smaller number of texts provided in the training dataset. This means that the set of Ukrainian texts must be expanded to improve their balance.
+                La valeur la plus faible concerne les textes de Lesya Ukrainka, en raison du nombre réduit de textes fournis dans l'ensemble de données d'apprentissage. Cela signifie que l'ensemble de textes ukrainiens doit être élargi afin d'améliorer leur équilibre.
             </div>
             <div class="text-section">
-                Thus, the obtained results demonstrated the high efficiency of the developed model for the task of classifying authorial texts. Even on a limited amount of data, the model is capable of generalization, providing high accuracy.
+                Ainsi, les résultats obtenus ont démontré la grande efficacité du modèle développé pour la tâche de classification des textes d'auteur. Même avec une quantité limitée de données, le modèle est capable de généralisation, offrant une grande précision.
             </div>
             <div class="text-section">
-                A basic interface for interacting with the model was created, and tt serves its purpose well, while also having potential for improvement, both in functionality and design.
+                Une interface de base permettant d'interagir avec le modèle a été créée. Elle remplit bien sa fonction, mais pourrait être améliorée, tant au niveau de ses fonctionnalités que de sa conception.
             </div>
             <div class="text-section">
-                In theory, the project results have practical value in the areas of text analysis automation, especially for tasks related to copyright and plagiarism.
+                En théorie, les résultats du projet ont une valeur pratique dans les domaines de l'automatisation de l'analyse de texte, en particulier pour les tâches liées au droit d'auteur et au plagiat.
             </div>
 
-            <div class="text-section"><h5><i>If you are interested in reading more detailed technical information about the project, please click on 'Tech Details' button on the top</i></h5></div>
+            <div class="text-section"><h5><i>Si vous souhaitez obtenir des informations techniques plus détaillées sur le projet, veuillez cliquer sur le bouton « Détails techniques » en haut de la page.</i></h5></div>
 
             <!--Modal-->
             <div id="lightbox-modal">
@@ -303,8 +303,8 @@
         </div>
 
         <div class="go-back-wrapper bottom">
-            <a href="../../../../projects.html" class="go-back-btn">← Go Back</a>
-            <button class="go-back-btn tech-btn">Tech Details</button>
+            <a href="../../../../projects.html" class="go-back-btn">← Retour</a>
+            <button class="go-back-btn tech-btn">Détails techniques</button>
         </div>
         
         
