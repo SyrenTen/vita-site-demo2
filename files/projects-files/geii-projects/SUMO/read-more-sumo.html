@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Mini-Sumo</title>
+    <link rel="stylesheet" href="../../rm-project.css">
+    <link rel="stylesheet" href="../../../../inventory.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
+</head>
+<body> 
+
+    <section class="read-more-article" id="readmore">
+        <div class="rm-in-info">
+            
+            <div class="go-back-wrapper top">
+                <a href="../../../../projects.html" class="go-back-btn">← Retour</a>
+                <button class="go-back-btn tech-btn">Tech Details</button>
+            </div>
+            
+            <div class="rm-project-title">Robot Mini-Sumo</div>            
+            <div class="used-tech-section"><i>Technologie utilisée: KiCad, ISIS, Arduino, C, connaissances acquises au cours de la 1ère et 2eme année en GEII</i></div>
+            <div class="text-section tech-content"><h5><i>Plus de détails techniques ont été ajoutés, lisez-les si cela vous intéresse ! Sinon, vous pouvez revenir à la « Version Simplifiée » à tout moment !</i></h5></div>
+
+            <img src="../../../../images/images-projects/geii/SUMO/robot-sumo.png" alt="tdb-KAH-image" class="rm-project-image">
+
+            <div class="text-section-title">Introduction</div>
+
+            <!-- Simplified version -->
+            <div class="text-section">
+                Au cours de nos études de 3eme semestre, dans le cadre du cours SAE (Situation d'Apprentissage et d'Évaluation), on a travaillé sur un Robot Mini-Sumo, un robot qui est commande par la carte Arduino et qui va participer en combat avec autre robot mini-Sumo sur Dohyo.
+            </div>
+            <div class="text-section">
+                Notre tâche était de créer un shield, qui va être connecter à un Arduno. Sur cette shield on devrait place les senseurs pour trouver robot adversaire ou la ligne du Dohyo, et le composant pour assurer le contrôle de la roue du robot. Dans l'équipe de 5, nous devions également créer un algorithme de combat pour notre robot qui nous garantirait la victoire.
+            </div>
+
+            <div class="text-section">
+                Pour mener à bien cette tâche, nous avons dû analyser les fiches techniques des composants, concevoir le schéma électronique, faire le grafcet de l’algorithme, produire un prototype et le vérifier en effectuant plusieurs tests. Pour cela, nous disposions de 84 heures et d'un budget total inférieur à 120 euros.
+            </div>
+
+
+            <div class="text-section-title">Répartition du travail</div>
+            <div class="text-section">
+                Nous avions 4 modules principales à développer : énergie, acquisition d'informations, traitement d'informations et actions. Nous nous sommes répartis en binômes pour travailler sur chacune d’elles, mais comme notre équipe comptait 5 personnes, il a été décidé que je vais travailler seule sur module d’action.
+            </div>
+            <div class="text-section">
+                J’étais donc responsable de la conception électronique et de la programmation du cette partie, ainsi que de ses tests et de sa validation sur le prototype.
+            </div>
+
+
+            <div class="text-section-title">Description du projet</div>
+            <div class="text-section">
+                Pour crée un shield pour robot, nous avions les exigences suivantes :
+                <ul>
+                    <li>● Fixer la carte Arduino UNO sur le châssis, port USB à l'arrière</li>
+                    <li>● L'énergie du robot permet un combat de 15 minutes minimum</li>
+                    <li>● Le circuit surveille la tension et peut couper l'alimentation</li>
+                    <li>● Le robot détecte un adversaire à 40 cm minimum</li>
+                    <li>● Le robot reste immobile jusqu'à ce que le juge appuie sur la télécommande IRC01</li>
+                    <li>● Le robot peut avancer, tourner à gauche ou à droite</li>
+                    <li>● Le robot change de direction de manière autonome avec les capteurs et actionneurs</li>
+                </ul>
+            </div>
+
+
+
+            <div class="text-section tech-content">
+                Pour plus de détails, voici l'ensemble des exigences relatives à robot :
+                <ul>
+                    <li>● Dimensions : largeur et longueur sont Moins de 100 mm, sans contrainte a hauteur, et sans modifications sur les plaques en bois ou plastique.</li>
+                    <li>● Masse : moins de 500 grammes, tout compris (mécanique, électronique, batterie).</li>
+                    <li>● Mécanique : base mécanique sans de modifications des pièces déjà fabriquées, la moteur GM3 et roues GMPW imposés.</li>
+                    <li>● Fixation : La carte Arduino UNO doit se fixer sur le châssis via les trous prévus, avec le port USB à l’arrière du robot.</li>
+                    <li>● Temps de développement total : 84 heures (conception, fabrication, vérification, rédaction, présentation).</li>
+                    <li>● Coût total des composants : Moins de 120 € HT pour un prototype.</li>
+                </ul>
+            </div>
+
+            <div class="text-section-title tech-content">Module d'énergie</div>
+            <div class="text-section tech-content">
+                <ul>
+                    <li>● Autonomie : Doit pouvoir combattre 15 minutes, ou se déplacer sans obstacle pendant 65 minutes.</li>
+                    <li>● Batterie : Priorité aux batteries LiPo2S (dimensions : 57x31x17 mm).</li>
+                    <li>● Surveillance de la tension : Arrêt des moteurs si la tension de la batterie descend sous 6,7V.</li>
+                </ul>
+            </div>
+
+
+            <div class="text-section-title tech-content">Module d'acquisition d'informations</div>
+            <div class="text-section tech-content">
+                <ul>
+                    <li>● Détection de l’adversaire : Le robot doit savoir si l'adversaire est à 40 cm minimum.</li>
+                    <li>● Luminosité : Doit être fonctionnel en forte lumière (éclairage continu et flashs).</li>
+                    <li>● Immobilité au départ : Le robot reste immobile jusqu'à ce que le juge appuie sur la télécommande infrarouge.</li>
+                </ul>
+            </div>
+
+            
+
+            <div class="text-section-title tech-content">Module de traitement d'informations</div>
+            <div class="text-section tech-content">
+                Le robot change de direction en fonction des données des capteurs et contrôle ses moteurs en conséquence.
+            </div>
+
+
+            <div class="text-section-title tech-content">Module d'action</div>
+            <div class="text-section tech-content">
+                Le robot peut avancer, tourner à gauche ou à droite sans problèmes.
+            </div>
+
+
+            <div class="text-section-title tech-content">Module fabrication</div>
+            <div class="text-section tech-content">
+                Composée de composants électroniques sur PCB FR4. Un shield doit être fabriqué pour se brancher à la carte Arduino.
+            </div>
+            <div class="text-section tech-content">
+                Composants imposés :
+            </div>
+            <div class="text-section tech-content">
+                <ul>
+                    <li>● 2 moteurs GM3</li>
+                    <li>● 2 roues GMPW</li>
+                    <li>● 1 interrupteur</li>
+                </ul>
+            </div>
+
+            <div class="text-section tech-content">
+                Composants à choisir :
+            </div>
+            <div class="text-section tech-content">
+                <ul>
+                    <li>● Capteurs d'adversaire</li>
+                    <li>● Batterie LiPo2S</li>
+                    <li>● Pont en H</li>
+                    <li>● Régulateur de tension</li>
+                </ul>
+            </div>
+
+
+
+            <div class="text-section-title"><b>Réalisation</b></div>
+            <img src="../../../../images/images-projects/geii/SUMO/architecute-sumo.png" alt="kah-t-architecute" class="rm-project-image">
+            <div class="image-desctiption">Architecture électronique du robot sumo</div>
+
+            <div class="text-section">
+                La première étape consiste à choisir les composants pour le projet. Pour partie action on a déjà impose deux motoréducteurs (moteurs) et roues noires, donc je devrais trouver comment on peut les commander. 
+            </div>
+            <div class="text-section">
+                Apres lecture des fiches techniques des composants proposés, j’ai décidé que on besoin une interface de puissance, nomme pont en H.
+            </div>
+
+
+            <img src="../../../../images/images-projects/geii/SUMO/moteur-principe.png" alt="potar-schema-kah" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">Modes de fonctionnement d’un moteur à courant continu</div>
+
+            <div class="text-section tech-content">
+                On peut contrôler les moteurs de façon comme indiqué sur l'image avec pont en H.
+            </div>
+            <div class="text-section tech-content">
+                On a comparé les composants propose : les deux Pololu. On savait que sur l'entrée logique, donc du côté du microcontrôleur Arduino, nous aurons une tension de 5 V, et sur côte de batterie nous aurons la tension de 7,4 V. Selon les datasheets, on est sûr qu’ils supportent une tension de 3 à 5 V sur entrée logique et ils conviennent à tension d'alimentation du moteur de notre projet.
+            </div>
+            <div class="text-section tech-content">
+                Selon la documentation de GM3, courant de décrochage du moteur est 400mA et courant à vide est quelque part entre 50 et 60mA. Nous avons conclu que, car nous avons 2 roues, on a besoin d'un courant de 800mA. Les Pololu ont un courant maximum de sortie suffisant, avec 1,2A par moteur au minimum.
+            </div>
+            <div class="text-section">
+                J’ai décidé de prendre Pololu Commande de 2 moteurs CC DRV8835, car il a répondu aux spécifications de base demandé, et il est plus petite taille avec moins de broches.
+            </div>
+            <div class="text-section tech-content">
+                De plus, il dispose de plus d'options de contrôle car il a deux modes de contrôle, PHASE/ENABL et IN/IN.
+            </div>
+
+            <img src="../../../../images/images-projects/geii/SUMO/kicad-robot.png" alt="horn-kah" class="rm-project-image tech-content resize">
+            <div class="image-desctiption tech-content">Schéma détaillé de la partie d’action</div>
+
+            <div class="text-section tech-content">
+                Comme Polulu est un petit circuit imprimé, on a besoin de connecteurs pour le connecter au shield. Nous avons utilisé deux connecteurs à 7 broches qui seront reliées à des broches du microcontrôleur du Arduin, ainsi qu’à une batterie, puis il nous faut 2 connecteurs pour les moteurs.
+            </div>
+            <div class="text-section tech-content">
+                J’ai consulté la documentation du Polulu pour faire un bon routage du schéma. Le mode « PHASE/ENABLE » nécessite une connexion supplémentaire, donc on a décidé de travailler en mode IN/IN, qui aussi offre un meilleur contrôle des moteurs.
+            </div>
+
+
+            <div class="text-section-title">Programmation</div>
+            <div class="text-section">
+                Tout d'abord, nous avons réalisé un grafcet illustrant le fonctionnement du robot :
+            </div>
+            <img src="../../../../images/images-projects/geii/SUMO/grafcet-sumo.png" alt="receiver-informatics-flowchart" class="rm-project-image">
+            <div class="image-desctiption">Grafcet de l’algorithme du robot mini-sumo</div>
+
+            <div class="text-section">
+                Toute la programmation a été réalisée dans Arduino.io à l'aide du langage C (Arduino). Pour ma partie, j’ai créé les fonctions qui permette a robot du avancer, tourner à gauche et à droite, puis stopper si on besoin.
+            </div>
+
+            <div class="text-section tech-content">
+                Pour faire ça, j’ai consulté une documentation en regardant le tableau :
+            </div>
+            <img src="../../../../images/images-projects/geii/SUMO/programmation-robot.png" alt="initiation-info-receiver" class="rm-project-image tech-content resize">
+            <div class="image-desctiption tech-content">Fonctionnement en marche avant/arrière ou en marche avant/freinage avec MODE=0 (IN/IN)</div>
+
+            <div class="text-section tech-content">
+                Sure les fonctions on utilise définit valeurs des vitesses, avec les valeurs du 0 à 255 (vitesse maximale).
+            </div>
+
+            <img src="../../../../images/images-projects/geii/SUMO/fonc-attack.png" alt="main-loop-receiver-kah" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">Fonction d’attaque</div>
+
+            <div class="text-section tech-content">
+                La fonction d’attaque attaquer(int attack_speed) prend comme entrée un valeur du vitesse d’attaque, et l'écrit pour les broches PWM définit avant. Les broches du direction (DIR) sont écrites avec etat LOW, donc 0, comme indiqué sur la documentation.
+            </div>
+
+            <img src="../../../../images/images-projects/geii/SUMO/tourner-robot.png" alt="piloterservomoteur-function" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">Fonction du tourner à gauche</div>
+
+            <div class="text-section tech-content">
+                La fonction avec laquelle on va tourner à gauche, et le même principe est présent sur fonction pour tourner à droite. Elle prend la valeur de la vitesse comme entrée, et l'utilise en broche PWM du moteur droit (PIN_B_PWM). On écrit la 0 sur la broche PWM du moteur gauche, donc il ne tourne pas. Avec ça, le robot va tourner à gauche. Les digital pins sont écrits sur LOW et LOW respectivement.
+            </div>
+
+
+            <div class="text-section-title">Dérisquage</div>
+            <div class="text-section">
+                Avant la production on devrait vérifier que les composants marchent. Donc j’ai réalisé les essais pour compléter cette partie.
+            </div>
+
+            <img src="../../../../images/images-projects/geii/SUMO/test-robot.png" alt="top-typon" class="rm-project-image">
+            <div class="image-desctiption">Schéma du dérisquage d’action</div>
+
+            <div class="text-section">
+                En utilisant le schéma du dérisquage et procédure d’essai, j’ai connecté pont en H a Arduino et robot, que permettre de vérifier travail du code et du robot lui-même.
+            </div>
+
+            <div class="text-section tech-content">
+                Procédure était suivante :
+            </div>
+            <div class="text-section tech-content">
+                Le montage commence par placer le Pololu DRV8835 au centre du breadboard, en alignant chaque pin sur la ligne unique, avec les deux carrés en haut de la carte. Les fils sont ensuite connectés à chaque pin, à l'exception des broches Mode et VMM. Sur le côté gauche, toutes les broches doivent être reliées à un Arduino. Ensuite, des sondes sont connectées aux canaux CH1 ou CH2 du générateur, en ajustant la tension à 5V, et les sondes sont branchées aux fils GND et VCC du côté moteur. Les connecteurs du moteur sont reliés aux broches BOUT1 et BOUT2 pour le moteur droit, et AOUT1 et AOUT2 pour le moteur gauche, en veillant à orienter les lignes des connecteurs vers le haut. Enfin, l'Arduino est connecté au PC pour télécharger le code, et après alimentation du générateur, le robot doit se mettre à avancer tout droit si le code est correctement chargé.
+            </div>
+
+            <div class="text-section">Les essais permettre d’avoir les signaux d’un Arduino et les signaux sur les moteurs :</div>
+
+            <img src="../../../../images/images-projects/geii/SUMO/arduino-signal.png" alt="layout-transmitter" class="rm-project-image">
+            <div class="image-desctiption">Tension sur la pin Arduino</div>
+
+            <div class="text-section">Par exemple, ici on peut avoir un signal envoyé par Arduino, son tension et fréquence.</div>
+            <div class="text-section tech-content">
+                On a fait les calculassions de l’erreur de tension, et du rapport cyclique du signal, qui était sur la plage de tolérance définit par moi-même.
+            </div>
+
+            <img src="../../../../images/images-projects/geii/SUMO/motor-signal.png" alt="layout-transmitter" class="rm-project-image">
+            <div class="image-desctiption">Tension sur la pin moteur</div>
+            <div class="text-section">C’est la tension sur un de moteurs, avec un bruit normal dû à la commutation du moteur. </div><div class="text-section tech-content">Il n’y a pas d’overshoot excessif observé.</div>
+
+            <div class="text-section">Étant donné que nous continuons actuellement à travailler sur le projet, une partie de la fabrication du prototype et de sa vérification, ainsi que la conclusion, seront ajoutées ultérieurement, avec les documents du projet.</div>
+
+
+            <div class="text-section"><h5><i>Si vous souhaitez obtenir des informations techniques plus détaillées sur le projet, veuillez cliquer sur le bouton « Détails techniques »</i></h5></div>
+
+            <!--Modal-->
+            <div id="lightbox-modal">
+                <button id="lightbox-prev" class="lightbox-nav-btn">&#10094;</button>
+                <img id="lightbox-img" src="" alt="Expanded image" />
+                <button id="lightbox-next" class="lightbox-nav-btn">&#10095;</button>
+                <span class="lightbox-close">&times;</span>
+            </div>
+        </div>
+
+
+        <div class="go-back-wrapper bottom">
+            <a href="../../../../projects.html" class="go-back-btn">← Retour</a>
+            <button class="go-back-btn tech-btn">Tech Details</button>
+        </div>
+        
+        
+    </section>
+
+    <button id="scrollTopBtn" title="Go to top">↑</button>
+
+    <footer class="footer">
+            <p class="copyright">© Vitaliia Maslova | All rights reserved</p>
+    </footer>
+    
+    <script src="../../../../script.js"></script>
+    <script>
+        (function notifyParentOfPage() {
+        try {
+            // full relative path (keeps folders, avoids D:\ absolute paths)
+            const url = window.location.pathname
+            .replace(window.location.origin + '/', '') // strip domain
+            .replace(/^\//, ''); // remove leading slash
+
+            window.parent.postMessage({ type: "IFRAME_NAV", page: url }, "*");
+        } catch(e) {}
+        })();
+    </script>
+</body>
+</html>
