@@ -85,7 +85,7 @@ body{
     color: var(--main-color);
     border: none;
     cursor: pointer;
-    font-size: 32px;
+    font-size: 30px;
     transition: 0.3s ease-in-out;
 }
 

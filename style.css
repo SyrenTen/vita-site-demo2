@@ -31,8 +31,9 @@ body{
     padding: 17px 15%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
     z-index: 1000;
+    text-decoration: none;
 }
 .navbar a{
     font-size: 16px;
@@ -55,27 +56,31 @@ body{
     transition: 0.3s ease-in-out;
     border: none;
     text-wrap: nowrap;
+    text-decoration: none;
 }
 .head-button:hover{
     transform: scale(1.03);
+    text-decoration: none;
 }
 .home{
-    padding: 55px 10%;
+    padding: 90px 9%;
     /* min-height: 100vh;*/
     background-color: var(--bg-color);
-    display: flex;
+    display: block;
     padding-bottom: 15px;
     /* align-items: flex-start;
     justify-content: center;*/
 }
-.home-layout {                  /* CHECK AFTER */
+.home-layout {
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 20px;
+    grid-template-columns: 950px minmax(0, 1fr);
+    gap: 40px;
+    align-items: start;
 }
 .main-card-area {                  /* CHECK AFTER */
     flex: 1;
     min-width: 0;
+    overflow: visible;
 }
 .tabs {
     display: flex;
@@ -83,6 +88,7 @@ body{
     margin-left: 38px;
 
 }
+
 .tab-button {
     background: 0;
     color: var(--text-color);
@@ -120,19 +126,19 @@ body{
     display: block;
 }
 .character-card {
-    padding: 46px;
-    width: 100%;
-    width: 950px;
-    height: 710px;
-    color: var(--text-color);
+    padding: 40px;
+    box-sizing: border-box;
 }
 .character-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-bottom: 25px;
-    gap: 15px;
+    gap: 10px;
+}
+.char-info {
+    max-width: 600px;
 }
 .age-box {
     display: grid;
@@ -194,11 +200,11 @@ body{
 }
 
 .main-info {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
+    display: grid;
+    min-height: 420px;
+    grid-template-columns: 260px 1fr 270px;
+    gap: 24px;
+    align-items: stretch;
 }
 .equipment {
     border: 1px solid var(--main-color);
@@ -253,7 +259,7 @@ body{
     margin-top: 7px;
     list-style: none;
     padding-left: 0;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.6em;
     white-space: nowrap;
 }
@@ -275,7 +281,7 @@ body{
 
 .factions p {
     margin-bottom: 7px;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.6em;
 }
 
@@ -283,6 +289,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    max-width: 100%;
 }
 
 .character-column {
@@ -290,16 +297,21 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 16px;
-  margin-top: -50px;
+  gap: 15px;
   align-self: center;
   flex: 1;
+}
+
+
+.quest-log ul {
+    white-space: normal;
 }
 
 .character-img img {
     align-self: start;
     width: 100%;
-    max-width: 270px;
+    max-width: 210px;
+    height: auto;
     filter: brightness(0.8);
     display: flex;
     justify-content: center;
@@ -308,7 +320,8 @@ body{
 }
 
 .stats-img img {
-    width: 260px;
+    max-width: 260px;
+    width: 100%;
     height: auto;
 }
 .download-btn {
@@ -331,10 +344,12 @@ body{
 }
 
 .book-shelf{
+    grid-column: 2;
     display: flex;
     flex-direction: row;
     gap: 15px;
     align-items: flex-end;
+    align-self: stretch;
 }
 
 .book-projects img{
@@ -806,9 +821,13 @@ body{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
     gap: 60px;
+    align-items: stretch;
 }
 
 .job-company-description{
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
     padding: 6px 13px;
     display: flex;
     flex-direction: column;
@@ -826,6 +845,10 @@ body{
     display: flex;
     flex-direction: row;
     gap: 13px;
+}
+
+.date-inline {
+    white-space: nowrap;
 }
 
 .job-company-logo img{
@@ -866,7 +889,8 @@ body{
     grid-template-columns: repeat(3, 1fr);
     list-style: none;
     font-size: 15px;
-    white-space: nowrap;
+    white-space: normal;
+    word-wrap: break-word;
 }
 
 .duties-desctiption{
@@ -885,5 +909,7 @@ body{
 .duties-list ul {
     list-style: none;
     font-size: 16px;
-    white-space: nowrap;
+    white-space: normal;
+    word-wrap: break-word;
+
 }
