@@ -266,7 +266,7 @@ document.querySelectorAll('.article-card').forEach(card => {
             document.body.classList.add('tech-mode');
           });
         });
-        techBtns.forEach(b => b.textContent = 'Simple Version');
+        techBtns.forEach(b => b.textContent = 'Version Simplifiée');
       } else {
         // smooth collapse, then fully hide with display:none
         techSections.forEach(el => {
@@ -277,7 +277,7 @@ document.querySelectorAll('.article-card').forEach(card => {
             document.body.classList.remove('tech-mode');
           }, 350); // match CSS transition time
         });
-        techBtns.forEach(b => b.textContent = 'Tech Details');
+        techBtns.forEach(b => b.textContent = 'Détails techniques');
       }
     }
 
