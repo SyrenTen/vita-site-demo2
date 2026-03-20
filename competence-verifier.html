@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compétence GEII - Vérifier</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="head-button">Vitaliia Maslova</div>
+
+    <nav class="navbar">
+        <div class="nav-dropdown">
+            <a href="index2.html#hero">Accueil ▾</a>
+            <div class="dropdown-menu">
+                <a href="index2.html#personnage">Personnage</a>
+                <a href="index2.html#competences-geii">Compétences GEII</a>
+                <a href="index2.html#competences">Compétences</a>
+                <a href="index2.html#liens">Liens</a>
+                <a href="index2.html#projects_presentation">Projets</a>
+                <a href="index2.html#contact">Contact</a>
+            </div>
+        </div>
+
+        <a href="research.html">Recherche</a>
+        <a href="projects.html">Projets</a>
+        <a href="about-me.html">About-me</a>
+        <a href="competences-geii.html">Competences GEII</a>
+    </nav>
+</header>
+
+
+<!-- HERO -->
+<section class="competence-hero">
+    <div class="competence-hero-overlay">
+        <h1>COMPÉTENCE : VÉRIFIER</h1>
+        <p>Vérifier la conformité d’un système technique.</p>
+    </div>
+</section>
+
+
+<!-- INTRO -->
+<section class="competence-intro">
+    <p>
+        Ici sont présentées les compétences V1 et V2 avec les preuves issues de mes projets académiques.
+        Chaque section contient les projets réalisés et les éléments démontrant l’acquisition de la compétence.
+    </p>
+</section>
+
+
+<section class="competence-list">
+
+<!-- ================= V1 ================= -->
+<details class="competence-block">
+<summary>V1 — Appliquer une procédure d’essais</summary>
+
+<div class="competence-content project-grid">
+
+<!-- RAFALE -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/projects/rafale-logo.png" class="project-logo">
+        <h3>RAFALE</h3>
+    </div>
+
+    <h4>SAE Système Sonore et Lumineux pour Rafale miniature</h4>
+
+    <p class="project-text">
+        Dans ce projet, j'ai dû vérifier que la période de clignotement de la LED était celle du cahier des charges.
+    </p>
+
+    <p class="project-text">
+        Pour ce test, j'ai utilisé un multimètre et oscilloscope en utilisation son outil interne de mesure de période.
+    </p>
+</div>
+
+
+<!-- TDB -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/projects/tdb-logo.png" class="project-logo">
+        <h3>TDB</h3>
+    </div>
+
+    <h4>SAE Thermomètre De Bain</h4>
+
+    <p class="project-text">
+        Dans ce projet, il fait que je vérifie :
+    </p>
+
+    <ul>
+        <li>L’autonomie de l’accumulateur</li>
+        <li>Les seuils de température</li>
+        <li>Le travail de l’interrupteur</li>
+    </ul>
+
+    <p class="project-text">
+        J’ai obtenu la valeur de 64 heures qu’est plus de 24 heures demande.
+    </p>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images/projects/tdb-verif.png">
+            <figcaption>Produit developpé</figcaption>
+        </figure>
+    </div>
+</div>
+
+
+<!-- KAH -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/projects/kah-logo.png" class="project-logo">
+        <h3>KAH</h3>
+    </div>
+
+    <h4>SAE Kart à Hélice</h4>
+
+    <p class="project-text">
+        Dans ce projet, j'ai dû vérifier la carte de récepteur, développée par l’autre partie de notre équipe.
+    </p>
+
+    <p class="project-text">
+        La procédure d’essais est le même :
+    </p>
+
+    <ul>
+        <li>Alimenter la carte</li>
+        <li>Connecter les pinces à oscilloscope</li>
+        <li>Envoyer le signal</li>
+        <li>Mesurer avec oscilloscope</li>
+        <li>Effectuer les calculs nécessaires</li>
+    </ul>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images/projects/kah-verif1.png">
+            <figcaption>Figure 1 : connexion des cartes</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/projects/kah-verif2.png">
+            <figcaption>Figure 2 : connexion de pince</figcaption>
+        </figure>
+    </div>
+</div>
+
+</div>
+</details>
+
+
+
+<!-- ================= V2 ================= -->
+<details class="competence-block">
+<summary>V2 — Identifier et corriger les non-conformités</summary>
+
+<div class="competence-content project-grid">
+
+<!-- RAFALE -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/projects/rafale-logo.png" class="project-logo">
+        <h3>RAFALE</h3>
+    </div>
+
+    <p class="project-text">
+        J'ai obtenu une valeur de période de 192 ms.
+    </p>
+
+    <p class="project-text">
+        La solution technique retenue à base de NE555 est donc en conformité.
+    </p>
+</div>
+
+
+<!-- TDB -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/projects/tdb-logo.png" class="project-logo">
+        <h3>TDB</h3>
+    </div>
+
+    <p class="project-text">
+        La LED verte ne s'est pas allumée, alors qu'au bout de 5 min de chauffe, c'est la rouge qui s'est allumée.
+    </p>
+
+    <p class="project-text">
+        Après vérification il s'avère qu'elle est rouge... L'étudiant en charge est daltonien.
+    </p>
+</div>
+
+
+<!-- KAH -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/projects/kah-logo.png" class="project-logo">
+        <h3>KAH</h3>
+    </div>
+
+    <p class="project-text">
+        Nous avons identifié deux non-conformité sur des LEDs.
+    </p>
+
+    <ul>
+        <li>LED verte : 76 mcd au lieu de 50 mcd</li>
+        <li>LED bleue : 162 mcd au lieu de 100 mcd</li>
+    </ul>
+
+    <p class="project-text">
+        Pour résoudre ces problèmes, on doit recalculer les valeurs et remplacer les résistances.
+    </p>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images/projects/kah-signal.png">
+            <figcaption>Example du signal de klaxon</figcaption>
+        </figure>
+    </div>
+</div>
+
+</div>
+</details>
+
+</section>
+
+
+<footer class="footer">
+    <p class="copyright">© 2025 Vitaliia Maslova | All rights reserved</p>
+</footer>
+
+</body>
+</html>

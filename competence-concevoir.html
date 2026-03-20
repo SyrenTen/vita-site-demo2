@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compétence GEII - Concevoir</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="head-button">Vitaliia Maslova</div>
+
+    <nav class="navbar">
+        <div class="nav-dropdown">
+            <a href="index2.html#hero">Accueil ▾</a>
+            <div class="dropdown-menu">
+                <a href="index2.html#personnage">Personnage</a>
+                <a href="index2.html#competences-geii">Compétences GEII</a>
+                <a href="index2.html#competences">Compétences</a>
+                <a href="index2.html#liens">Liens</a>
+                <a href="index2.html#projects_presentation">Projets</a>
+                <a href="index2.html#contact">Contact</a>
+            </div>
+        </div>
+
+        <a href="research.html">Recherche</a>
+        <a href="projects.html">Projets</a>
+        <a href="about-me.html">About-me</a>
+        <a href="competences-geii.html">Competences GEII</a>
+    </nav>
+</header>
+
+<section class="competence-hero">
+    <div class="competence-hero-overlay">
+        <h1>COMPÉTENCE : CONCEVOIR</h1>
+        <p>Concevoir une solution technique répondant à un cahier des charges.</p>
+    </div>
+</section>
+
+<section class="competence-intro">
+    <p>
+        Ici sont présentées les compétences C1, C2, C3 et C4 avec les preuves issues de mes projets académiques, personnels et de recherche.
+        Chaque section contient les projets réalisés et les éléments démontrant l’acquisition de la compétence.
+    </p>
+</section>
+
+<section class="competence-list">
+
+<!-- ================= C1 ================= -->
+<details class="competence-block">
+<summary>C1 — Identifier les fonctions demandées</summary>
+
+<div class="competence-content project-grid">
+
+<!-- ===== RAFALE ===== -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/projects/rafale-logo.png" class="project-logo">
+        <h3>RAFALE</h3>
+    </div>
+
+    <h4>SAE Système Sonore et Lumineux pour Rafale miniature</h4>
+
+    <p class="project-text">
+        L'objectif du projet SLR est de développer un Système Sonore et Lumineux pour Rafale miniature.
+    </p>
+
+    <p class="project-text">
+        Dans ce projet, j'ai réalisé une analyse architecturelle du produit à développer. Le synoptique architecturel comporte les 4 blocs d'un système du génie électrique : acquisition, traitement, action et énergie.
+    </p>
+
+    <ul>
+        <li>L'interrupteur fait partie du bloc d'acquisition.</li>
+        <li>Dans le bloc de traitement, le NE555 en configuration astable est associé à 2 résistances et 1 condensateur.</li>
+        <li>Le transistor fait partie du bloc d'action avec les 3 LEDs associées à 5 résistances.</li>
+        <li>Les 3 piles font partie du bloc énergie.</li>
+    </ul>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images/projects/rafale1.png">
+            <figcaption>Synoptique architecturel du RAFALE</figcaption>
+        </figure>
+    </div>
+</div>
+
+<!-- ===== TDB ===== -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/projects/tdb-logo.png" class="project-logo">
+        <h3>TDB</h3>
+    </div>
+
+    <h4>SAE Thermomètre De Bain</h4>
+
+    <p class="project-text">
+        L'objectif est de concevoir un thermomètre de bain qui indique la température de l'eau par l'éclairage de LED de différentes couleurs qui s'allument ou non selon les critères suivants :
+    </p>
+
+    <ul>
+        <li>LED bleue seule : détection d'une eau trop froide ( < 36°C )</li>
+        <li>LED rouge seule : détection d'une eau trop chaude ( > 39°C )</li>
+        <li>LED verte : détection d'une eau tiède</li>
+    </ul>
+
+    <p class="project-text">
+        La carte doit avoir une autonomie plus de 24h de fonctionnement et un coût inférieur à 20 €.
+    </p>
+
+    <p class="project-text">
+        En equipe nous avons identifié dans ce projet 4 blocs fonctionnels : acquisition, traitement, action et énergie.
+    </p>
+
+    <p class="project-text">
+        Le bloc Acquisition contient la mesure de la température par à un capteur LM35 et la pont diviseur a deux sorties.
+        Le bloc Traitement a une partie avec l'amplificateur operationnel en montage de comparateur a fenetre.
+        Le bloc Action regroupe les 3 LED.
+        Le bloc Energie comporte un accumulateur LiPo.
+    </p>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images/projects/tdb1.png">
+            <figcaption>Blocs fonctionnels du TDB</figcaption>
+        </figure>
+    </div>
+</div>
+
+<!-- ===== KAH ===== -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/projects/kah-logo.png" class="project-logo">
+        <h3>KAH</h3>
+    </div>
+
+    <h4>SAE Kart à Hélice</h4>
+
+    <p class="project-text">
+        L'objectif du projet Kart à Hélice est de développer deux cartes : l’émetteur et le récepteur permettant de commander un kart.
+    </p>
+
+    <p class="project-text">
+        Dans ce projet, j'ai réalisé une analyse architecturelle du l’émetteur.
+    </p>
+
+    <ul>
+        <li>Bloc Energie : accumulateur avec autonomie de 60 minutes</li>
+        <li>Bloc Acquisition : interfaces homme-machine + bouton poussoir</li>
+        <li>Bloc Traitement : microcontrôleur + protocole infrarouge NEC</li>
+        <li>Bloc Action : LEDs infrarouges + LED d’état</li>
+    </ul>
+
+    <p class="project-text">
+        L’émetteur émet une trame avec période de 108 ms ou 333 ms.
+    </p>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images/projects/kah1.png">
+            <figcaption>Bloc d’analyse fonctionnelle du KAH</figcaption>
+        </figure>
+    </div>
+</div>
+
+</div>
+</details>
+
+<!-- ================= C2 ================= -->
+<details class="competence-block">
+<summary>C2 — Proposer une solution technique</summary>
+
+<div class="competence-content project-grid">
+
+<!-- ===== RAFALE ===== -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/projects/rafale-logo.png" class="project-logo">
+        <h3>RAFALE</h3>
+    </div>
+
+    <h4>SAE Système Sonore et Lumineux</h4>
+
+    <p class="project-text">
+        L'objectif du projet SLR est de développer un Système Sonore et Lumineux pour Rafale miniature.
+    </p>
+
+    <p class="project-text">
+        Dans ce projet, j'ai réalisé une analyse architecturelle du produit à développer. Le synoptique architecturel comporte les 4 blocs d'un système du génie électrique : acquisition, traitement, action et énergie.
+    </p>
+
+    <ul>
+        <li>Dans le bloc de traitement, le NE555 en configuration astable est associé à 2 résistances et 1 condensateur.</li>
+        <li>Le transistor fait partie du bloc d'action avec les 3 LEDs associées à 5 résistances.</li>
+        <li>Les 3 piles font partie du bloc énergie.</li>
+    </ul>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images/projects/rafale2.png">
+            <figcaption>Schéma de l'oscillateur</figcaption>
+        </figure>
+    </div>
+</div>
+
+
+<!-- ===== TDB ===== -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/projects/tdb-logo.png" class="project-logo">
+        <h3>TDB</h3>
+    </div>
+
+    <h4>SAE Thermomètre De Bain</h4>
+
+    <p class="project-text">
+        1. Afin de répondre à l'exigence de comparaisons du Cahier Des Charges :
+    </p>
+
+    <ul>
+        <li>« Eau Froide » : information active si l'information « Température » mesurée est inférieure au seuil de température « Température Froide » sinon information inactive.</li>
+        <li>« Eau Tiède » : information active si l'information « Température » mesurée est simultanément supérieure au seuil de température « Température Froide » et inférieure au seuil de température « Température Chaude » sinon information inactive.</li>
+        <li>« Eau Chaude » : information active si l'information « Température » mesurée est supérieure au seuil de température « Température Chaude » sinon information inactive.</li>
+    </ul>
+
+    <p class="project-text">
+        j’ai choisi le montage de comparateur a fenêtre en utilisant AOP MCP 6002 et porte logique NOR 74HC02.
+    </p>
+
+    <p class="project-text">
+        En resultat j'ai déterminé que :
+    </p>
+
+    <ul>
+        <li>Si le signal capturé est supérieur à 0.39V +/-5%, on aura 5V en sortie de l’AOP U1 : B et 0V en sortie de l’AOP U1 : A - on allume la LED rouge.</li>
+        <li>Si signal capturé est inférieur à 0.36V +/-5%, on aura 5V en sortie de l’AOP U1 : A et 0V de la sortie de l'AOP U1 : B donc on allume la LED bleue.</li>
+        <li>Si on a 0.36V < signal capturé <0.39V, on utilise une porte logique NOR pour allumer une LED verte.</li>
+    </ul>
+
+    <p class="project-text">
+        2. Pour répondre à l'exigence d’allumage du Cahier Des Charges :
+    </p>
+
+    <ul>
+        <li>Voyant bleu allumé lorsque l'information « Eau Froide » est active sinon éteint</li>
+        <li>Voyant vert allumé lorsque l'information « Eau Tiède » est active sinon éteint</li>
+        <li>Voyant rouge allumé lorsque l'information « Eau Chaude » est active sinon éteint</li>
+    </ul>
+
+    <p class="project-text">
+        j'ai exploité les formules et les graphiques de la datasheet pour trouver les valeurs des résistances. En appliquant la méthode de normalisation des valeurs de résistance j'ai retenu le dimensionnement final suivant : Rrouge = série E24 +-5% 27kΩ ; Rvert = E24 +-5% 6.8kΩ ; Rbleu = E24 +-5% 120kΩ.
+    </p>
+
+    <p class="project-text">
+        3. Afin de répondre à l'exigence d’intensités (l'intensité lumineuse de chaque voyant est de 50 mcd (erreur de -/+10%) lorsque le voyant est allumé) du Cahier Des Charges j'ai réalisé les calculs pour trouver l’intensité du chaque LED et j’ai trouvé les valeurs suivantes : Irouge = 0,13mA (+/-10%) ; Ivert = 0,44mA (+/-10%) ; Ibleu = 0,022mA (+/-10%).
+    </p>
+
+    <p class="project-text">
+        Ces solutions sont conforme aux tolérances mentionnées dans le cahier des charges.
+    </p>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images/projects/tdb2.png">
+            <figcaption>Schéma électrique du TDB</figcaption>
+        </figure>
+    </div>
+</div>
+
+
+<!-- ===== KAH ===== -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/projects/kah-logo.png" class="project-logo">
+        <h3>KAH</h3>
+    </div>
+
+    <h4>SAE Kart à Hélice</h4>
+
+    <p class="project-text">
+        J'ai fait la conception technique de la carte émetteur. J’ai proposé plusieurs solutions pour répondre aux exigences.
+    </p>
+
+    <p class="project-text">
+        1. Afin de répondre à l'exigence d'acquisition d'information sur les interfaces homme-machine, on choisit le deux potentiomètres linéaire PTA4543.
+    </p>
+
+    <p class="project-text">
+        Pour d’éviter les problemes causés par le bruit créé par les mains humaines, j’ai ajouté un filtrage.
+    </p>
+
+    <p class="project-text">
+        Pour l’étage avec klaxon, on doit choisir une résistance et décider est que c’est type pull-up ou pull-down.
+    </p>
+
+    <p class="project-text">
+        2. Pour de répondre à l'exigence d’action sur les LEDs d’émission infrarouge, nous devrons faire l’étage avec transistor.
+    </p>
+
+    <p class="project-text">
+        L’indicateur vert doit être connecter à la résistance pour limiter le courant.
+    </p>
+
+    <p class="project-text">
+        Chaque étage a été simulé sous outil logiciel pour vérifier le fonctionnement attendu. Ces simulations nous ont permis de conformé les valeurs des composants et de corriger les erreurs avant l'étape de production.
+    </p>
+
+</div>
+
+</div>
+</details>
+
+<!-- ================= C3 ================= -->
+<details class="competence-block">
+<summary>C3 — Affiner une solution par maquettage</summary>
+
+<div class="competence-content project-grid">
+
+<!-- ===== RAFALE ===== -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/projects/rafale-logo.png" class="project-logo">
+        <h3>RAFALE</h3>
+    </div>
+
+    <h4>SAE Système Sonore et Lumineux</h4>
+
+    <p class="project-text">
+        A partir du schéma électrique complet du SLR, j'ai rédigé la nomenclature et y associant le coût de chaque composant.
+    </p>
+
+    <p class="project-text">
+        J'ai effectué le placement puis le routage du circuit imprimé. J'ai alors rédigé le DDF en intégrant à l'échelle le typon de la couche supérieure, le schéma d'implantation, le plan de perçage.
+    </p>
+
+    <p class="project-text">
+        Le protocole de fabrication est décrit en détail dans ma fiche de synthèse du HTUT 4 "Comment fabriquer une carte électronique ?"
+    </p>
+</div>
+
+
+<!-- ===== TDB ===== -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/projects/tdb-logo.png" class="project-logo">
+        <h3>TDB</h3>
+    </div>
+
+    <h4>SAE Thermomètre De Bain</h4>
+
+    <p class="project-text">
+        A partir du schéma électrique complet du TDB, j'ai rédigé la nomenclature en y associant le coût de chaque composant.
+    </p>
+
+    <p class="project-text">
+        En équipe j’ai effectué le placement de composants sur le circuit et le routage du circuit imprime. J’ai après rédige le dossier de fabrication en intégrant le typon de la couche supérieure, le schéma d'implantation, le plan de perçage.
+    </p>
+
+    <p class="project-text">
+        Les documents sont les suivants :
+    </p>
+
+    <ul>
+        <li>Document 1 et 2 : typons</li>
+        <li>Document 3 : plan de perçage</li>
+        <li>Document 4 : schéma de perçage</li>
+    </ul>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images/projects/tdb3.png">
+            <figcaption>Typon et plan de perçage du TDB</figcaption>
+        </figure>
+    </div>
+</div>
+
+
+<!-- ===== KAH ===== -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/projects/kah-logo.png" class="project-logo">
+        <h3>KAH</h3>
+    </div>
+
+    <h4>SAE Kart à Hélice</h4>
+
+    <p class="project-text">
+        A partir du schéma électrique complet d’émetteur, j'ai rédigé la nomenclature en associant le coût des composants choisit d’étages sur lesquelles j’ai travaillé. Ce permis de vérifier la faisabilité économique du projet.
+    </p>
+
+    <p class="project-text">
+        Avec coéquipiers j’ai effectué le placement des composants et le routage du circuit imprimé. Ca été fait à l’aide d’un outil logiciel specialisé. J’ai après rédige le dossier de fabrication en intégrant le typon de la couche supérieure, le schéma d'implantation, le plan de perçage et nomenclature complet.
+    </p>
+
+    <p class="project-text">
+        Le protocole de fabrication utilise est décrit dans ma fiche de synthèse du HTUT 4 "Comment fabriquer une carte électronique".
+    </p>
+
+    <p class="project-text">
+        Les documents obtenu sont les suivants :
+    </p>
+
+    <ul>
+        <li>Document 1 et 2 : typons</li>
+        <li>Document 3 : plan d'implantation</li>
+        <li>Document 4 : schéma de perçage</li>
+    </ul>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images/projects/kah3.png">
+            <figcaption>Les typones d'emetteur</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/projects/kah4.png">
+            <figcaption>Plan d'implantation d'emetteur</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/projects/kah5.png">
+            <figcaption>Schema de percage d'emetteur</figcaption>
+        </figure>
+    </div>
+</div>
+
+</div>
+</details>
+
+<!-- ================= C4 ================= -->
+<!-- ================= C4 ================= -->
+<details class="competence-block">
+<summary>C4 — Rédiger un dossier de conception et de fabrication</summary>
+
+<div class="competence-content project-grid">
+
+<!-- ===== KAH ===== -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/projects/kah-logo.png" class="project-logo">
+        <h3>KAH</h3>
+    </div>
+
+    <h4>SAE Kart à Hélice</h4>
+
+    <p class="project-text">
+        Au cours de ce projet, j’ai effectué la rédaction du dossier de fabrication de la carte émetteur, à partir des documents obtenu pendant de la conception (schéma électrique, implantation, routage).
+    </p>
+
+    <p class="project-text">
+        J’ai ensuite participé à l’assemblage d’émetteur. J'ai percé les trous pour les composants et les ai soudés. J'ai vérifié les valeurs et les directions des composants comme les résistances et les condensateurs. J'ai suivi le plan pendant la soudure.
+    </p>
+
+    <p class="project-text">
+        Malheureusement, le transistor de stock choisi par mes coéquipiers ne correspondait pas à celui indiqué dans la nomenclature. Cela a posé problème lors de la vérification de la carte. Après avoir identifié le problème, on a remplacé le composant par le bon et terminé la vérification de la carte.
+    </p>
+
+    <p class="project-text">
+        Ensuite, nous avons chargé le code écrit par une autre équipe travaillant sur le récepteur.
+    </p>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images/projects/kah6.png">
+            <figcaption>La carte l'emetteur</figcaption>
+        </figure>
+    </div>
+
+    <p class="project-text">
+        Legende de l'image d'emetteur
+    </p>
+
+    <ul>
+        <li>1 - Potentiometre de direction</li>
+        <li>2 - Potentiometre de la vitesse</li>
+        <li>3 - LEDs infrarouge</li>
+        <li>4 - place de microcontrolleur</li>
+        <li>5 - bouton-poussoir</li>
+        <li>6 - connecteur de telechargement de code</li>
+        <li>7 - interrupteur</li>
+        <li>8 - regulateur linéaire</li>
+        <li>9 - LED vert</li>
+        <li>10 - les condensateurs</li>
+        <li>11 - la resistance</li>
+        <li>12 - transistor</li>
+        <li>13 - quartz</li>
+    </ul>
+
+</div>
+
+</div>
+</details>
+
+</section>
+
+<footer class="footer">
+    <p class="copyright">© 2025 Vitaliia Maslova | All rights reserved</p>
+</footer>
+
+</body>
+</html>

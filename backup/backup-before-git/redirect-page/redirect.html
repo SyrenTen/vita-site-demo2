@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
+    <!-- 
+    © 2025 Vitallia Maslova | All rights reserved.
+    This is a hidden copyright notice.
+    -->
+    <link rel="stylesheet" href="redirect-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="buttons">
+            <!-- Button 1: Main Page -->
+            <div class="button-wrapper" data-description="Redirects to the main page of site, from where you can start learn more about me, my projects and activities">
+                <a href="../main.html#index.html" class="button" id="btn-main">
+                    <img src="redirect-images\home-page-redirect.svg" alt="Main Page">
+                </a>
+                <div class="button-name">Main Page</div>
+                <div class="hover-preview" id="preview-main">
+                    <img src="redirect-images\hover-home-page-r.svg" alt="Preview Main">
+                </div>
+            </div>
+
+            <!-- Button 2: CV PDF -->
+            <div class="button-wrapper" data-description="Opens my CV in format PDF">
+                <a href="../files/CV-Vitaliia-Maslova.pdf" class="button" target="_blank" id="btn-cv">
+                    <img src="redirect-images\cv-page-redirect.svg" alt="CV">
+                </a>
+                <div class="button-name">My CV</div>
+                <div class="hover-preview" id="preview-cv">
+                    <img src="redirect-images\hover-cv-page-r.svg" alt="Preview CV">
+                </div>
+            </div>
+
+            <!-- Button 3: All Projects -->
+            <div class="button-wrapper" data-description="Redirects to the page, where you can discover all projects: that i did myself and in which i participated in universities">
+                <a href="../main.html#projects.html" class="button" id="btn-all-projects">
+                    <img src="redirect-images\projects-page-redirect.svg" alt="All Projects">
+                </a>
+                <div class="button-name">All Projects</div>
+                <div class="hover-preview" id="preview-all-projects">
+                    <img src="redirect-images\hover-projects-page-r.svg" alt="Preview All Projects">
+                </div>
+            </div>
+
+            <!-- Button 4: My Projects -->
+            <div class="button-wrapper" data-description="Redirects to page where you can discover all projects i worked on myself">
+                <a href="../main.html#my-projects.html" class="button" id="btn-my-projects">
+                    <img src="redirect-images\my-projects-page-r.svg" alt="My Projects">
+                </a>
+                <div class="button-name">My Own Projects</div>
+                <div class="hover-preview" id="preview-my-projects">
+                    <img src="redirect-images\hover-my-projects-page-r.svg" alt="Preview My Projects">
+                </div>
+            </div>
+        </div>
+        <div class="description" id="description"></div>
+    </div>
+
+    <div style="display:none;">
+        © 2025 Vitaliia Maslova | All rights reserved
+    </div>
+
+    
+
+    <script src="redirect-script.js"></script>
+</body>
+</html>

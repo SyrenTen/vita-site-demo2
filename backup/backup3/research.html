@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research</title>
+    <link rel="stylesheet" href="research-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <button class="head-button">Funny Inventory</button>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="research.html">Research</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+
+        <button class="head-button">Lang</button>
+    </header>
+
+    <section class="research" id="research">
+        <div class="research-interest">🔎 I am interested in AI, Computer Science, Space and Robotics</div>
+
+        <div class="research-tabs">
+            <button class="tab-btn active" data-section="interesting">Materials that I found interesting</button>
+            <button class="tab-btn" data-section="written">Articles that I wrote</button>
+        </div>
+
+        <div class="research-main-tab">
+
+            <div class="research-content">
+
+                <!-- Interesting Articles Section -->
+                <div class="articles-list-section" id="interesting-section">
+                    
+                    <div class="article-card lang-eng">
+                        <img src="images\images-research\interesting-articles\spatial-speech\spatial-speech-img.svg" alt="article-image">
+                        <div class="article-content">
+                            <div class="article-header">
+                                <p class="article-title">Spatial Speech Translation: Translating Across Space With Binaural Hearables</p>
+                                <span class="lang-tag">English</span>
+                            </div>
+                            <p class="authors">Tuochao Chen, Runlin He, Qirui Wang, Shyamnath Gollakota</p>
+                            <div class="article-buttons">
+                                <button class="btn-abstract">Abstract</button>
+                                <button class="btn-comment">My Comment</button>
+                                <a href="https://dl.acm.org/doi/pdf/10.1145/3706598.3713745" target="_blank" class="btn-read">Read article</a>
+                            </div>
+                            <p class="abstract hidden">Imagine being in a crowded space where people speak a different language and having hearables that transform the auditory
+space into your native language, while preserving the spatial cues for all speakers. We introduce spatial speech translation, a novel concept for hearables that translate speakers in the wearer’s environment, while maintaining the direction and unique voice characteristics of each speaker in the binaural output... </p>
+                            <p class="comment hidden">This is interesting and impressive work and I can't wait for this kind of tech to become more common. That could help a lot in different spheres</p>
+                        </div>
+                    </div>
+                    <!-- More cards... -->
+                     
+                </div>
+
+                <!-- Written Articles Section -->
+                <div class="articles-list-section" id="written-section" style="display: none;">
+                    <div class="article-card lang-eng">
+                        <img src="images\images-research\written-articles\comparing-contollers\comparing-arduino-esp-stm-cover.svg" alt="article-image">
+                        <div class="article-content">
+                            <div class="article-header">
+                                <p class="article-title">Comparing Arduino vs ESP32 vs STM32</p>
+                                <span class="lang-tag">English</span>
+                            </div>
+                            <div class="article-buttons">
+                                <a href="https://medium.com/@marichka_liia/comparing-arduino-vs-esp32-vs-stm32-22e1c72c9cba" target="_blank" class="btn-read">Read article</a>
+                            </div>
+                            <p class="abstract">At the very beginning, we should pose the question properly. We cannot compare Arduino boards with ESP32 microcontorllers. We either compare an ATMEGA microcontroller, for example usual ATMEGA328P, with ESP32, or we compare Arduino board with a board that has ESP32. Same goes to STM32. But let’s try to compare them anyway...</p>
+                        </div>
+                    </div>
+
+                    <div class="article-card lang-ukr">
+                        <img src="images\images-research\written-articles\wifi-code-56\code-56-img.svg" alt="article-image">
+                        <div class="article-content">
+                            <div class="article-header">
+                                <p class="article-title">Код 56, пропав Wi-Fi, комп’ютер його не бачить — що робити?</p>
+                                <span class="lang-tag">Ukrainian</span>
+                            </div>
+                            <div class="article-buttons">
+                                <a href="https://itc.ua/ua/blogs/kod-56-propav-wi-fi-komp-yuter-jogo-ne-bachyt-shho-robyty/" target="_blank" class="btn-read">Read article</a>
+                            </div>
+                            <p class="abstract">Одного разу відкриваю Google календар – а в мене різко відключається Wi-Fi. Дивлюся, а він зовсім зник з панелі, й більш немає його в налаштуваннях...</p>
+                        </div>
+                    </div>
+                    <!-- More cards... -->
+                     <div class="article-card lang-ukr">
+                        <img src="images\images-research\written-articles\wow-keyboards\wow-keyboard-cover.svg" alt="article-image">
+                        <div class="article-content">
+                            <div class="article-header">
+                                <p class="article-title">10 найдивовижніших дизайнів клавіатур</p>
+                                <span class="lang-tag">Ukrainian</span>
+                            </div>
+                            <div class="article-buttons">
+                                <a href="https://itc.ua/ua/blogs/10-nezvychajnyh-dyzajniv-klaviatur/" target="_blank" class="btn-read">Read article</a>
+                            </div>
+                            <p class="abstract">Людство постійно шукає шляхи модифікувати або представити наявну технологію у новому вигляді. Клавіатури є однією з цих технологій, для них постійно з’являються нові ідеї дизайну та функціоналу, які можуть втішити як професіоналів, так і просто любителів техніки...</p>
+                        </div>
+                    </div>
+                     
+                </div>
+
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All articles</button>
+                <button class="filter-btn" data-filter="eng">English</button>
+                <button class="filter-btn" data-filter="ukr">Ukrainian</button>
+            </div>
+
+
+        </div>
+
+        
+
+        
+
+    </section>
+
+    <footer class="footer">
+            <p class="copyright">© Vitaliia Maslova | All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

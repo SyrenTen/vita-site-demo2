@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compétence GEII - Maintenir</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="head-button">Vitaliia Maslova</div>
+
+    <nav class="navbar">
+        <div class="nav-dropdown">
+            <a href="index2.html#hero">Accueil ▾</a>
+            <div class="dropdown-menu">
+                <a href="index2.html#personnage">Personnage</a>
+                <a href="index2.html#competences-geii">Compétences GEII</a>
+                <a href="index2.html#competences">Compétences</a>
+                <a href="index2.html#liens">Liens</a>
+                <a href="index2.html#projects_presentation">Projets</a>
+                <a href="index2.html#contact">Contact</a>
+            </div>
+        </div>
+
+        <a href="research.html">Recherche</a>
+        <a href="projects.html">Projets</a>
+        <a href="about-me.html">About-me</a>
+        <a href="competences-geii.html">Competences GEII</a>
+    </nav>
+</header>
+
+
+<!-- HERO -->
+<section class="competence-hero">
+    <div class="competence-hero-overlay">
+        <h1>COMPÉTENCE : MAINTENIR</h1>
+        <p>Appliquer une maintenance et diagnostiquer un système technique.</p>
+    </div>
+</section>
+
+
+<!-- INTRO -->
+<section class="competence-intro">
+    <p>
+        Cette page présente les compétences liées à la maintenance des systèmes électroniques.
+        Elle regroupe des activités de diagnostic, d’intervention et de rédaction de procédures
+        réalisées lors de travaux pratiques et de SAE.
+    </p>
+</section>
+
+
+<!-- BLOCKS -->
+<section class="competence-list">
+
+
+<!-- ================= M1 ================= -->
+<details class="competence-block">
+<summary>M1 — Appliquer une opération de maintenance</summary>
+
+<div class="competence-content">
+
+    <div class="project-header">
+        <img src="images/projects/blc-logo.png" class="project-logo">
+        <h3>SAE Maintenance — Brassard Lumineux pour Cycliste (BLC)</h3>
+    </div>
+
+    <p class="project-text">
+        Lors de cette SAE, nous avons travaillé sur une carte électronique de Brassard Lumineux pour Cycliste.
+        Ce système permet de signaler la présence d’un usager grâce à des LEDs fonctionnant selon deux modes :
+        un mode continu et un mode clignotant.
+    </p>
+
+    <p class="project-text">
+        La carte est composée de plusieurs étages (alimentation, oscillateur, amplification, éclairage),
+        chacun assurant une fonction spécifique. L’objectif en maintenance est d’analyser le fonctionnement
+        global afin d’identifier les causes possibles de dysfonctionnement, comme une piste coupée ou un
+        composant mal soudé.
+    </p>
+
+    <p class="project-text">
+        Lors des essais, j’ai constaté que les 6 LEDs restaient allumées en continu alors qu’elles devaient
+        clignoter. Cette observation m’a orienté vers un défaut probable dans les étages liés à l’oscillation
+        ou à l’alimentation.
+    </p>
+
+    <p class="project-text">
+        Après investigation, j’ai identifié la cause racine : un mauvais dimensionnement du pont diviseur
+        de tension en sortie du NE555 dans l’étage oscillateur. Les résistances utilisées n’étaient pas
+        adaptées, ce qui entraînait une fréquence incorrecte et donc une non-conformité du système.
+    </p>
+
+</div>
+</details>
+
+
+
+<!-- ================= M2 ================= -->
+<details class="competence-block">
+<summary>M2 — Rédiger une procédure de maintenance</summary>
+
+<div class="competence-content">
+
+    <div class="project-header">
+        <img src="images/projects/blc-logo.png" class="project-logo">
+        <h3>SAE Maintenance — Dossier de Réparation (DDR)</h3>
+    </div>
+
+    <p class="project-text">
+        Pour structurer le diagnostic et assurer la traçabilité des interventions, j’ai utilisé un DDR
+        (Dossier De Réparation). Cet outil permet de formaliser les étapes de test, les observations
+        et les décisions techniques prises lors de la maintenance d’un système.
+    </p>
+
+    <p class="project-text">
+        Le DDR est composé de deux parties principales :
+    </p>
+
+    <ul class="project-list">
+        <li>Un compte-rendu d’investigation détaillant les procédures, moyens d’essai et résultats</li>
+        <li>Un tableau de suivi permettant d’identifier rapidement la cause racine par sous-système</li>
+    </ul>
+
+    <p class="project-text">
+        Dans le compte-rendu, j’ai décrit chaque étape : le moyen utilisé (multimètre, alimentation),
+        la procédure appliquée (mesures, changement de sélecteur), les résultats attendus et ceux obtenus.
+        J’ai également ajouté des commentaires pour justifier les hypothèses et décisions.
+    </p>
+
+    <p class="project-text">
+        Le tableau de suivi m’a permis d’analyser chaque étage du système (alimentation, oscillateur,
+        amplificateur, éclairage) et de valider progressivement leur fonctionnement.
+    </p>
+
+    <p class="project-text">
+        Cette démarche méthodique m’a permis d’identifier rapidement la panne et de proposer une correction
+        adaptée, tout en assurant une documentation complète de l’intervention.
+    </p>
+
+</div>
+</details>
+
+
+</section>
+
+
+<footer class="footer">
+    <p class="copyright">© 2025 Vitaliia Maslova | All rights reserved</p>
+</footer>
+
+</body>
+</html>

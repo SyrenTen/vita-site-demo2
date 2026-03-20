@@ -1,0 +1,237 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: "Fira Code";
+}
+:root {
+    --bg-color: #222831;
+    --second-bg-color: #31363F;
+    --text-color: #EEEEEE;
+    --secont-text-color: #FAEB92;
+    --main-color: #76ABAE;
+}
+html{
+    font-size:  16px;
+    overflow-x: hidden;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+.header{
+    position: fixed;
+    background-color: var(--bg-color);
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 17px 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.navbar a{
+    font-size: 16px;
+    color: var(--main-color);
+    margin-left: 39px;
+    font-weight: normal;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+.navbar a:hover{
+    color: var(--text-color);
+}
+.head-button{
+    font-size: 16px;
+    padding: 7px 14px;
+    border-radius: 20px;
+    color: var(--main-color);
+    background: var(--second-bg-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: none;
+    text-wrap: nowrap;
+}
+.head-button:hover{
+    transform: scale(1.03);
+}
+.footer .copyright{
+    font-size: 12px;
+    text-align: center;
+}
+
+.research {
+    padding: 120px 10%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding-bottom: 60px;
+}
+.research-interest{
+    font-size: 20px;
+}
+
+.research-tabs {
+    display: flex;
+    gap: 80px;
+    margin: 24px;
+}
+
+.tab-btn {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    transition: 0.3s ease-in-out;
+}
+
+.tab-btn:hover{
+    transform: scale(1.01);
+}
+
+.tab-btn.active {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.filter-buttons{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.filter-buttons button{
+    font-size: 16px;
+    padding: 7px 14px;
+    border-radius: 20px;
+    color: var(--main-color);
+    background: var(--second-bg-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: none;
+    text-wrap: nowrap;
+}
+.filter-buttons button:hover{
+    transform: scale(1.03);
+}
+.filter-btn.active {
+    color: var(--text-color);
+}
+
+
+.research-main-tab{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.research-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.articles-list-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 1200px;
+}
+
+.article-card {
+  display: flex;
+  background-color: var(--second-bg-color);
+  padding: 15px;
+  border-radius: 5px;
+  gap: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.article-card img {
+  width: 310px;
+  height: 310px;
+  border-radius: 5px;
+}
+
+.article-content{
+    flex:1;
+}
+
+.article-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.article-header .article-title{
+    font-size: 24px;
+    color: var(--secont-text-color);
+    font-weight: 600;
+}
+
+.article-header .lang-tag{
+    font-size: 15px;
+    color: var(--main-color);
+}
+
+.article-content .authors{
+    font-size: 20px;
+}
+
+.article-buttons {
+  margin: 8px 0;
+  display: flex;
+  gap: 19px;
+  
+}
+
+.article-buttons button{
+    font-size: 16px;
+    padding: 7px 14px;
+    border-radius: 20px;
+    color: var(--main-color);
+    background: var(--bg-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: none;
+    text-wrap: nowrap;
+}
+.article-buttons button:hover{
+    transform: scale(1.03);
+}
+.article-buttons .btn-read {
+    font-size: 16px;
+    padding: 7px 14px;
+    border-radius: 20px;
+    color: var(--main-color);
+    background: var(--bg-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: none;
+    text-wrap: nowrap;
+    text-decoration: none;
+}
+.article-buttons .btn-read:hover {
+  transform: scale(1.03);
+}
+
+.abstract.hidden {
+  display: none;
+}
+
+.article-buttons button.active-toggle {
+  color: var(--text-color);
+}
+
+.comment.hidden {
+  display: none;
+}
+.comment {
+  font-style: italic;
+  color: var(--text-color);
+  font-size: 15px;
+}
+

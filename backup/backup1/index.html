@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="'en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Fira Code' rel='stylesheet'>
+    </head>
+    <body>
+        <!-- header -->
+        <header class="header">
+            <button class="head-button">Funny Inventory</button>
+
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Experience</a>
+                <a href="#research">Research</a>
+                <a href="#projects">Projects</a>
+            </nav>
+
+            <button class="head-button">Lang</button>
+        </header>
+
+        <!-- home -->
+        <section class="home" id="home">
+            <div class="home-content">
+                <div class="home-layout">
+                    <!-- cards area -->
+                     <div class="main-card-area">
+                        <!-- cards buttons -->
+                         <div class="tabs">
+                            <button class="tab-button active" data-tab="character">Character</button>
+                            <button class="tab-button" data-tab="skills">Skills</button>
+                            <button class="tab-button" data-tab="links">Links</button>
+                            <button class="tab-button" data-tab="contact">Contact</button>
+                         </div>
+
+                         <!-- tab content -->
+                          <div class="tab-content-container">
+
+                            <!-- character tab -->
+                             <div class="tab-content active" id="character">
+                                <div class="character-card">
+                                    <div class="character-header">
+                                        <div class="age-box">
+                                            <div class="age-top">1</div>
+                                            <div class="age">21</div>
+                                            <div class="age-time">20.34</div>
+                                            <div class="age-label">Age</div>
+                                        </div>
+
+                                        <div class="char-name">
+                                            <div class="name-label">Name</div>
+                                            <div class="my-name">Vitaliia Maslova</div>
+                                            <div class="description">
+                                                <span class="highlight">Vitaliia Maslova</span> began her quest in the land of circuits and code. Guided by curiosity and powered by logic, she journeys through the academic dungeons seeking the ultimate upgrade: mastery in embedded systems and automation
+                                            </div>
+                                        </div>
+
+                                        <div class="job-description">
+                                            <p><strong>Job</strong>: <span class="highlight">GEII</span></p>
+                                            <p><strong>Title</strong>: <span class="highlight">Student</span></p>
+                                            <p><strong>Level</strong>: <span class="highlight">2</span></p>
+                                        </div>
+                                    </div>
+
+                                    <dev class="main-info">
+
+                                        <div class="left-column">
+
+                                            <div class="equipment">
+                                            <div class="equip-label">Equipment</div>                                            
+                                            <div class="items">
+                                                <div class="item-box"><img src="images/images-home/laptop.svg" alt=""></div>
+                                                <div class="item-box"><a href="https://github.com/lilka-dev/lilka"><img src="images/images-home/lilka.svg" alt="lilka"></a></div>
+                                                <div class="item-box"><img src="images/images-home/phone.svg" alt=""></div>
+                                                <div class="item-box"><img src="images/images-home/coffee.svg" alt=""></div>
+                                                <div class="item-box"><img src="images/images-home/tablet.svg" alt=""></div>
+                                                <div class="item-box"><img src="images/images-home/screwdriver.svg" alt=""></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="factions">
+                                            <dev class="faction-label">Factions</dev>                                   
+                                            <p>DU IA</p>
+                                            <p>KhPI graduate</p>
+                                        </div>
+                                        </div>
+
+                                        <div class="right-column">
+                                            <div class="quest-log">
+                                            <div class="quest-label">Quest Log</div>                                            
+                                            <ul>
+                                                <li>Complete summer internship</li>
+                                                <li>Build IoT project</li>
+                                                <li>Pass embedded systems exam</li>
+                                                <li>Pass Automatisme</li>
+                                                <li>Learn SPI bus</li>
+                                            </ul>
+                                        </div>
+
+                                            <div class="stats-img">
+                                                <img src="images\images-home\radar-chart-char.svg" alt="Stats-Char">
+                                            </div>
+                                        </div>                    
+
+                                        <div class="character-column">
+                                        <div class="character-img">
+                                            <img src="images/images-home/silhouette.png" alt="Silhouette">
+                                        </div>
+
+                                        <div class="cv-button">
+                                            <a href="files\CV-Vitaliia-Maslova.pdf" download class="download-btn">Download CV</a>
+                                        </div>
+                                        </div>
+
+                                    </dev>
+
+                                </div>
+
+                             </div>
+
+                            <!-- skills tab -->
+                            <div class="tab-content" id="skills">
+                                <p>⚙️ Skills tab under construction! (or list your tech stack here)</p>
+                            </div>
+
+
+                          </div>
+
+                     </div>
+
+                     <!-- books area -->
+                    <div class="book-shelf">
+                        <div class="book-projects"><img src="images\images-home\book1.svg" alt="book-projects"></div>
+                        <div class="book-experience"><img src="images\images-home\book2.svg" alt="book-experience"></div>
+                        <div class="book-education"><img src="images\images-home\book3.svg" alt="book-education"></div>                       
+                    
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+</html>

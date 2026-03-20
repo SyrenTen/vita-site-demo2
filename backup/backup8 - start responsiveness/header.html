@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="inventory.css">
+  <link href='https://fonts.googleapis.com/css?family=Fira Code' rel='stylesheet'>
+  <script src="funny-inventory.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="head-button" id="inventory-button">Funny inventory</div>
+    <div id="funny-inventory" class="inventory-popup">
+      <div class="inventory-content">
+        <div class="inventory-item" id="radio-inventory-item">
+          <img src="images/radio-inventory.svg" alt="Radio Icon">
+        </div>
+      </div>
+    </div>
+
+    <div id="radio-player-container">
+      <div id="radio-player">
+        <img id="radio-image" src="images/radio-inventory.svg" alt="Radio Player">
+        <div id="youtube-player"></div>
+        <div class="close-button" id="close-radio">&times;</div>
+      </div>
+    </div>
+
+    <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+      ☰
+    </button>
+
+    <nav class="navbar">
+      <a href="index.html" target="contentFrame">Home</a>
+      <a href="education.html" target="contentFrame">Education</a>
+      <a href="experience.html" target="contentFrame">Experience</a>
+      <a href="research.html" target="contentFrame">Research</a>
+      <a href="projects.html" target="contentFrame">Projects</a>
+    </nav>
+
+    <button class="head-button">Lang</button>
+  </header>
+</body>
+</html>

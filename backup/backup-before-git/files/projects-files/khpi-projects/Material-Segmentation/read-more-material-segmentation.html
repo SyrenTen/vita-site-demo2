@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software for Material Segmentation</title>
+    <link rel="stylesheet" href="../../rm-project.css">
+    <link rel="stylesheet" href="../../../../inventory.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
+</head>
+<body>
+
+    <section class="read-more-article" id="readmore">
+        <div class="rm-in-info">
+
+            <div class="go-back-wrapper top">
+                <a href="../../../../projects.html" class="go-back-btn">← Go Back</a>
+                <button class="go-back-btn tech-btn">Tech Details</button>
+            </div>
+            
+            
+            <div class="rm-project-title">Software for Material Segmentation</div>            
+            <div class="used-tech-section"><i>Used technologies: Python, PyTorch, U-Net, PyCharm, Google Colab</i></div>
+            <div class="text-section tech-content"><h5><i>More tech detailes were added, read them if you are interested! If not, you can return to the 'Simple Version' anytime!</i></h5></div>
+
+            <div class="text-section-title">Introduction</div>
+
+            <!-- Simplified version -->
+            <div class="text-section">
+                During coursework our team was given a task to develop a web-application that allows the user to perform data segmentation using their web-browser. We developed various segmentation methods using tools such as OpenCV, PyTorch and PyTorch Image. The user could select the method from proposed options and perform image segmentation through interface provided by the application.
+            </div>
+
+            <div class="text-section">
+                As input data, we were given two sets containing 500 images with a size of 256x256 pixels of parts of microscopic images of cross-sections of carbon-fiber composite laminates.
+            </div>
+
+            <div class="text-section">
+                The data sets contained the corresponding masks for each image. Each pixel was annotated by class: matrix material, fiber or void. Provided datasets were used to train, validate and test developed segmentation models.
+            </div>
+
+            <div class="text-section">
+                We also developed software to process and analyze input data. A web application was created for convenient access to the software functionality via a web interface. Docker-based software deployment was performed to ensure its isolation and scalability.
+            </div>
+
+            <!-- Simplified image -->
+            <img src="/images/images-projects/khpi/materials-segmentation/interface-example-ms.svg" alt="interface-example-ms" class="rm-project-image" >
+            <div class="image-desctiption">Interface of the developed web application</div>
+
+
+            <div class="text-section-title">Work distribution</div>
+            <div class="text-section">Our work was divided into four parts, each team member working on their individual part: three Python developers and one Docker specialist. As Python developers, we worked on three segmentation methods: using OpenCV, using only PyTorch and using library Image Segmentation Models. Docker specialist was responsible for the software and deploying the web application.</div>
+            <div class="text-section">During the whole project I worked on Image Segmentation Models part, repository of whose you can <a href="https://github.com/qubvel/segmentation_models" target="_blank">visit here</a>.</div>
+            <div class="text-section">Here you can see an example of the given data and the result obtained using the trained segmentation model:</div>
+
+            <img src="/images/images-projects/khpi/materials-segmentation/four-example-image-ms.svg" alt="four-example-ms" class="rm-project-image">
+            <div class="image-desctiption">Input image – Original mask – Mask given by developed model – Three defined classes</div>
+
+        
+            <!-- Technical details (hidden by default) -->
+            <div class="text-section-title tech-content">PyTorch Image Segmentation Models</div>
+            <div class="text-section tech-content">
+                It is an extension to the PyTorch library designed for working with images in the context of computer vision and image processing tasks. This extension provides a wide range of tools and functions for image processing, augmentation, visualization, and evaluation. PyTorch Image includes a variety of image processing modules and classes, such as transformations, datasets, models, loss functions, and optimizers. Using this extension simplifies the development and training of computer vision models in the PyTorch environment.
+            </div>
+
+            <div class="text-section-title tech-content">Class diagrams</div>
+            <div class="carousel-wrapper tech-content" data-carousel="material-segmentation">
+                <button class="carousel-btn prev" onclick="moveSlide(-1, this)">&#10094;</button>
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <img src="/images/images-projects/khpi/materials-segmentation/carbon-dataset-mgs.svg" alt="carbon-dataset">
+                        <img src="/images/images-projects/khpi/materials-segmentation/evaluation-ms.svg" alt="evaluation">
+                        <img src="/images/images-projects/khpi/materials-segmentation/functions-ms.svg" alt="functions">
+                        <img src="/images/images-projects/khpi/materials-segmentation/prediction-ms.svg" alt="prediction">
+                        <img src="/images/images-projects/khpi/materials-segmentation/test-ms.svg" alt="test-ms">
+                        <img src="/images/images-projects/khpi/materials-segmentation/testdataset-ms.svg" alt="test-dataset">
+                        <img src="/images/images-projects/khpi/materials-segmentation/transforms-ms.svg" alt="transforms">
+                        <img src="/images/images-projects/khpi/materials-segmentation/unet-ms.svg" alt="unet-ms">
+                    </div>
+
+                </div>
+                <button class="carousel-btn next" onclick="moveSlide(1, this)">&#10095;</button>
+            </div>
+            <div class="image-desctiption tech-content">Class diagrams of my code</div>
+
+            <div class="text-section-title tech-content">U-Net</div>
+            <div class="text-section tech-content">
+                U-Net is a convolutional neural network (CNN) that was developed for image segmentation. Its architecture was modified and extended, so it could work with fewer images and still provide precise segmentation. It avoids fully connected layers and can process images of varying sizes.
+            </div>
+
+            <div class="text-section tech-content">
+                U-Net has a U-shape, consisting of two main parts: encoder and decoder.
+            </div>
+
+            <img src="/images/images-projects/khpi/materials-segmentation/unet-arch-ms.svg" alt="unet-architecture" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">U-Net architecture</div>
+
+            <div class="text-section tech-content">
+                Contracting path – encoder – is typical for CNN and consists of repeated application of convolutions, followed by rectified linear unit (ReLU) and a max pooling operation. Expansive path – decoder – restores spatial resolution through up-convolutions and concatenations with high-resolution features from encoder.
+            </div>
+
+            <div class="text-section-title">Realization</div>
+            <div class="text-section">I divided work into three stages, evolving step by step, especially since it was my first major project. First and second stages were done in PyCharm, model trained locally on my computer.</div>
+            <div class="text-section">Third and last stage was done in Google Collaboratory, which meant working with Jupyter notebooks, to which I needed to rewrite my local code. I reduced five files to two main files (codes), one for training model and one to test the result model which is going to be used in web-application.</div>
+            <div class="text-section"><b>First file: training segmentation model</b></div>
+            <div class="text-section">As first step, I indicated all parameters for model such as learning rate, number of epochs that model will learn, image size, and paths to directories with datasets that will be used during model training and validation.</div>
+            <div class="text-section">Different classes and functions were written, such as a class for loading images and masks, or functions for saving and loading model, as well as function for training model during indicated number of epochs and saving result images in their own directory. All of them were combined in the main function.</div>
+
+            <div class="text-section tech-content">Going into details, the CarbonDataset class was created to load images and corresponding masks, after that it prepares loaded data for training, applying transformations and converting them into arrays.</div>
+            <img src="/images/images-projects/khpi/materials-segmentation/training-flowchart-ms.svg" alt="training-flowchart" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">Flowchart of model training</div>
+            <div class="text-section tech-content">Function named get_model configures the model according to the Segmentation Models library documentation. The U-Net is also initialized, and ResNet18 was used as the encoder for this part of project. The get_dataloaders function is responsible for loading the training and validation datasets. </div>
+            <div class="text-section tech-content">The train_fn function performs one epoch of model training and after it comes validate_fn function that performs model validation. Loss and dice score are calculated. Results as masks and predictions are stored next.</div>
+
+            <div class="text-section"><b>Moving on, second file: testing segmentation model</b></div>
+            <div class="text-section">Originally, given on the start dataset was divided into different parts. Some images were placed into directory destined only for testing already trained model. Their masks also were stored to compare them with results, that model will give us during tests. We also calculate the dice score, that is the similarity between model result and masks for each class. Example of model work is given below:</div>
+
+            <img src="/images/images-projects/khpi/materials-segmentation/original-image-ms.svg" alt="three-orig-images-ms" class="rm-project-image">
+            <div class="image-desctiption">Three original input images</div>
+
+            <img src="/images/images-projects/khpi/materials-segmentation/original-mask-ms.svg" alt="three-orig-masks-ms" class="rm-project-image">
+            <div class="image-desctiption">Three corresponding masks from dataset</div>
+
+            <img src="/images/images-projects/khpi/materials-segmentation/model-mask-ms.svg" alt="three-model-masks-ms" class="rm-project-image">
+            <div class="image-desctiption">Three corresponding masks, obtained by software [by segmentation model]</div>
+
+            <div class="text-section tech-content">For this code, as before, firstly I define parameters such as image sizes, paths to images, path to model, and where to store predictions. The TestDataset class was responsible for creating a dataset for testing the model. That is, it accepts paths to images and their masks, which are then used to determine the dice score, performs simple transformations on the images, after which an image with a mask is returned.</div>
+            <div class="text-section tech-content">The get_transforms function transforms the dataset used for testing: resizing and normalization are performed. The get_model function creates a U-Net model, and the next function loads the saved model checkpoint.</div>
+
+            <img src="/images/images-projects/khpi/materials-segmentation/testing-flowchart-ms.svg" alt="testing-flowchart-ms" class="rm-project-image tech-content flowchart-img">
+            <div class="image-desctiption tech-content">Flowchart of model testing</div>
+            <div class="text-section tech-content">The dice_score function does the calculation of the dice score. Next comes the make_predictions function, which does predictions for the given test dataset and also stores the final result. A dice score is calculated for each image, and at the end, the average dice score was displayed on the screen.</div>
+
+
+            <div class="text-section-title">Results</div>
+            <div class="text-section tech-content">As mentioned before, in this project loss and dice score were used.</div>
+            <div class="text-section tech-content">Loss is a numerical value that measures how far the model’s predictions are from the actual target values. If we have low loss, that means predictions are close to true values, while high loss tells us that predictions are inaccurate.</div>
+            <div class="text-section tech-content">Below, you can see the loss graph for training and validation sets, where blue is training loss and orange is validation loss:</div>
+            <img src="/images/images-projects/khpi/materials-segmentation/loss-graph-ms.svg" alt="loss-graph-ms" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">Loss graph for training and validation datasets</div>
+
+            <div class="text-section">To evaluate all developed methods for this project, we needed some score. After research, the dice score was calculated in the end of testing and used for comparison with other methods.</div>
+            <div class="text-section tech-content">We also calculated dice score during training and validation, what you can see on graph below, where blue is training dice score and orange is validation dice score:</div>
+            <img src="/images/images-projects/khpi/materials-segmentation/dice-score-graph-ms.svg" alt="dice-graph-ms" class="rm-project-image tech-content">
+            <div class="image-desctiption tech-content">Dice score graph for training and validation datasets</div>
+
+            <div class="text-section">Dice score formula is simple and you can see it here:</div>
+            <img src="/images/images-projects/khpi/materials-segmentation/dsc-formula.svg" alt="dice-score-formula" class="rm-project-image">
+            <div class="image-desctiption">Dice score formula</div>
+
+            <div class="text-section">It is equal to 2 multiplied by number of common elements, divided by number of elements in set X plus number of elements in set Y. To simplify, X is prediction – result of my model, and Y is mask from original dataset.</div>
+            <div class="text-section">Below you can see the dice score for test dataset that was used during model testing:</div>
+
+            <img src="/images/images-projects/khpi/materials-segmentation/testing-dice-score-ms.svg" alt="testing-dsc-ms" class="rm-project-image">
+            <div class="image-desctiption">Dice Score of test dataset</div>
+
+            <div class="text-section">For this test we only had 50 images. On graph you can see mixed results, considering the fact that maximum possible value to obtain for dice score is 1 – which means perfection and it’s impossible to obtain it. In the end of testing we got average dice score for this test:</div>
+
+            <img src="/images/images-projects/khpi/materials-segmentation/checkpoint-ms.svg" alt="checkpoint-ms" class="rm-project-image">
+            <div class="image-desctiption">Average dice score - direct result after perfoming test</div>
+
+            <div class="text-section">Model was trained for around 2 hours and got a dice score of 0.89 which is a good result and it was the highest among all three developed methods. In the same time, my model took the longest to train.</div>
+            <div class="text-section">You can find repository of project by this <a href="https://github.com/VadimST04/Material-Segmentation-project-2024" target="_blank">GitHub link</a>.</div>
+            <div class="text-section"><h5><i>If you are interested in reading more detailed technical information about the project, please click on 'Tech Details' button on the top</i></h5></div>
+
+            <!--Modal-->
+            <div id="lightbox-modal">
+                <button id="lightbox-prev" class="lightbox-nav-btn">&#10094;</button>
+                <img id="lightbox-img" src="" alt="Expanded image" />
+                <button id="lightbox-next" class="lightbox-nav-btn">&#10095;</button>
+                <span class="lightbox-close">&times;</span>
+            </div>
+        </div>
+
+        <div class="go-back-wrapper bottom">
+            <a href="../../../../projects.html" class="go-back-btn">← Go Back</a>
+            <button class="go-back-btn tech-btn">Tech Details</button>
+        </div>
+        
+        
+    </section>
+
+    <button id="scrollTopBtn" title="Go to top">↑</button>
+
+    <footer class="footer">
+            <p class="copyright">© Vitaliia Maslova | All rights reserved</p>
+    </footer>
+    
+    <script src="../../../../script.js"></script>
+    <script>
+        (function notifyParentOfPage() {
+        try {
+            // full relative path (keeps folders, avoids D:\ absolute paths)
+            const url = window.location.pathname
+            .replace(window.location.origin + '/', '') // strip domain
+            .replace(/^\//, ''); // remove leading slash
+
+            window.parent.postMessage({ type: "IFRAME_NAV", page: url }, "*");
+        } catch(e) {}
+        })();
+    </script>
+
+</body>
+</html>
