@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermomètre De Bain pour Bébé</title>
+
+    <!-- GLOBAL STYLE -->
+    <link rel="stylesheet" href=../../../../style.css>
+
+    <!-- PROJECT PAGE STYLE -->
+    <link rel="stylesheet" href="project-page.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="head-button">Vitaliia Maslova</div>
+
+    <nav class="navbar">
+        <div class="nav-dropdown">
+            <a href="index2.html#hero">Accueil ▾</a>
+            <div class="dropdown-menu">
+                <a href="index2.html#personnage">Personnage</a>
+                <a href="index2.html#competences-geii">Compétences GEII</a>
+                <a href="index2.html#competences">Compétences</a>
+                <a href="index2.html#liens">Liens</a>
+                <a href="index2.html#projects_presentation">Projets</a>
+                <a href="index2.html#contact">Contact</a>
+            </div>
+        </div>
+
+        <a href="research.html">Recherche</a>
+        <a href="projects.html">Projets</a>
+        <a href="about-me.html">About-me</a>
+        <a href="competences-geii.html">Competences GEII</a>
+    </nav>
+</header>
+
+<section class="project-page">
+
+    <div class="project-container">
+
+        <!-- TOP BAR -->
+        <div class="project-top">
+            <a href="../../../../projects.html" class="btn-read project-back-btn">← Retour</a>
+        </div>
+
+        <!-- TITLE -->
+        <h1 class="project-title">Thermomètre De Bain pour Bébé</h1>
+
+        <!-- IMAGE -->
+        <div class="project-image-wrapper">
+            <img src="../../../../images/images-projects/geii/TDB/TDB-logo.svg" alt="kah-project">
+        </div>
+
+        <!-- INTRO -->
+        <div class="project-section">
+            <h2>Présentation</h2>
+
+            <p>
+                Ce projet a été réalisé dans le cadre d’une SAE lors de ma première année de BUT GEII.
+                L’objectif était de concevoir un thermomètre de bain pour bébé capable d’indiquer rapidement si la température de l’eau est trop froide,
+                correcte ou trop chaude grâce à un système électronique autonome.
+            </p>
+
+            <p>
+                Le projet a été développé en équipe de quatre personnes,
+                avec une répartition des tâches entre la conception électronique, les calculs, les simulations et la rédaction technique.
+            </p>
+        </div>
+
+        <!-- MISSIONS -->
+        <div class="project-section">
+            <h2>Mes missions principales</h2>
+
+            <ul>
+                <li>Conception de l’architecture fonctionnelle du système</li>
+                <li>Étude du comparateur à fenêtre avec amplificateurs opérationnels</li>
+                <li>Gestion des seuils de température</li>
+                <li>Conception du système d’allumage des LEDs</li>
+                <li>Choix et validation des composants électroniques</li>
+                <li>Réalisation des simulations sous ISIS/Proteus</li>
+                <li>Rédaction des documents techniques</li>
+            </ul>
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="project-section">
+            <h2>Description technique</h2>
+
+            <p>
+                Le projet repose sur un système électronique autonome capable de mesurer la température de l’eau grâce à un capteur analogique LM35DZ.
+            </p>
+
+            <p>
+                Le signal mesuré est comparé à deux seuils de température :
+            </p>
+
+            <ul>
+                <li>inférieur à 36°C → eau froide</li>
+                <li>entre 36°C et 39°C → température correcte</li>
+                <li>supérieur à 39°C → eau chaude</li>
+            </ul>
+
+            <p>
+                Le traitement est réalisé à l’aide :
+            </p>
+
+            <ul>
+                <li>d’un comparateur à fenêtre basé sur un MCP6002</li>
+                <li>d’une porte logique NOR 74HC02</li>
+                <li>de trois LEDs de signalisation (bleu, vert, rouge)</li>
+            </ul>
+
+            <p>
+                Des simulations électriques ont permis de valider :
+            </p>
+
+            <ul>
+                <li>le fonctionnement des comparaisons de seuils</li>
+                <li>l’allumage automatique des LEDs selon la température</li>
+                <li>la consommation énergétique et l’autonomie du système</li>
+            </ul>
+
+
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="project-buttons">
+            <a href="TDB_DDC_EQ23.pdf" target="_blank" class="btn-read">
+                Dossier de Conception
+            </a>
+            <a href="TDB_DDF_EQ23.pdf" target="_blank" class="btn-read">
+                Dossier de Fabrication
+            </a>
+            <a href="TDB_DDV_EQ23.pdf" target="_blank" class="btn-read">
+                Dossier de Vérification
+            </a>
+            <a href="read-more-bath-termometer.html" target="_blank" class="btn-read">
+                En savoir plus
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+    <p class="copyright">© 2025 Vitaliia Maslova</p>
+</footer>
+
+</body>
+</html>

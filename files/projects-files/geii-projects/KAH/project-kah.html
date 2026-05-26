@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kart à Hélice télécommandé</title>
+
+    <!-- GLOBAL STYLE -->
+    <link rel="stylesheet" href=../../../../style.css>
+
+    <!-- PROJECT PAGE STYLE -->
+    <link rel="stylesheet" href="project-page.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="head-button">Vitaliia Maslova</div>
+
+    <nav class="navbar">
+        <div class="nav-dropdown">
+            <a href="index2.html#hero">Accueil ▾</a>
+            <div class="dropdown-menu">
+                <a href="index2.html#personnage">Personnage</a>
+                <a href="index2.html#competences-geii">Compétences GEII</a>
+                <a href="index2.html#competences">Compétences</a>
+                <a href="index2.html#liens">Liens</a>
+                <a href="index2.html#projects_presentation">Projets</a>
+                <a href="index2.html#contact">Contact</a>
+            </div>
+        </div>
+
+        <a href="research.html">Recherche</a>
+        <a href="projects.html">Projets</a>
+        <a href="about-me.html">About-me</a>
+        <a href="competences-geii.html">Competences GEII</a>
+    </nav>
+</header>
+
+<section class="project-page">
+
+    <div class="project-container">
+
+        <!-- TOP BAR -->
+        <div class="project-top">
+            <a href="../../../../projects.html" class="btn-read project-back-btn">← Retour</a>
+        </div>
+
+        <!-- TITLE -->
+        <h1 class="project-title">Kart à Hélice télécommandé</h1>
+
+        <!-- IMAGE -->
+        <div class="project-image-wrapper">
+            <img src="../../../../images/images-projects/geii/KAH/KAH-logo.svg" alt="kah-project">
+        </div>
+
+        <!-- INTRO -->
+        <div class="project-section">
+            <h2>Présentation</h2>
+
+            <p>
+                Ce projet a été réalisé dans le cadre d’une SAE lors de ma première année de BUT GEII.
+                L’objectif était de concevoir un kart à hélice télécommandé en développant deux cartes électroniques :
+                un émetteur et un récepteur.
+            </p>
+
+            <p>
+                Le travail s’est déroulé en équipe de huit personnes, réparties en sous-groupes.
+                Chaque équipe était responsable d’une carte et de plusieurs modules fonctionnels.
+            </p>
+        </div>
+
+        <!-- MISSIONS -->
+        <div class="project-section">
+            <h2>Mes missions principales</h2>
+
+            <ul>
+                <li>Conception des modules d’acquisition et d’action</li>
+                <li>Choix des composants électroniques</li>
+                <li>Programmation en Arduino (C)</li>
+                <li>Tests et validation du prototype</li>
+                <li>Rédaction des documents techniques</li>
+            </ul>
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="project-section">
+            <h2>Description technique</h2>
+
+            <p>
+                Le projet repose sur une architecture composée de deux cartes communicantes utilisant
+                une transmission infrarouge basée sur le protocole NEC.
+            </p>
+
+            <ul>
+                <li>Contrôle de la vitesse et de la direction via potentiomètres</li>
+                <li>Transmission infrarouge jusqu’à 10 mètres</li>
+                <li>Programmation embarquée sur microcontrôleur ATmega328P</li>
+                <li>Gestion des actionneurs : moteurs, LED et buzzer</li>
+            </ul>
+
+            <p>
+                Le système complet permet de piloter le kart à distance en temps réel,
+                avec une gestion fiable des signaux et une autonomie conforme au cahier des charges.
+            </p>
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="project-buttons">
+            <a href="KAH_DDC_EQ22.docx.pdf" target="_blank" class="btn-read">
+                Dossier de Conception
+            </a>
+            <a href="KAH_DDF_EMTT_EQ22.pdf" target="_blank" class="btn-read">
+                Dossier de Fabrication
+            </a>
+            <a href="https://drive.google.com/file/d/1_ZbgAq_HZJd9CsvQZ2ejw0qj5Syg3FGN/view?usp=sharing" target="_blank" class="btn-read">
+                Dossier de Vérification
+            </a>
+            <a href="read-more-remote-kart.html" target="_blank" class="btn-read">
+                En savoir plus
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+    <p class="copyright">© 2025 Vitaliia Maslova</p>
+</footer>
+
+</body>
+</html>
