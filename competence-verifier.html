@@ -57,14 +57,14 @@
 
 <!-- ================= V1 ================= -->
 <details class="competence-block">
-<summary>V1 — Appliquer une procédure d’essais</summary>
+<summary>V1 — J'applique, j'élabore, je rédige une procédure d'essais</summary>
 
 <div class="competence-content project-grid">
 
 <!-- RAFALE -->
 <div class="project-card">
     <div class="project-header">
-        <img src="images/projects/rafale-logo.png" class="project-logo">
+        <img src="images/images-projects/geii/R.jpg.1.jpg" class="project-logo">
         <h3>RAFALE</h3>
     </div>
 
@@ -83,7 +83,7 @@
 <!-- TDB -->
 <div class="project-card">
     <div class="project-header">
-        <img src="images/projects/tdb-logo.png" class="project-logo">
+        <img src="images/images-projects/geii/TDB/TDB-logo.svg" class="project-logo">
         <h3>TDB</h3>
     </div>
 
@@ -94,18 +94,34 @@
     </p>
 
     <ul>
-        <li>L’autonomie de l’accumulateur</li>
-        <li>Les seuils de température</li>
-        <li>Le travail de l’interrupteur</li>
+        <li>L’autonomie de l’accumulateur, que le thermomètre peut fonctionner pour une période de minimum 24 heure.</li>
+        <li>Les seuils, que les LEDs s’allumons correctement en fonction de la température, par exemple la LED rouge allume si la température est plus de 39 °C.</li>
+        <li>Le travail de l’interrupteur donc on peut mettre le thermomètre en fonctionnement ou à l’arrêt.</li>
     </ul>
+
+    <p class="project-text">
+        1. Pour vérification d’autonomie j’ai utilisé le générateur de courant pour allumer la carte et le multimètre pour trouver la consommation du courant de chaque LED. Après les mesures j’ai pris la valeur maximale de consommation et la capacite d’énergie d’accumulateur. En les utilisant, j’au calculer le temps d’autonomie de notre prototype également inclus dans les calculs l’erreur de 20%.
+    </p>
 
     <p class="project-text">
         J’ai obtenu la valeur de 64 heures qu’est plus de 24 heures demande.
     </p>
 
+    <p class="project-text">
+        2. Afin de vérifier les seuils j’ai utilisé le générateur de courant pour allumer l’étuve qui va simuler les températures différentes. Pendant les essaies j’ai trouvé les valeurs de 35.1 °C pour seuil de détection d’eau froide et 38.4°C pour seuil de détection d’eau chaude. On a l’erreur de +/-5% donc j’ai applique la formule pour calculer d’erreurs pour être sûr que j’ai respecté l’exigence du client.
+    </p>
+
+    <p class="project-text">
+        Les valeurs trouve sont dans la marge d’erreur donc l’exigence a été remplie.
+    </p>
+
+    <p class="project-text">
+        3. J’ai aussi vérifié le travail de l’interrupteur. C’est le composant est située sur le produit développé donc j’ai utilisé le générateur du courant pour allumer la carte et j’ai change état d’interrupteur et conforme que les LEDs ont été éteint quand il était sur l’état d’arrêt et que LEDs ont été allumée quand il était sûr était en marche.
+    </p>
+
     <div class="project-gallery">
         <figure>
-            <img src="images/projects/tdb-verif.png">
+            <img src="images\images-projects\geii\TDB\swithc-on-tdb.svg">
             <figcaption>Produit developpé</figcaption>
         </figure>
     </div>
@@ -115,18 +131,18 @@
 <!-- KAH -->
 <div class="project-card">
     <div class="project-header">
-        <img src="images/projects/kah-logo.png" class="project-logo">
+        <img src="images/images-projects/geii/KAH/KAH-logo.svg" class="project-logo">
         <h3>KAH</h3>
     </div>
 
     <h4>SAE Kart à Hélice</h4>
 
     <p class="project-text">
-        Dans ce projet, j'ai dû vérifier la carte de récepteur, développée par l’autre partie de notre équipe.
+        Dans ce projet, j'ai dû vérifier la carte de récepteur, développée par l’autre partie de notre équipe. Mon objectif était de verifier la conformité de la carte par rapport au cahier des charges, notamment sur les blocs d’acquisition et d’action.
     </p>
 
     <p class="project-text">
-        La procédure d’essais est le même :
+        La procédure d’essais est :
     </p>
 
     <ul>
@@ -137,15 +153,60 @@
         <li>Effectuer les calculs nécessaires</li>
     </ul>
 
+    <p class="project-text">
+        Pendant tous les essais on utilise générateur pour alimenter l’émetteur et récepteur. Pour vérification de bloc d’acquisition et de la génération des signaux, on besoin l’oscilloscope.
+    </p>
+
     <div class="project-gallery">
         <figure>
-            <img src="images/projects/kah-verif1.png">
+            <img src="images\images-projects\geii\connection_recepteur_emetteur.jpg">
             <figcaption>Figure 1 : connexion des cartes</figcaption>
         </figure>
 
         <figure>
-            <img src="images/projects/kah-verif2.png">
+            <img src="images\images-projects\geii\KAH\connection-broche.svg">
             <figcaption>Figure 2 : connexion de pince</figcaption>
+        </figure>
+    </div>
+
+    <p class="project-text">
+        Pour vérifier des LEDs, on utilise d'appareil de mesure pour faire les mesures de tension et résistances que on besoin pour les calculations. En regardant les documents des voyants, on trouve l’autre valeur à l’aide de quelles on peut trouver l’intensité réel. C'est l'etape des calculs nécessaires pour vérification, toutes les formules utilisé, nous avons appris pendant nos études.
+    </p>
+</div>
+
+
+<div class="project-card">
+    <div class="project-header">
+        <h3>MUGOCHAUD</h3>
+    </div>
+
+    <p class="project-text">
+        Dans ce projet, j’ai participé à la vérification du produit développé à partir du dossier de vérification,
+        afin de démontrer la conformité du système vis-à-vis des exigences du cahier des charges.
+    </p>
+
+    <p class="project-text">
+        Les essais réalisés m’ont permis de vérifier le bon fonctionnement du détecteur de fermeture de porte,
+        de la sécurisation du chauffage, de la commande de verrouillage, du déverrouillage et du cycle de fonctionnement normal.
+    </p>
+
+    <p class="project-text">
+        Pour effectuer ces vérifications, j’ai utilisé les documents de référence du projet, l’automate Siemens S7-1200,
+        le système MUGOCHAUD, ainsi que les moyens de mesure et de test nécessaires pour observer l’état des entrées, des sorties et du cycle automatique.
+    </p>
+
+    <ul>
+        <li>Vérification du capteur de porte inductif SN04N</li>
+        <li>Vérification de la commande du verrouillage par électro-aimant</li>
+        <li>Vérification de la mise en sécurité du chauffage</li>
+        <li>Vérification de la montée et du maintien de température</li>
+        <li>Vérification de l’arrêt de fonctionnement et du déverrouillage</li>
+    </ul>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images\images-projects\geii\mujoco\fils_connection.jpg" alt="schema-automat-mugochaud">
+            <figcaption>Connexion de l’automate</figcaption>
         </figure>
     </div>
 </div>
@@ -157,31 +218,41 @@
 
 <!-- ================= V2 ================= -->
 <details class="competence-block">
-<summary>V2 — Identifier et corriger les non-conformités</summary>
+<summary>V2 — J'identifie, je corrige les non-conformités d'un prototype</summary>
 
 <div class="competence-content project-grid">
 
 <!-- RAFALE -->
 <div class="project-card">
     <div class="project-header">
-        <img src="images/projects/rafale-logo.png" class="project-logo">
+        <img src="images/images-projects/geii/R.jpg.1.jpg" class="project-logo">
         <h3>RAFALE</h3>
     </div>
+
+    <p class="project-text">
+        J'ai mentionné que la période de clignotement attendue était de 100 ms avec une tolérance de +/- 10%, comme décrit dans l'éxigence du Cahier Des Charges.
+    </p>
+
+    <p class="project-text">
+        J'ai alors explicité le déroulement de la mesure. En effet, il fallait alimenter le système, configurer l'oscilloscope, aller dans les menus de celui-ci, pour sélectionner la mesure de période.
+    </p>
 
     <p class="project-text">
         J'ai obtenu une valeur de période de 192 ms.
     </p>
 
     <p class="project-text">
-        La solution technique retenue à base de NE555 est donc en conformité.
+        La valeur obtenue est située dans l'intervalle de valeurs attendues acceptées par le Cahier Des Charges.
+        La solution technique retenue à base de NE555 et son dimensionnement est donc en conformité par l'exigence du Cahier Des Charges.
     </p>
+
 </div>
 
 
 <!-- TDB -->
 <div class="project-card">
     <div class="project-header">
-        <img src="images/projects/tdb-logo.png" class="project-logo">
+        <img src="images/images-projects/geii/TDB/TDB-logo.svg" class="project-logo">
         <h3>TDB</h3>
     </div>
 
@@ -198,12 +269,16 @@
 <!-- KAH -->
 <div class="project-card">
     <div class="project-header">
-        <img src="images/projects/kah-logo.png" class="project-logo">
+        <img src="images/images-projects/geii/KAH/KAH-logo.svg" class="project-logo">
         <h3>KAH</h3>
     </div>
 
     <p class="project-text">
-        Nous avons identifié deux non-conformité sur des LEDs.
+        Pendant la vérification de la carte récepteur, on n’a pas rencontré les beaucoup de problèmes. La plupart des blocs fonctionnaient correctement : la réception et génération des signaux pour vitesse, direction et klaxon (example peut être vu à droite) ont été validés sans problème.
+    </p>
+
+    <p class="project-text">
+    Nous avons identifié deux non-conformité sur des LEDs. Les problèmes était trouvé sur l’étape de conception. Il y a eu des problèmes avec les calculs, c'est pourquoi la valeur réelle d’intensité lumineuse que on a obtenue sont très grandes.
     </p>
 
     <ul>
@@ -212,13 +287,53 @@
     </ul>
 
     <p class="project-text">
-        Pour résoudre ces problèmes, on doit recalculer les valeurs et remplacer les résistances.
+        Pour résoudre ces problèmes, on doit recalculer les valeurs au niveau du conception et remplacer les résistances associer aux LEDs pour réduire leur l'intensité.
     </p>
 
     <div class="project-gallery">
         <figure>
-            <img src="images/projects/kah-signal.png">
+            <img src="images\images-projects\geii\KAH\horn-signal-kah.svg">
             <figcaption>Example du signal de klaxon</figcaption>
+        </figure>
+    </div>
+</div>
+
+
+<div class="project-card">
+    <div class="project-header">
+        <h3>MUGOCHAUD</h3>
+    </div>
+
+    <p class="project-text">
+        Pendant la vérification du prototype, la plupart des fonctions ont été validées correctement :
+        la détection de porte, le verrouillage, la sécurité de chauffage, l’arrêt du cycle et le déverrouillage
+        ont répondu aux attentes du cahier des charges.
+    </p>
+
+    <p class="project-text">
+        En revanche, une non-conformité a été identifiée sur la montée en température.
+        Le système a atteint 50°C en 12,4 minutes au lieu des 10 minutes demandées.
+        Cette différence a été mise en évidence lors des essais et des calculs réalisés à partir des mesures relevées.
+    </p>
+
+    <p class="project-text">
+        Cette non-conformité est liée au choix des matériaux et aux caractéristiques thermiques du système.
+        Pour corriger ce point, il faudrait soit revoir la conception thermique du MUGOCHAUD,
+        soit ajuster l’exigence de temps de montée en température dans le cahier des charges.
+    </p>
+
+    <ul>
+        <li>Conformité validée sur la majorité des essais</li>
+        <li>Non-conformité identifiée sur la montée en température</li>
+        <li>Temps mesuré : 12,4 minutes pour atteindre 50°C</li>
+        <li>Temps demandé : 10 minutes</li>
+        <li>Proposition d’amélioration : revoir le dimensionnement thermique</li>
+    </ul>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images\images-projects\geii\mujoco\Tracé du maintien de la température.png" alt="synoptique-mugochaud">
+            <figcaption>Figure : Tracé du maintien de la température</figcaption>
         </figure>
     </div>
 </div>

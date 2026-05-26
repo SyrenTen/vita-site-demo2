@@ -404,4 +404,87 @@ document.querySelectorAll('.article-card').forEach(card => {
 
 
 
+document.querySelectorAll('[data-project-carousel]').forEach((carousel) => {
+  const track = carousel.querySelector('.projects-track');
+  const prevBtn = carousel.querySelector('.projects-arrow.prev');
+  const nextBtn = carousel.querySelector('.projects-arrow.next');
+
+  if (!track || !prevBtn || !nextBtn) return;
+
+  let realCards = Array.from(track.querySelectorAll('.project-cell'));
+
+  function getCardWidth() {
+    const card = track.querySelector('.project-cell');
+    if (!card) return 0;
+
+    const style = getComputedStyle(track);
+    const gap = parseFloat(style.gap || '0');
+
+    return card.offsetWidth + gap;
+  }
+  const VISIBLE_COUNT = 2;
+
+  if (realCards.length <= VISIBLE_COUNT) {
+    track.classList.add('centered');
+    track.style.transform = 'none';
+    prevBtn.style.display = 'none';
+    nextBtn.style.display = 'none';
+    return;
+  }
+
+  // ✅ Only now we enable carousel
+  const firstClone = realCards[0].cloneNode(true);
+  const lastClone = realCards[realCards.length - 1].cloneNode(true);
+
+  track.insertBefore(lastClone, realCards[0]);
+  track.appendChild(firstClone);
+
+  let index = 1;
+  let locked = false;
+
+  function render(animate = true) {
+    const step = getCardWidth();
+    track.style.transition = animate ? 'transform 0.4s ease' : 'none';
+    track.style.transform = `translateX(${-index * step}px)`;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (locked) return;
+    locked = true;
+    index--;
+    render(true);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (locked) return;
+    locked = true;
+    index++;
+    render(true);
+  });
+
+  track.addEventListener('transitionend', () => {
+    const total = realCards.length;
+
+    if (index === 0) {
+      index = total;
+      render(false);
+    } else if (index === total + 1) {
+      index = 1;
+      render(false);
+    }
+
+    locked = false;
+  });
+
+  window.addEventListener('resize', () => {
+    track.style.transition = 'none';
+    render(false);
+  });
+
+  window.addEventListener('load', () => render(false));
+
+  render(false);
+});
+
+
 })();

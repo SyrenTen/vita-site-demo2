@@ -47,8 +47,8 @@
 <!-- INTRO -->
 <section class="competence-intro">
     <p>
-        Cette page présente les compétences liées à la maintenance des systèmes électroniques.
-        Elle regroupe des activités de diagnostic, d’intervention et de rédaction de procédures
+        Cette page présente les compétences liées à la maintenance des systèmes électroniques et automatisés.
+        Elle regroupe des activités de diagnostic, d’intervention corrective et de rédaction de procédure
         réalisées lors de travaux pratiques et de SAE.
     </p>
 </section>
@@ -60,39 +60,82 @@
 
 <!-- ================= M1 ================= -->
 <details class="competence-block">
-<summary>M1 — Appliquer une opération de maintenance</summary>
+<summary>M1 — J'applique une opération de maintenance (préventive, corrective, améliorative) à un système</summary>
 
-<div class="competence-content">
+<div class="competence-content project-grid">
 
-    <div class="project-header">
-        <img src="images/projects/blc-logo.png" class="project-logo">
-        <h3>SAE Maintenance — Brassard Lumineux pour Cycliste (BLC)</h3>
+    <!-- BLC -->
+    <div class="project-card">
+        <div class="project-header">
+            <h3>BLC</h3>
+        </div>
+
+        <h4>SAE Maintenance — Brassard Lumineux pour Cycliste</h4>
+
+        <p class="project-text">
+            Lors de cette SAE, nous avons travaillé sur une carte électronique de Brassard Lumineux pour Cycliste.
+            Ce système permet de signaler la présence d’un usager grâce à des LEDs fonctionnant selon deux modes :
+            un mode continu et un mode clignotant.
+        </p>
+
+        <p class="project-text">
+            Pendant les essais, j’ai constaté que le comportement lumineux n’était pas conforme à celui attendu :
+            les LEDs clignotaient bien, mais avec une luminosité plus faible que sur la carte de référence.
+            Le problème était donc lié à une non-conformité sur la partie éclairage.
+        </p>
+
+        <p class="project-text">
+            Après analyse, j’ai identifié que les résistances montées sur la carte ne correspondaient pas à celles
+            indiquées dans le schéma électrique. Cette différence expliquait l’intensité lumineuse trop faible
+            observée sur le prototype.
+        </p>
+
+        <p class="project-text">
+            La solution de maintenance consiste donc à remplacer les résistances par les valeurs correctes
+            prévues dans le dossier de conception afin de retrouver l’intensité lumineuse attendue et
+            remettre la carte en conformité.
+        </p>
+
+        <div class="project-gallery">
+            <figure>
+                <img src="images/images-projects/geii/maintenance/BLC.jpg" alt="BLC">
+                <figcaption>Carte BLC</figcaption>
+            </figure>
+        </div>
     </div>
 
-    <p class="project-text">
-        Lors de cette SAE, nous avons travaillé sur une carte électronique de Brassard Lumineux pour Cycliste.
-        Ce système permet de signaler la présence d’un usager grâce à des LEDs fonctionnant selon deux modes :
-        un mode continu et un mode clignotant.
-    </p>
+    <!-- MUGOCHAUD -->
+    <div class="project-card">
+        <div class="project-header">
+            <h3>MUGOCHAUD</h3>
+        </div>
 
-    <p class="project-text">
-        La carte est composée de plusieurs étages (alimentation, oscillateur, amplification, éclairage),
-        chacun assurant une fonction spécifique. L’objectif en maintenance est d’analyser le fonctionnement
-        global afin d’identifier les causes possibles de dysfonctionnement, comme une piste coupée ou un
-        composant mal soudé.
-    </p>
+        <p class="project-text">
+            J'ai travaillé sur la maintenance du coffret de commande contenant
+                l’automate Siemens S7-1200 et la partie de commande du système MUGOCHAUD.
+                Mon rôle consistait à diagnostiquer une panne liée à l’indication d’alimentation
+                du coffret.
+        </p>
 
-    <p class="project-text">
-        Lors des essais, j’ai constaté que les 6 LEDs restaient allumées en continu alors qu’elles devaient
-        clignoter. Cette observation m’a orienté vers un défaut probable dans les étages liés à l’oscillation
-        ou à l’alimentation.
-    </p>
+        <p class="project-text">
+            Lors de la mise sous tension, la LED rouge censée signaler l’état d’alimentation ne changeait pas
+            correctement d’état. Le système restait en permanence alimenté à 24 V, ce qui empêchait la mise
+            en sécurité du chauffage et le fonctionnement normal du cycle.
+        </p>
 
-    <p class="project-text">
-        Après investigation, j’ai identifié la cause racine : un mauvais dimensionnement du pont diviseur
-        de tension en sortie du NE555 dans l’étage oscillateur. Les résistances utilisées n’étaient pas
-        adaptées, ce qui entraînait une fréquence incorrecte et donc une non-conformité du système.
-    </p>
+        <p class="project-text">
+            Pour résoudre ce problème, j’ai suivi la procédure de maintenance demandée : retrait du contacteur
+            depuis la porte du coffret, remplacement par un composant neuf, puis reprise complète de la procédure
+            d’essais afin de vérifier le bon fonctionnement du boîtier métallique et de son automatisme.
+        </p>
+
+        <div class="project-gallery">
+            <figure>
+                <img src="images\images-projects\geii\mujoco\mujoco_box.jpg" alt="schema-mugochaud-automate">
+                <figcaption>Photo de coffret de commande</figcaption>
+            </figure>
+        </div>
+    </div>
 
 </div>
 </details>
@@ -101,45 +144,71 @@
 
 <!-- ================= M2 ================= -->
 <details class="competence-block">
-<summary>M2 — Rédiger une procédure de maintenance</summary>
+<summary>M2 — Je rédige la procédure de maintenance (préventive, corrective, améliorative) d'un système</summary>
 
-<div class="competence-content">
+<div class="competence-content project-grid">
 
-    <div class="project-header">
-        <img src="images/projects/blc-logo.png" class="project-logo">
-        <h3>SAE Maintenance — Dossier de Réparation (DDR)</h3>
+    <!-- BLC -->
+    <div class="project-card">
+        <div class="project-header">
+            <h3>BLC</h3>
+        </div>
+
+        <h4>SAE Maintenance — Procédure corrective du Brassard Lumineux pour Cycliste</h4>
+
+        <p class="project-text">
+            Pour documenter la maintenance du BLC, j’ai rédigé une procédure structurée permettant de localiser
+            la panne, d’identifier la cause racine et de définir la correction à appliquer.
+        </p>
+
+        <p class="project-text">
+            La démarche suivie repose sur les étapes classiques d’une maintenance corrective :
+        </p>
+
+        <ul class="project-list">
+            <li>contrôle visuel de la carte et des soudures,</li>
+            <li>vérification du fonctionnement des LEDs en mode continu et clignotant,</li>
+            <li>comparaison avec le schéma électrique,</li>
+            <li>identification des résistances réellement montées,</li>
+            <li>remplacement des composants non conformes par les bonnes valeurs.</li>
+        </ul>
+
+        <p class="project-text">
+            Une fois les résistances corrigées, j’ai proposé une nouvelle vérification de la luminosité afin de confirmer
+            que les LEDs retrouvent l’intensité attendue et que la carte respecte bien le comportement prévu.
+        </p>
     </div>
 
-    <p class="project-text">
-        Pour structurer le diagnostic et assurer la traçabilité des interventions, j’ai utilisé un DDR
-        (Dossier De Réparation). Cet outil permet de formaliser les étapes de test, les observations
-        et les décisions techniques prises lors de la maintenance d’un système.
-    </p>
+    <!-- MUGOCHAUD -->
+    <div class="project-card">
+        <div class="project-header">
+            <h3>MUGOCHAUD</h3>
+        </div>
 
-    <p class="project-text">
-        Le DDR est composé de deux parties principales :
-    </p>
+        <p class="project-text">
+            J’ai également rédigé la procédure de maintenance corrective du boîtier métallique du système MUGOCHAUD,
+            en détaillant toutes les étapes nécessaires pour remplacer le contacteur de porte défectueux.
+        </p>
 
-    <ul class="project-list">
-        <li>Un compte-rendu d’investigation détaillant les procédures, moyens d’essai et résultats</li>
-        <li>Un tableau de suivi permettant d’identifier rapidement la cause racine par sous-système</li>
-    </ul>
+        <p class="project-text">
+            La procédure comprend les opérations suivantes :
+        </p>
 
-    <p class="project-text">
-        Dans le compte-rendu, j’ai décrit chaque étape : le moyen utilisé (multimètre, alimentation),
-        la procédure appliquée (mesures, changement de sélecteur), les résultats attendus et ceux obtenus.
-        J’ai également ajouté des commentaires pour justifier les hypothèses et décisions.
-    </p>
+        <ul class="project-list">
+            <li>mettre le système hors tension,</li>
+            <li>retirer le contacteur du boîtier métallique,</li>
+            <li>installer un nouveau contacteur conforme,</li>
+            <li>vérifier la LED d’état alimentation / non-alimentation,</li>
+            <li>relancer la procédure complète de test du système,</li>
+            <li>confirmer la bonne mise en sécurité du chauffage et le retour au fonctionnement normal.</li>
+        </ul>
 
-    <p class="project-text">
-        Le tableau de suivi m’a permis d’analyser chaque étage du système (alimentation, oscillateur,
-        amplificateur, éclairage) et de valider progressivement leur fonctionnement.
-    </p>
+        <p class="project-text">
+            Cette procédure permet de garantir une intervention reproductible et fiable, tout en assurant la conformité
+            du système après remplacement du composant défectueux.
+        </p>
 
-    <p class="project-text">
-        Cette démarche méthodique m’a permis d’identifier rapidement la panne et de proposer une correction
-        adaptée, tout en assurant une documentation complète de l’intervention.
-    </p>
+    </div>
 
 </div>
 </details>

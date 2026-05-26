@@ -2058,10 +2058,10 @@ html {
 
 /* Inside block */
 .competence-content {
-    padding: 15px 0;
+    padding: 18px 0;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 22px;
 }
 
 /* Project header */
@@ -2071,11 +2071,41 @@ html {
     gap: 15px;
 }
 
+.project-text {
+    font-size: 1rem;
+    opacity: 0.92;
+    line-height: 1.75;
+    margin-bottom: 16px;
+}
+
+.project-gallery {
+    margin-top: 6px;
+}
+
+.competence-content .project-card ul {
+    columns: unset;
+    list-style: disc;
+
+    padding-left: 24px;
+
+    margin-top: 14px;
+    margin-bottom: 18px;
+
+    line-height: 1.7;
+}
+
+.competence-content .project-card li {
+    margin-bottom: 10px;
+    padding-left: 4px;
+}
+
 .project-logo {
     width: 60px;
     height: 60px;
     border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.3);
+    border: none;
+    object-fit: contain;
+    background: transparent;
 }
 
 /* Text */
@@ -2086,15 +2116,42 @@ html {
 
 /* Gallery */
 .project-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 18px;
+}
+
+.project-gallery figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 650px;
+    margin: 0;
 }
 
 .project-gallery img {
     width: 100%;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.2);
+    max-width: 650px;
+    max-height: 650px;
+    height: auto;
+    object-fit: contain;
+
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+
+    background: rgba(255,255,255,0.03);
+    padding: 8px;
+}
+
+.project-gallery figcaption {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    opacity: 0.85;
+    line-height: 1.4;
+    text-align: center;
 }
 
 .project-gallery figcaption {
@@ -2344,12 +2401,6 @@ html {
     margin: 0 auto;
 }
 
-.project-card h4 {
-    margin-top: 10px;
-    font-size: 1.1rem;
-    color: #aaa;
-}
-
 .project-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -2360,120 +2411,219 @@ html {
     flex: 1 1 250px;
 }
 
-.project-card ul {
-    columns: 2;
-    column-gap: 20px;
+.competence-content .project-card ul {
+    columns: unset;
+    column-gap: normal;
+    list-style: disc;
+    padding-left: 22px;
+    margin: 10px 0;
+    display: block;
 }
+
+.competence-content .project-card li {
+    display: list-item;
+    margin-bottom: 8px;
+    white-space: normal;
+    line-height: 1.5;
+}
+
+
+
+/* ===== PROJECT PAGE ===== */
 
 .project-page {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-.project-hero {
+    padding: 40px 8%;
     display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.project-hero img {
-    width: 140px;
-    height: auto;
-    border-radius: 10px;
-    border: 2px solid var(--main-color);
-}
-
-.project-hero-text h1 {
-    font-size: 40px;
-}
-
-.project-hero-text p {
-    font-size: 18px;
-    opacity: 0.8;
-}
-
-.project-section {
-    margin-bottom: 35px;
-    padding: 20px;
+/* MAIN CONTAINER */
+.project-container {
+    max-width: 1050px;
+    width: 100%;
+    padding: 25px;
 
     border: var(--card-border-width) solid var(--main-color);
     border-radius: var(--card-radius);
     box-shadow: var(--card-shadow);
 
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    background: var(--bg-color);
+}
+
+/* TOP BAR */
+.project-top {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.project-back-btn {
+    font-size: 16px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    color: var(--main-color);
     transition: 0.3s ease;
 }
 
-.project-section:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--card-hover-shadow);
+.project-back-btn:hover {
+    transform: scale(1.05);
+}
+
+/* TITLE */
+.project-title {
+    font-size: 36px;
+    text-align: center;
+}
+
+/* IMAGE */
+.project-image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.project-image-wrapper img {
+    max-width: 320px;
+    border-radius: 10px;
+    border: 2px solid var(--main-color);
+}
+
+/* SECTIONS */
+.project-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .project-section h2 {
-    font-size: 26px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid var(--main-color);
+    font-size: 22px;
+    border-bottom: 2px solid var(--main-color);
     padding-bottom: 5px;
 }
 
+/* TEXT */
 .project-section p {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 12px;
 }
 
+/* LIST */
 .project-section ul {
-    padding-left: 20px;
-    line-height: 1.6;
+    padding-left: 18px;
 }
 
 .project-section li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    font-size: 16px;
 }
 
-
-.project-image-placeholder {
-    margin-top: 15px;
-    padding: 40px;
-    border: 2px dashed var(--main-color);
-    border-radius: 10px;
-    text-align: center;
-    opacity: 0.6;
-}
-
-
+/* BUTTONS */
 .project-buttons {
     display: flex;
+    justify-content: center;
     gap: 20px;
-    margin-top: 30px;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
-.project-buttons a {
+.project-btn {
     padding: 10px 20px;
     border-radius: 20px;
-    border: 2px solid var(--main-color);
+    background: var(--second-bg-color);
     color: var(--main-color);
-    text-decoration: none;
+    border: none;
+    cursor: pointer;
     transition: 0.3s ease;
+    font-size: 16px;
 }
 
-.project-buttons a:hover {
+.project-btn:hover {
     background: var(--main-color);
     color: var(--bg-color);
 }
 
-/* RESPONSIVE */
-@media (max-width: 700px) {
-    .project-hero {
-        flex-direction: column;
-        align-items: flex-start;
+
+/* ===== Projects carousel on projects.html ===== */
+#projects_page .projects-section.projects-carousel {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 18px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* Hide overflow area */
+#projects_page .projects-viewport {
+    overflow: hidden;
+    width: 100%;
+    padding-top: 20px;
+    margin-top: -20px;
+}
+
+/* Horizontal moving line of cards */
+#projects_page .projects-track {
+    display: flex;
+    gap: 32px;
+    align-items: stretch;
+    transition: transform 0.4s ease;
+    will-change: transform;
+    justify-content: flex-start;
+}
+#projects_page .projects-track.centered {
+    justify-content: center;
+}
+
+/* Each card keeps your existing style, but gets carousel sizing */
+#projects_page .projects-track .project-cell {
+    flex: 0 0 calc((100% - 32px) / 2);
+    max-width: calc((100% - 32px) / 2);
+}
+
+/* Arrows reuse your button palette */
+#projects_page .projects-arrow {
+    min-width: 52px;
+    min-height: 52px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 28px;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    #projects_page .projects-section.projects-carousel {
+        grid-template-columns: 1fr;
+        gap: 12px;
     }
 
-    .project-hero img {
-        width: 100px;
+    #projects_page .projects-arrow.prev {
+        order: 1;
+    }
+
+    #projects_page .projects-viewport {
+        order: 2;
+    }
+
+    #projects_page .projects-arrow.next {
+        order: 3;
+    }
+
+    #projects_page .projects-track .project-cell {
+        flex: 0 0 100%;
+        width: 100%;
     }
 }
 
+@media (max-width: 600px) {
+    #projects_page .projects-track .project-cell {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

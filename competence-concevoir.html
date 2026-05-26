@@ -52,14 +52,14 @@
 
 <!-- ================= C1 ================= -->
 <details class="competence-block">
-<summary>C1 — Identifier les fonctions demandées</summary>
+<summary>C1 — J'identifie les fonctions demandées à la lecture du cahier des charges (architecture fonctionnelle -sans solution technique)</summary>
 
 <div class="competence-content project-grid">
 
 <!-- ===== RAFALE ===== -->
 <div class="project-card">
     <div class="project-header">
-        <img src="images/projects/rafale-logo.png" class="project-logo">
+        <img src="images/images-projects/geii/R.jpg.1.jpg" class="project-logo">
         <h3>RAFALE</h3>
     </div>
 
@@ -80,18 +80,12 @@
         <li>Les 3 piles font partie du bloc énergie.</li>
     </ul>
 
-    <div class="project-gallery">
-        <figure>
-            <img src="images/projects/rafale1.png">
-            <figcaption>Synoptique architecturel du RAFALE</figcaption>
-        </figure>
-    </div>
 </div>
 
 <!-- ===== TDB ===== -->
 <div class="project-card">
     <div class="project-header">
-        <img src="images/projects/tdb-logo.png" class="project-logo">
+        <img src="images/images-projects/geii/TDB/TDB-logo.svg" class="project-logo">
         <h3>TDB</h3>
     </div>
 
@@ -118,22 +112,26 @@
     <p class="project-text">
         Le bloc Acquisition contient la mesure de la température par à un capteur LM35 et la pont diviseur a deux sorties.
         Le bloc Traitement a une partie avec l'amplificateur operationnel en montage de comparateur a fenetre.
-        Le bloc Action regroupe les 3 LED.
-        Le bloc Energie comporte un accumulateur LiPo.
+        
     </p>
 
     <div class="project-gallery">
         <figure>
-            <img src="images/projects/tdb1.png">
+            <img src="images/images-projects/geii/TDB/architecute-diagram-tdb.svg">
             <figcaption>Blocs fonctionnels du TDB</figcaption>
         </figure>
     </div>
+    
+    <p class="project-text">Le bloc Action regroupe les 3 LED : bleue, rouge et verte, qui s'allument dans les cas indiqués. Chacune d'elle est alimentée par un régulateur linéaire controlé par une des combinaison de AOP et porte logique.</p>
+
+    <p class="project-text">Le bloc Energie comporte un accumulateur LiPo commuté par un interrupteur qui contrôle la mise en marche la carte et la regulateur linéaire.</p>
+
 </div>
 
 <!-- ===== KAH ===== -->
 <div class="project-card">
     <div class="project-header">
-        <img src="images/projects/kah-logo.png" class="project-logo">
+        <img src="images/images-projects/geii/KAH/KAH-logo.svg" class="project-logo">
         <h3>KAH</h3>
     </div>
 
@@ -155,13 +153,46 @@
     </ul>
 
     <p class="project-text">
-        L’émetteur émet une trame avec période de 108 ms ou 333 ms.
+        L’émetteur émet une trame (signal) avec période de 108 millisecondes. Mais si aucune commande ne change, la période est fixée à 333 millisecondes.
     </p>
 
     <div class="project-gallery">
         <figure>
-            <img src="images/projects/kah1.png">
+            <img src="images/images-projects/geii/KAH/Diagramme d'Architecture Emetteur.svg">
             <figcaption>Bloc d’analyse fonctionnelle du KAH</figcaption>
+        </figure>
+    </div>
+</div>
+
+
+
+<div class="project-card">
+    <div class="project-header">
+        <h3>MUGOCHAUD</h3>
+    </div>
+
+    <p class="project-text">
+        Dans ce projet, j’ai d’abord identifié les fonctions demandées à la lecture du cahier des charges,
+        afin de construire l’architecture fonctionnelle du système sans encore entrer dans le choix détaillé des solutions techniques.
+    </p>
+
+    <p class="project-text">
+        Le système MUGOCHAUD est organisé autour de quatre blocs fonctionnels : acquisition, traitement, action et énergie.
+        L’objectif global est de gérer automatiquement l’ouverture de la porte, la mise en sécurité, le verrouillage,
+        le chauffage et l’affichage lumineux du cycle de fonctionnement.
+    </p>
+
+    <ul>
+        <li>Bloc acquisition : capteur inductif SN04N pour détecter la fermeture de la porte, bouton start/stop et capteur PT1000 pour la température.</li>
+        <li>Bloc traitement : automate Siemens S7-1200 CPU 1215C, qui orchestre la séquence de fonctionnement.</li>
+        <li>Bloc action : électro-aimant 24 V pour le verrouillage, deux résistances chauffantes 12 Ω / 50 W, et deux LED blanches.</li>
+        <li>Bloc énergie : alimentation 24 V DC distribuée vers l’armoire et les différents actionneurs.</li>
+    </ul>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images\images-projects\geii\mujoco\mujoco_synoptique.png" alt="synoptique-mugochaud">
+            <figcaption>Synoptique fonctionnel du projet MUGOCHAUD</figcaption>
         </figure>
     </div>
 </div>
@@ -171,14 +202,14 @@
 
 <!-- ================= C2 ================= -->
 <details class="competence-block">
-<summary>C2 — Proposer une solution technique</summary>
+<summary>C2 — Je propose une solution technique pour répondre à une fonction</summary>
 
 <div class="competence-content project-grid">
 
 <!-- ===== RAFALE ===== -->
 <div class="project-card">
     <div class="project-header">
-        <img src="images/projects/rafale-logo.png" class="project-logo">
+        <img src="images/images-projects/geii/R.jpg.1.jpg" class="project-logo">
         <h3>RAFALE</h3>
     </div>
 
@@ -198,19 +229,13 @@
         <li>Les 3 piles font partie du bloc énergie.</li>
     </ul>
 
-    <div class="project-gallery">
-        <figure>
-            <img src="images/projects/rafale2.png">
-            <figcaption>Schéma de l'oscillateur</figcaption>
-        </figure>
-    </div>
 </div>
 
 
 <!-- ===== TDB ===== -->
 <div class="project-card">
     <div class="project-header">
-        <img src="images/projects/tdb-logo.png" class="project-logo">
+        <img src="images/images-projects/geii/TDB/TDB-logo.svg" class="project-logo">
         <h3>TDB</h3>
     </div>
 
@@ -237,7 +262,7 @@
     <ul>
         <li>Si le signal capturé est supérieur à 0.39V +/-5%, on aura 5V en sortie de l’AOP U1 : B et 0V en sortie de l’AOP U1 : A - on allume la LED rouge.</li>
         <li>Si signal capturé est inférieur à 0.36V +/-5%, on aura 5V en sortie de l’AOP U1 : A et 0V de la sortie de l'AOP U1 : B donc on allume la LED bleue.</li>
-        <li>Si on a 0.36V < signal capturé <0.39V, on utilise une porte logique NOR pour allumer une LED verte.</li>
+        <li>Si on a 0.36V < signal capturé < 0.39V, on utilise une porte logique NOR pour allumer une LED verte.</li>
     </ul>
 
     <p class="project-text">
@@ -264,7 +289,7 @@
 
     <div class="project-gallery">
         <figure>
-            <img src="images/projects/tdb2.png">
+            <img src="images/images-projects/geii/TDB/full-schema-tdb.svg">
             <figcaption>Schéma électrique du TDB</figcaption>
         </figure>
     </div>
@@ -274,7 +299,7 @@
 <!-- ===== KAH ===== -->
 <div class="project-card">
     <div class="project-header">
-        <img src="images/projects/kah-logo.png" class="project-logo">
+        <img src="images/images-projects/geii/KAH/KAH-logo.svg" class="project-logo">
         <h3>KAH</h3>
     </div>
 
@@ -289,15 +314,15 @@
     </p>
 
     <p class="project-text">
-        Pour d’éviter les problemes causés par le bruit créé par les mains humaines, j’ai ajouté un filtrage.
+        Pour d’éviter les problemes causés par le bruit créé par les mains humaines, j’ai ajouté un filtrage. Pour ça on a cherché la formule de fréquence de coupure et dimensionné un condensateur qui aide avec ce probleme.
     </p>
 
     <p class="project-text">
-        Pour l’étage avec klaxon, on doit choisir une résistance et décider est que c’est type pull-up ou pull-down.
+        Pour l’étage avec klaxon, on doit choisir une résistance et décider est que c’est type pull-up ou pull-down, ce qui simplifie la détection d’un appui.
     </p>
 
     <p class="project-text">
-        2. Pour de répondre à l'exigence d’action sur les LEDs d’émission infrarouge, nous devrons faire l’étage avec transistor.
+        2. Pour de répondre à l'exigence d’action sur les LEDs d’émission infrarouge, nous devrons faire l’étage avec transistor et utilise 2 résistances avec un condensateur. La raison est que LEDs besoin plus de courant de que le microcontrôleur peut fournir.
     </p>
 
     <p class="project-text">
@@ -308,6 +333,45 @@
         Chaque étage a été simulé sous outil logiciel pour vérifier le fonctionnement attendu. Ces simulations nous ont permis de conformé les valeurs des composants et de corriger les erreurs avant l'étape de production.
     </p>
 
+    <div class="project-gallery">
+        <figure>
+            <img src="images/images-projects/geii/KAH/transmitter-kah.svg">
+            <figcaption>Schéma électrique du KAH</figcaption>
+        </figure>
+    </div>
+
+</div>
+
+
+
+<div class="project-card">
+    <div class="project-header">
+        <h3>MUGOCHAUD</h3>
+    </div>
+
+    <p class="project-text">
+        Pour répondre aux fonctions du cahier des charges, j’ai proposé et justifié plusieurs solutions techniques
+        adaptées au fonctionnement du système MUGOCHAUD.
+    </p>
+
+    <p class="project-text">
+        La fermeture de porte est détectée à l’aide d’un capteur inductif SN04N, qui permet de distinguer l’état ouvert
+        ou fermé de l’enceinte. La mesure de température est assurée par une sonde PT1000, intégrée dans la boucle de régulation.
+    </p>
+
+    <p class="project-text">
+        Pour le verrouillage, j’ai retenu un électro-aimant 24 V commandé directement par l’automate.
+        Pour le chauffage, le choix retenu est un radiateur constitué de deux résistances électriques HS50 12R F de 50 W.
+        L’automate Siemens S7-1200 CPU 1215C pilote l’ensemble du cycle de fonctionnement.
+    </p>
+
+    <ul>
+        <li>Détection de porte : SN04N inductif, signal logique conforme à l’état mécanique de la porte.</li>
+        <li>Mesure de température : PT1000, utilisée comme capteur principal de régulation.</li>
+        <li>Action de verrouillage : électro-aimant 24 V.</li>
+        <li>Action de chauffage : deux résistances 12 Ω / 50 W en parallèle.</li>
+        <li>Traitement : automate Siemens S7-1200 avec programmation sous TIA Portal.</li>
+    </ul>
 </div>
 
 </div>
@@ -315,14 +379,14 @@
 
 <!-- ================= C3 ================= -->
 <details class="competence-block">
-<summary>C3 — Affiner une solution par maquettage</summary>
+<summary>C3 — J'affine une solution technique en m'appuyant sur un maquettage numérique et/ou matériel</summary>
 
 <div class="competence-content project-grid">
 
 <!-- ===== RAFALE ===== -->
 <div class="project-card">
     <div class="project-header">
-        <img src="images/projects/rafale-logo.png" class="project-logo">
+        <img src="images/images-projects/geii/R.jpg.1.jpg" class="project-logo">
         <h3>RAFALE</h3>
     </div>
 
@@ -337,7 +401,7 @@
     </p>
 
     <p class="project-text">
-        Le protocole de fabrication est décrit en détail dans ma fiche de synthèse du HTUT 4 "Comment fabriquer une carte électronique ?"
+        Le protocole de fabrication est décrit en détail dans ma fiche de synthèse cree pendant le cours du HTUT 4 "Comment fabriquer une carte électronique ?"
     </p>
 </div>
 
@@ -345,7 +409,7 @@
 <!-- ===== TDB ===== -->
 <div class="project-card">
     <div class="project-header">
-        <img src="images/projects/tdb-logo.png" class="project-logo">
+        <img src="images/images-projects/geii/TDB/TDB-logo.svg" class="project-logo">
         <h3>TDB</h3>
     </div>
 
@@ -371,7 +435,7 @@
 
     <div class="project-gallery">
         <figure>
-            <img src="images/projects/tdb3.png">
+            <img src="images/images-projects/geii/les typons.png">
             <figcaption>Typon et plan de perçage du TDB</figcaption>
         </figure>
     </div>
@@ -381,7 +445,7 @@
 <!-- ===== KAH ===== -->
 <div class="project-card">
     <div class="project-header">
-        <img src="images/projects/kah-logo.png" class="project-logo">
+        <img src="images/images-projects/geii/KAH/KAH-logo.svg" class="project-logo">
         <h3>KAH</h3>
     </div>
 
@@ -411,18 +475,54 @@
 
     <div class="project-gallery">
         <figure>
-            <img src="images/projects/kah3.png">
+            <img src="images\images-projects\geii\typonesemetteur.png">
             <figcaption>Les typones d'emetteur</figcaption>
         </figure>
 
         <figure>
-            <img src="images/projects/kah4.png">
+            <img src="images\images-projects\geii\KAH\plan implantation emmeteur.svg">
             <figcaption>Plan d'implantation d'emetteur</figcaption>
         </figure>
 
         <figure>
-            <img src="images/projects/kah5.png">
+            <img src="images\images-projects\geii\KAH\planpercageemmeteur.svg">
             <figcaption>Schema de percage d'emetteur</figcaption>
+        </figure>
+    </div>
+</div>
+
+
+<div class="project-card">
+    <div class="project-header">
+        <h3>MUGOCHAUD</h3>
+    </div>
+
+    <p class="project-text">
+        Afin d’affiner la solution, j’ai travaillé sur le maquettage numérique et sur les documents de câblage
+        nécessaires à la fabrication du système.
+    </p>
+
+    <p class="project-text">
+        J’ai exploité la nomenclature générée, les schémas de connexion et la procédure de câblage pour vérifier
+        la cohérence de l’implantation des composants, des alimentations et des liaisons entre l’enceinte et l’armoire.
+    </p>
+
+    <p class="project-text">
+        Cette étape m’a permis de vérifier les longueurs de câbles, le positionnement des bornes,
+        la répartition des entrées/sorties de l’automate et la faisabilité du montage avant la réalisation finale.
+    </p>
+
+    <ul>
+        <li>Lecture et exploitation de la nomenclature automatique du projet.</li>
+        <li>Vérification des schémas de connexion alimentation / automate.</li>
+        <li>Contrôle de la cohérence du câblage entre l’enceinte climatique et l’armoire électrique.</li>
+        <li>Préparation de la procédure de fabrication et de câblage.</li>
+    </ul>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images\images-projects\geii\mujoco\Schema_connection_cables_Automat.png" alt="schema-alimentation-mugochaud">
+            <figcaption>Schéma de connexion</figcaption>
         </figure>
     </div>
 </div>
@@ -430,17 +530,17 @@
 </div>
 </details>
 
-<!-- ================= C4 ================= -->
+
 <!-- ================= C4 ================= -->
 <details class="competence-block">
-<summary>C4 — Rédiger un dossier de conception et de fabrication</summary>
+<summary>C4 — Je rédige un dossier de conception et de fabrication</summary>
 
 <div class="competence-content project-grid">
 
 <!-- ===== KAH ===== -->
 <div class="project-card">
     <div class="project-header">
-        <img src="images/projects/kah-logo.png" class="project-logo">
+        <img src="images/images-projects/geii/KAH/KAH-logo.svg" class="project-logo">
         <h3>KAH</h3>
     </div>
 
@@ -464,7 +564,7 @@
 
     <div class="project-gallery">
         <figure>
-            <img src="images/projects/kah6.png">
+            <img src="images\images-projects\geii\photo_2025-06-05_07-16-32.jpg">
             <figcaption>La carte l'emetteur</figcaption>
         </figure>
     </div>
@@ -489,6 +589,37 @@
         <li>13 - quartz</li>
     </ul>
 
+</div>
+
+
+<div class="project-card">
+    <div class="project-header">
+        <h3>MUGOCHAUD</h3>
+    </div>
+
+    <p class="project-text">
+        Dans ce projet, j’ai participé à la rédaction des dossiers de conception, de fabrication et de vérification,
+        en m’appuyant sur les schémas, la nomenclature et les essais réalisés sur le système.
+    </p>
+
+    <p class="project-text">
+        Le dossier de conception présente l’architecture fonctionnelle et détaillée du produit,
+        tandis que le dossier de fabrication regroupe les documents nécessaires à l’assemblage :
+        schéma électrique, nomenclature, procédure de câblage et implantation logicielle.
+    </p>
+
+    <p class="project-text">
+        J’ai également contribué à la vérification du fonctionnement complet : détection de porte,
+        verrouillage, mise en chauffe, arrêt du cycle et retour à l’état sécurisé.
+        La validation du comportement global a été consignée dans le dossier de vérification.
+    </p>
+
+    <ul>
+        <li>Rédaction et mise en forme du dossier de conception.</li>
+        <li>Rédaction du dossier de fabrication avec les documents de production.</li>
+        <li>Participation à la vérification du cycle complet de fonctionnement.</li>
+        <li>Analyse des essais et validation de la conformité du système.</li>
+    </ul>
 </div>
 
 </div>
