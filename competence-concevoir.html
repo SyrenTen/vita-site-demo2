@@ -175,16 +175,11 @@
     </p>
 
     <ul>
-        <li>Le robot doit avancer vers l’adversaire.</li>
-        <li>Le robot doit pouvoir tourner à gauche ou à droite.</li>
-        <li>Le robot doit pouvoir s’arrêter lorsque c’est nécessaire.</li>
-        <li>Le robot doit réagir aux informations issues des capteurs de sol et de détection d’adversaire.</li>
+        <li>Le robot doit avancer vers l’adversaire</li>
+        <li>Le robot doit pouvoir tourner à gauche ou à droite</li>
+        <li>Le robot doit pouvoir s’arrêter lorsque c’est nécessaire</li>
+        <li>Le robot doit réagir aux informations issues des capteurs de sol et de détection d’adversaire</li>
     </ul>
-
-    <p class="project-text">
-        J’ai donc travaillé sur l’identification des besoins du bloc action, qui repose sur les motoréducteurs,
-        l’interface de puissance et la logique de commande du déplacement.
-    </p>
 
     <div class="project-gallery">
         <figure>
@@ -351,20 +346,20 @@
     </p>
 
     <p class="project-text">
-        Nous avons comparé deux solutions disponibles sur le stock : le DRV8835 et le DRV8833.
+        J'ai comparé deux solutions disponibles sur le stock : le DRV8835 et le DRV8833.
         Le choix du DRV8835 a été retenu car il répondait aux contraintes d’alimentation logique du microcontrôleur,
         à la tension batterie et au courant nécessaire pour entraîner les moteurs.
     </p>
 
     <ul>
-        <li>Pont en H DRV8835 pour commander deux moteurs CC.</li>
-        <li>Commande adaptée à une logique 5 V côté Arduino.</li>
-        <li>Alimentation moteur compatible avec la batterie 7,4 V.</li>
-        <li>Courant de sortie suffisant pour les motoréducteurs GM3.</li>
+        <li>Pont en H DRV8835 pour commander deux moteurs CC</li>
+        <li>Adaptée à une logique 5 V côté Arduino</li>
+        <li>Alimentation moteur compatible avec la batterie 7,4 V</li>
+        <li>Courant de sortie suffisant pour les motoréducteurs GM3</li>
     </ul>
 
     <p class="project-text">
-        J’ai également participé à la programmation des fonctions de déplacement, notamment l’avance, le virage à gauche,
+        J’ai également fait la programmation des fonctions de déplacement, notamment l’avance, le virage à gauche,
         le virage à droite et l’arrêt des moteurs.
     </p>
 
@@ -507,25 +502,19 @@
     </div>
 
     <p class="project-text">
-        Afin d’affiner la solution technique, j’ai travaillé sur le maquettage numérique de la partie action,
-        en m’appuyant sur le schéma détaillé, le routage KiCad et les documents de connexion du driver moteur.
+        J'ai travaillé sur le prototypage numérique de la section de commande, en m'appuyant sur les schémas des tableaux de connexion du pont et du circuit d'attaque du moteur, mais le tracé KiCad du shield a été réalisé par un autre binôme de notre équipe.
     </p>
 
     <p class="project-text">
-        J’ai vérifié la cohérence entre le schéma électrique, l’implantation du pont en H et les connexions vers l’Arduino,
-        afin de préparer un prototype exploitable pour les essais.
+        J’ai apres vérifié la cohérence entre le schéma électrique et l’implantation du pont en H et les connexions vers l’Arduino.
     </p>
 
     <ul>
-        <li>Vérification du câblage du DRV8835 en mode IN/IN.</li>
-        <li>Contrôle de la correspondance entre les broches Arduino et les entrées du pont en H.</li>
-        <li>Préparation du schéma d’implantation dans KiCad.</li>
-        <li>Validation des choix techniques avant la fabrication du prototype.</li>
+        <li>Câblage du DRV8835 en mode IN/IN</li>
+        <li>Contrôle de la correspondance entre les broches Arduino et les entrées du pont en H</li>
+        <li>Validation des choix techniques avant la fabrication du prototype avec derisquage</li>
     </ul>
 
-    <p class="project-text">
-        Cette étape m’a permis de confirmer que la solution retenue était réaliste, cohérente et compatible avec le fonctionnement attendu du robot.
-    </p>
 
     <div class="project-gallery">
         <figure>
@@ -558,10 +547,9 @@
     </p>
 
     <ul>
-        <li>Lecture et exploitation de la nomenclature automatique du projet.</li>
-        <li>Vérification des schémas de connexion alimentation / automate.</li>
-        <li>Contrôle de la cohérence du câblage entre l’enceinte climatique et l’armoire électrique.</li>
-        <li>Préparation de la procédure de fabrication et de câblage.</li>
+        <li>Vérification des schémas de connexion alimentation/automate</li>
+        <li>Contrôle du connection entre l’enceinte climatique et l’armoire électrique</li>
+        <li>Préparation de la procédure de fabrication et de câblage</li>
     </ul>
 
     <div class="project-gallery">
@@ -646,31 +634,19 @@
     </div>
 
     <p class="project-text">
-        Dans ce projet, j’ai participé à la rédaction du dossier de conception, du dossier de fabrication
-        et du dossier de vérification pour la partie action du robot mini-sumo.
-    </p>
-
-    <p class="project-text">
         J’ai contribué à la rédaction des documents nécessaires à la fabrication du prototype :
-        nomenclature, schéma électrique, schéma d’implantation, plan de câblage et procédure d’assemblage.
-    </p>
-
-    <p class="project-text">
-        J’ai également préparé les éléments de vérification permettant de contrôler le bon fonctionnement du pont en H
-        et la conformité des déplacements du robot.
+        nomenclature, schéma électrique, schéma d’implantation, plan de câblage et procédure de connection du pont en H.
     </p>
 
     <ul>
-        <li>Rédaction des documents de conception pour la partie action.</li>
-        <li>Participation à la mise en forme du dossier de fabrication.</li>
-        <li>Préparation des documents utiles à la vérification du prototype.</li>
-        <li>Suivi de la cohérence entre schéma, routage et essais.</li>
+        <li>Rédaction des documents de conception pour la partie action</li>
+        <li>Préparation des procedure de verificaiton du prototype</li>
     </ul>
 
     <div class="project-gallery">
         <figure>
             <img src="images\images-projects\geii\SUMO\test-robot.png" alt="Schéma d’essai de l’action">
-            <figcaption>Schéma d’essai de la partie action</figcaption>
+            <figcaption>Schéma de connection d’essai de la partie action</figcaption>
         </figure>
     </div>
 </div>
@@ -681,27 +657,14 @@
     </div>
 
     <p class="project-text">
-        Dans ce projet, j’ai participé à la rédaction des dossiers de conception, de fabrication et de vérification,
-        en m’appuyant sur les schémas, la nomenclature et les essais réalisés sur le système.
-    </p>
-
-    <p class="project-text">
-        Le dossier de conception présente l’architecture fonctionnelle et détaillée du produit,
-        tandis que le dossier de fabrication regroupe les documents nécessaires à l’assemblage :
-        schéma électrique, nomenclature, procédure de câblage et implantation logicielle.
-    </p>
-
-    <p class="project-text">
-        J’ai également contribué à la vérification du fonctionnement complet : détection de porte,
-        verrouillage, mise en chauffe, arrêt du cycle et retour à l’état sécurisé.
-        La validation du comportement global a été consignée dans le dossier de vérification.
+        J’ai participé à la rédaction des dossiers de conception, de fabrication et de vérification,
+        en m’appuyant sur les schémas fait, la nomenclature et le procedure de fabrication réalisé avec un algorithm de fonctionnement creé
     </p>
 
     <ul>
-        <li>Rédaction et mise en forme du dossier de conception.</li>
-        <li>Rédaction du dossier de fabrication avec les documents de production.</li>
-        <li>Participation à la vérification du cycle complet de fonctionnement.</li>
-        <li>Analyse des essais et validation de la conformité du système.</li>
+        <li>Rédaction et mise en forme du dossier de conception</li>
+        <li>Rédaction du dossier de fabrication avec les procedure de fabrication</li>
+        <li>Analyse des essais et validation de la conformité du système</li>
     </ul>
 </div>
 
