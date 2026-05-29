@@ -18,12 +18,12 @@
         <div class="nav-dropdown">
             <a href="index2.html#hero">Accueil ▾</a>
             <div class="dropdown-menu">
-                <a href="index2.html#personnage">Personnage</a>
-                <a href="index2.html#competences-geii">Compétences GEII</a>
-                <a href="index2.html#competences">Compétences</a>
-                <a href="index2.html#liens">Liens</a>
-                <a href="index2.html#projects_presentation">Projets</a>
-                <a href="index2.html#contact">Contact</a>
+                <a href="index.html#personnage">Personnage</a>
+                <a href="index.html#competences-geii">Compétences GEII</a>
+                <a href="index.html#competences">Compétences</a>
+                <a href="index.html#liens">Liens</a>
+                <a href="index.html#projects_presentation">Projets</a>
+                <a href="index.html#contact">Contact</a>
             </div>
         </div>
 
@@ -57,7 +57,7 @@
 
 <!-- ================= V1 ================= -->
 <details class="competence-block">
-<summary>V1 — J'applique, j'élabore, je rédige une procédure d'essais</summary>
+<summary>V1: J'applique, j'élabore, je rédige une procédure d'essais</summary>
 
 <div class="competence-content project-grid">
 
@@ -175,6 +175,51 @@
 </div>
 
 
+<!-- ===== SUMO ===== -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/images-projects/geii/SUMO/robot-sumo.png" class="project-logo" alt="Robot Mini-Sumo">
+        <h3>Robot Mini-Sumo</h3>
+    </div>
+
+    <h4>SAE Robot Mini-Sumo</h4>
+
+    <p class="project-text">
+        Dans ce projet, j’ai participé à la vérification de la partie action du robot mini-sumo,
+        afin de confirmer le bon fonctionnement des moteurs, du pont en H et des déplacements du robot.
+    </p>
+
+    <p class="project-text">
+        Les essais avaient pour objectif de vérifier que les commandes envoyées par l’Arduino
+        permettaient bien d’obtenir les comportements attendus : avance, rotation, arrêt et changement de direction.
+    </p>
+
+    <p class="project-text">
+        La procédure d’essais utilisée était la suivante :
+    </p>
+
+    <ul>
+        <li>Alimenter la carte et vérifier les tensions d’alimentation.</li>
+        <li>Connecter le driver moteur DRV8835 aux motoréducteurs.</li>
+        <li>Télécharger le programme de test sur l’Arduino.</li>
+        <li>Observer le comportement des moteurs pour chaque commande.</li>
+        <li>Contrôler les signaux et les connexions du pont en H.</li>
+    </ul>
+
+    <p class="project-text">
+        Pendant les essais, j’ai vérifié le fonctionnement des sorties du pont en H ainsi que la réaction des moteurs
+        aux commandes logiques. Les tests ont permis de confirmer la cohérence entre le programme,
+        le schéma électrique et le comportement réel du robot.
+    </p>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images\images-projects\geii\SUMO\polulu.jpg" alt="Schéma d’essai du robot Sumo">
+            <figcaption>Polulu</figcaption>
+        </figure>
+    </div>
+</div>
+
 <div class="project-card">
     <div class="project-header">
         <h3>MUGOCHAUD</h3>
@@ -218,7 +263,7 @@
 
 <!-- ================= V2 ================= -->
 <details class="competence-block">
-<summary>V2 — J'identifie, je corrige les non-conformités d'un prototype</summary>
+<summary>V2: J'identifie, je corrige les non-conformités d'un prototype</summary>
 
 <div class="competence-content project-grid">
 
@@ -298,6 +343,49 @@
     </div>
 </div>
 
+<!-- ===== SUMO ===== -->
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/images-projects/geii/SUMO/robot-sumo.png" class="project-logo" alt="Robot Mini-Sumo">
+        <h3>Robot Mini-Sumo</h3>
+    </div>
+
+    <p class="project-text">
+        Pendant la vérification du prototype, plusieurs essais ont été réalisés sur la partie action du robot mini-sumo.
+        Les déplacements principaux fonctionnaient correctement, mais certaines non-conformités ont été identifiées
+        lors des premiers tests.
+    </p>
+
+    <p class="project-text">
+        Un problème de comportement moteur a été observé pendant les essais :
+        le robot ne réagissait pas toujours correctement aux changements de direction,
+        ce qui indiquait une erreur possible dans les connexions ou dans la logique de commande du pont en H.
+    </p>
+
+    <ul>
+        <li>Vérification des connexions entre l’Arduino et le DRV8835.</li>
+        <li>Contrôle des signaux de commande envoyés au pont en H.</li>
+        <li>Analyse du comportement des moteurs pendant les rotations.</li>
+        <li>Correction des connexions et ajustement du programme de test.</li>
+    </ul>
+
+    <p class="project-text">
+        Après vérification, les connexions et les commandes ont été corrigées,
+        ce qui a permis de retrouver un fonctionnement cohérent des moteurs et des déplacements du robot.
+    </p>
+
+    <p class="project-text">
+        Ces essais m’ont permis d’identifier les causes des non-conformités,
+        puis de corriger les erreurs avant la validation finale du prototype.
+    </p>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images\images-projects\geii\SUMO\motor-signal.png" alt="Dérisquage partie action">
+            <figcaption>Sigfnal du moteur</figcaption>
+        </figure>
+    </div>
+</div>
 
 <div class="project-card">
     <div class="project-header">

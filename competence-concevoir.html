@@ -18,12 +18,12 @@
         <div class="nav-dropdown">
             <a href="index2.html#hero">Accueil ▾</a>
             <div class="dropdown-menu">
-                <a href="index2.html#personnage">Personnage</a>
-                <a href="index2.html#competences-geii">Compétences GEII</a>
-                <a href="index2.html#competences">Compétences</a>
-                <a href="index2.html#liens">Liens</a>
-                <a href="index2.html#projects_presentation">Projets</a>
-                <a href="index2.html#contact">Contact</a>
+                <a href="index.html#personnage">Personnage</a>
+                <a href="index.html#competences-geii">Compétences GEII</a>
+                <a href="index.html#competences">Compétences</a>
+                <a href="index.html#liens">Liens</a>
+                <a href="index.html#projects_presentation">Projets</a>
+                <a href="index.html#contact">Contact</a>
             </div>
         </div>
 
@@ -158,7 +158,41 @@
     </div>
 </div>
 
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/images-projects/geii/SUMO/robot-sumo.png" class="project-logo" alt="Robot Mini-Sumo">
+        <h3>Robot Mini-Sumo</h3>
+    </div>
 
+    <p class="project-text">
+        L’objectif du projet Sumo était de concevoir un robot mini-sumo capable de se déplacer de façon autonome,
+        d’attaquer l’adversaire et de rester dans la zone de combat sans sortir du dohyo.
+    </p>
+
+    <p class="project-text">
+        Dans ce projet, j’ai réalisé l’analyse fonctionnelle de la partie action, en identifiant les fonctions demandées
+        à la lecture du cahier des charges, sans encore choisir les solutions techniques détaillées.
+    </p>
+
+    <ul>
+        <li>Le robot doit avancer vers l’adversaire.</li>
+        <li>Le robot doit pouvoir tourner à gauche ou à droite.</li>
+        <li>Le robot doit pouvoir s’arrêter lorsque c’est nécessaire.</li>
+        <li>Le robot doit réagir aux informations issues des capteurs de sol et de détection d’adversaire.</li>
+    </ul>
+
+    <p class="project-text">
+        J’ai donc travaillé sur l’identification des besoins du bloc action, qui repose sur les motoréducteurs,
+        l’interface de puissance et la logique de commande du déplacement.
+    </p>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images\images-projects\geii\SUMO\architecute-sumo.png" alt="Robot Mini-Sumo">
+            <figcaption>Blocs fonctionnels du robot SUMO</figcaption>
+        </figure>
+    </div>
+</div>
 
 <div class="project-card">
     <div class="project-header">
@@ -305,7 +339,42 @@
 
 </div>
 
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/images-projects/geii/SUMO/robot-sumo.png" class="project-logo" alt="Robot Mini-Sumo">
+        <h3>Robot Mini-Sumo</h3>
+    </div>
 
+    <p class="project-text">
+        Pour répondre à la fonction de déplacement, j’ai proposé une solution technique basée sur deux motoréducteurs GM3
+        commandés par un pont en H.
+    </p>
+
+    <p class="project-text">
+        Nous avons comparé deux solutions disponibles sur le stock : le DRV8835 et le DRV8833.
+        Le choix du DRV8835 a été retenu car il répondait aux contraintes d’alimentation logique du microcontrôleur,
+        à la tension batterie et au courant nécessaire pour entraîner les moteurs.
+    </p>
+
+    <ul>
+        <li>Pont en H DRV8835 pour commander deux moteurs CC.</li>
+        <li>Commande adaptée à une logique 5 V côté Arduino.</li>
+        <li>Alimentation moteur compatible avec la batterie 7,4 V.</li>
+        <li>Courant de sortie suffisant pour les motoréducteurs GM3.</li>
+    </ul>
+
+    <p class="project-text">
+        J’ai également participé à la programmation des fonctions de déplacement, notamment l’avance, le virage à gauche,
+        le virage à droite et l’arrêt des moteurs.
+    </p>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images\images-projects\geii\SUMO\kicad-robot.png" alt="Schéma détaillé de l’action">
+            <figcaption>Schéma détaillé de la partie action</figcaption>
+        </figure>
+    </div>
+</div>
 
 <div class="project-card">
     <div class="project-header">
@@ -431,6 +500,42 @@
     </div>
 </div>
 
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/images-projects/geii/SUMO/robot-sumo.png" class="project-logo" alt="Robot Mini-Sumo">
+        <h3>Robot Mini-Sumo</h3>
+    </div>
+
+    <p class="project-text">
+        Afin d’affiner la solution technique, j’ai travaillé sur le maquettage numérique de la partie action,
+        en m’appuyant sur le schéma détaillé, le routage KiCad et les documents de connexion du driver moteur.
+    </p>
+
+    <p class="project-text">
+        J’ai vérifié la cohérence entre le schéma électrique, l’implantation du pont en H et les connexions vers l’Arduino,
+        afin de préparer un prototype exploitable pour les essais.
+    </p>
+
+    <ul>
+        <li>Vérification du câblage du DRV8835 en mode IN/IN.</li>
+        <li>Contrôle de la correspondance entre les broches Arduino et les entrées du pont en H.</li>
+        <li>Préparation du schéma d’implantation dans KiCad.</li>
+        <li>Validation des choix techniques avant la fabrication du prototype.</li>
+    </ul>
+
+    <p class="project-text">
+        Cette étape m’a permis de confirmer que la solution retenue était réaliste, cohérente et compatible avec le fonctionnement attendu du robot.
+    </p>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images\images-projects\geii\SUMO\programmation-robot.png" alt="Connexion IN/IN du DRV8835">
+            <figcaption>Travail du DRV8835 en mode IN/IN</figcaption>
+        </figure>
+    </div>
+</div>
+
+
 
 <div class="project-card">
     <div class="project-header">
@@ -462,7 +567,12 @@
     <div class="project-gallery">
         <figure>
             <img src="images\images-projects\geii\mujoco\Schema_connection_cables_Automat.png" alt="schema-alimentation-mugochaud">
-            <figcaption>Schéma de connexion</figcaption>
+            <figcaption>Maquettage de connexion</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images\images-projects\geii\mujoco\qelectrotech.png" alt="schema-alimentation-mugochaud">
+            <figcaption>Schéma de connexion en QElectroTech</figcaption>
         </figure>
     </div>
 </div>
@@ -529,6 +639,41 @@
 
 </div>
 
+<div class="project-card">
+    <div class="project-header">
+        <img src="images/images-projects/geii/SUMO/robot-sumo.png" class="project-logo" alt="Robot Mini-Sumo">
+        <h3>Robot Mini-Sumo</h3>
+    </div>
+
+    <p class="project-text">
+        Dans ce projet, j’ai participé à la rédaction du dossier de conception, du dossier de fabrication
+        et du dossier de vérification pour la partie action du robot mini-sumo.
+    </p>
+
+    <p class="project-text">
+        J’ai contribué à la rédaction des documents nécessaires à la fabrication du prototype :
+        nomenclature, schéma électrique, schéma d’implantation, plan de câblage et procédure d’assemblage.
+    </p>
+
+    <p class="project-text">
+        J’ai également préparé les éléments de vérification permettant de contrôler le bon fonctionnement du pont en H
+        et la conformité des déplacements du robot.
+    </p>
+
+    <ul>
+        <li>Rédaction des documents de conception pour la partie action.</li>
+        <li>Participation à la mise en forme du dossier de fabrication.</li>
+        <li>Préparation des documents utiles à la vérification du prototype.</li>
+        <li>Suivi de la cohérence entre schéma, routage et essais.</li>
+    </ul>
+
+    <div class="project-gallery">
+        <figure>
+            <img src="images\images-projects\geii\SUMO\test-robot.png" alt="Schéma d’essai de l’action">
+            <figcaption>Schéma d’essai de la partie action</figcaption>
+        </figure>
+    </div>
+</div>
 
 <div class="project-card">
     <div class="project-header">

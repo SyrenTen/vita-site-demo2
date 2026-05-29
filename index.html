@@ -12,17 +12,20 @@
 
 <div class="explain-overlay" id="explainOverlay">
     <div class="explain-box" id="explainBox">
-        <button class="explain-close" onclick="closeExplain()">×</button>
+        <button class="explain-close" type="button" onclick="closeExplain()">×</button>
 
-        <img id="explainImage" src="" alt="Explanation Image">
-
-        <h2 id="explainTitle"></h2>
+        <div class="explain-head">
+            <img id="explainImage" src="" alt="Explanation logo">
+            <div class="explain-head-text">
+                <h2 id="explainTitle"></h2>
+            </div>
+        </div>
 
         <div id="explainText"></div>
 
         <div class="explain-buttons">
             <a id="explainSite" target="_blank" class="explain-btn">Website</a>
-            <a id="explainProject" target="_blank" class="explain-btn">My Project</a>
+            <a id="explainProject" target="_blank" class="explain-btn explain-project">My Project</a>
         </div>
     </div>
 </div>
@@ -115,12 +118,34 @@
 
     <!-- JOURNAL -->
     <div class="quest-log">
-        <div class="quest-label">Journal <span class="sub-label">Objectifs à réaliser</span></div>
+            <div class="quest-label">Journal <span class="sub-label">Objectifs à réaliser</span></div>
+            <ul>
+                <li>Terminer le stage en INRIA equipe AUCTUS</li>
+                <li>Améliorer mode pour le jeux DD2</li>
+                <li>Ajouter les donnees en projet "Navigation Bot"</li>
+            </ul>
+        </div>
+
+        <div class="quest-log internship-card">
+        <div class="quest-label">Stage <span class="sub-label">Inria Bordeaux — AUCTUS</span></div>
+
+        <p>
+            En ce moment, je travaille sur des sujets liés à la robotique et à l’intelligence artificielle
+            dans le cadre de mon stage. Je participe à l’analyse, à la mise en forme des données et à l’évolution
+            des outils utilisés par l’équipe.
+        </p>
+
         <ul>
-            <li>Terminer le stage en INRIA equipe AUCTUS</li>
-            <li>Améliorer mode pour le jeux DD2</li>
-            <li>Ajouter les donnees en projet "Navigation Bot"</li>
+            <li>Travail sur les données et leur structure</li>
+            <li>Participation à l’amélioration des outils du projet</li>
+            <li>Découverte d’un environnement de recherche appliquée</li>
         </ul>
+
+        <div class="internship-media">
+            <video class="internship-video" controls preload="metadata">
+                <source src="files\projects-files\moving_robot.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
 
     <!-- HOBBIES -->

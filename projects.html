@@ -8,6 +8,28 @@
 
     <link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
 </head>
+
+<div class="explain-overlay" id="explainOverlay">
+    <div class="explain-box" id="explainBox">
+        <button class="explain-close" type="button" onclick="closeExplain()">×</button>
+
+        <div class="explain-head">
+            <img id="explainImage" src="" alt="Explanation logo">
+            <div class="explain-head-text">
+                <h2 id="explainTitle"></h2>
+            </div>
+        </div>
+
+        <div id="explainText"></div>
+
+        <div class="explain-buttons">
+            <a id="explainSite" target="_blank" class="explain-btn">Website</a>
+            <a id="explainProject" target="_blank" class="explain-btn explain-project">My Project</a>
+        </div>
+    </div>
+</div>
+
+
 <body id="projects_page">
 
 <header class="header">

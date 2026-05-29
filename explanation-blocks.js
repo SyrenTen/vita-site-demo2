@@ -48,6 +48,7 @@ const explainData = {
             <p>I use Arduino boards for my personal projects and during studies in universities, using in in KAH project and Robot SUMO for example. Using Arduino IDE for programming the boards.</p>
         `,
         site: "https://www.arduino.cc/",
+        
     },
 
     blender: {
@@ -63,29 +64,63 @@ const explainData = {
 
 
     // ADD MORE EXPLANATIONS HERE
+    // project: "files/projects/blender-project.html"
 };
 
-document.querySelectorAll(".explain-trigger").forEach(el => {
-    el.addEventListener("click", () => {
-        const key = el.dataset.explain;
-        openExplain(key);
-    });
+document.addEventListener("click", (e) => {
+    const trigger = e.target.closest(".explain-trigger");
+    if (!trigger) return;
+
+    const key = trigger.dataset.explain;
+    openExplain(key);
 });
 
 function openExplain(key) {
     const data = explainData[key];
     if (!data) return;
 
-    document.getElementById("explainTitle").innerText = data.title;
-    document.getElementById("explainImage").src = data.image;
-    document.getElementById("explainText").innerHTML = data.text;
-    document.getElementById("explainSite").href = data.site;
+    const overlay = document.getElementById("explainOverlay");
+    const title = document.getElementById("explainTitle");
+    const image = document.getElementById("explainImage");
+    const text = document.getElementById("explainText");
+    const siteBtn = document.getElementById("explainSite");
+    const projectBtn = document.getElementById("explainProject");
 
-    document.getElementById("explainOverlay").style.display = "flex";
+    title.innerText = data.title || "";
+    image.src = data.image || "";
+    text.innerHTML = data.text || "";
+
+    if (data.site) {
+        siteBtn.href = data.site;
+        siteBtn.style.display = "inline-flex";
+    } else {
+        siteBtn.style.display = "none";
+    }
+
+    if (data.project) {
+        projectBtn.href = data.project;
+        projectBtn.style.display = "inline-flex";
+    } else {
+        projectBtn.style.display = "none";
+    }
+
+    overlay.style.display = "flex";
 }
 
 function closeExplain() {
     document.getElementById("explainOverlay").style.display = "none";
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const overlay = document.getElementById("explainOverlay");
+    const box = document.getElementById("explainBox");
+
+    if (overlay) {
+        overlay.addEventListener("click", closeExplain);
+    }
+    if (box) {
+        box.addEventListener("click", (e) => e.stopPropagation());
+    }
+});
 
 
