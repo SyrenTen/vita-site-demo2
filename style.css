@@ -151,7 +151,7 @@ html, body {
     display: block;
 }
 .character-card {
-    padding: 30px;
+    padding: 15px;
     box-sizing: border-box;
 }
 .character-header {
