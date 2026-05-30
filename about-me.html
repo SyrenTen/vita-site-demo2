@@ -9,6 +9,28 @@
     <link rel="stylesheet" href="inventory.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
 </head>
+
+<div class="explain-overlay" id="explainOverlay">
+    <div class="explain-box" id="explainBox">
+        <button class="explain-close" type="button" onclick="closeExplain()">×</button>
+
+        <div class="explain-head">
+            <img id="explainImage" src="" alt="Explanation logo">
+            <div class="explain-head-text">
+                <h2 id="explainTitle"></h2>
+            </div>
+        </div>
+
+        <div id="explainText"></div>
+
+        <div class="explain-buttons">
+            <a id="explainSite" target="_blank" class="explain-btn">Site web</a>
+            <a id="explainProject" target="_blank" class="explain-btn explain-project">Projet</a>
+        </div>
+    </div>
+</div>
+
+
 <body>
 
 <header class="header">
@@ -34,6 +56,203 @@
     </nav>
 </header>
 
+
+<!-- ================= INTERNSHIP ================= -->
+<section class="experience internship" id="internship">
+    <h2 class="section-title">Stage</h2>
+
+    <div class="experience-content">
+
+        <div class="job-company-description internship-card">
+            <div class="job-descritpion-header">
+                <div class="company-info">
+                    <div class="job-company-logo">
+                        <img src="images\images-stage\auctus.png" alt="AUCTUS logo">
+                    </div>
+                    <div class="job-title-place">
+                        <div class="job-title">Stage chez INRIA Bordeaux</div>
+                        <div class="job-place">Equipe-projet AUCTUS</div>
+                    </div>
+                </div>
+
+                <div class="job-duration">
+                    <span class="date-inline">2026</span>
+                </div>
+            </div>
+
+            <div class="requirements-skills">
+                <ul class="internship-links">
+                    <li>
+                        <a href="https://auctus-team.gitlabpages.inria.fr/jobs/2026/master_agency_assessment/"
+                           target="_blank" rel="noopener noreferrer">
+                            Description de stage
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="duties-desctiption">
+                <div class="my-duties">L’équipe</div>
+                <p class="project-text">
+                    Stage réalisé au sein de l’équipe AUCTUS à INRIA Bordeaux.
+                </p>
+
+                <div class="project-gallery internship-branding">
+                    <figure>
+                        <img src="images\images-stage\inria.jpg" alt="Photo of INRIA department">
+                        <figcaption>Photo du département INRIA</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="images\images-stage\auctus.png" alt="AUCTUS logo">
+                        <figcaption>Logo de l’équipe AUCTUS</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="duties-desctiption">
+                <div class="my-duties">Axes scientifiques de l’équipe</div>
+                <div class="internship-axes">
+                    <div class="internship-axis">
+                        <h4>Analyse et modélisation du comportement</h4>
+                        <ul>
+                            <li>Liens entre les sciences humaines et l'intelligence artificielle</li>
+                            <li>Analyse des ensembles de postures, de gestes et de mouvements humains</li>
+                        </ul>
+                    </div>
+
+                    <div class="internship-axis">
+                        <h4>Couplage opérateur/robot</h4>
+                        <ul>
+                            <li>Optimisation des performances d'un couple opérateur/robot</li>
+                            <li>Médiation des perceptions au sein d'un couple opérateur/robot</li>
+                        </ul>
+                    </div>
+
+                    <div class="internship-axis">
+                        <h4>Conception de robots collaboratifs et de systèmes d'assistance robotique</h4>
+                        <ul>
+                            <li>Conception architecturale</li>
+                            <li>Conception des systèmes de commande</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="internship-axis">
+                        <h4>Soutien méthodologique : expériences et développements technologiques</h4>
+                        <ul>
+                            <li>Capteurs innovants</li>
+                            <li>Expériences</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="duties-desctiption">
+                <div class="my-duties">Que j'ai fait pendant mon stage</div>
+
+                <div class="internship-video-grid">
+                    <div class="internship-video-card">
+                        <video class="internship-video vertical" controls preload="metadata">
+                            <source src="images\images-stage\moving_robot_vid.mp4" type="video/mp4">
+                        </video>
+                        <p class="video-caption">Test du code sur le robot réel : le capteur de force/couple est fixé au bras du robot. La force exercée sur le capteur est transmise au robot, ce qui le fait se déplacer dans la direction où nous le poussons.</p>
+                    </div>
+
+                    <div class="internship-video-card">
+                        <video class="internship-video horizontal" controls preload="metadata">
+                            <source src="images\images-stage\infinity_move.mp4" type="video/mp4">
+                        </video>
+                        <p class="video-caption">En apprenant le fonctionnement de la simulation et comment déplacer un robot à l'aide de <span class="explain-trigger" data-explain="ros2">ROS2</span>, j'ai fait en sorte que le robot suive différentes trajectoires, comme par exemple le symbole de l'infini</p>
+                    </div>
+
+                    <div class="internship-video-card">
+                        <video class="internship-video horizontal" controls preload="metadata">
+                            <source src="images\images-stage\moveit2_tests.mp4" type="video/mp4">
+                        </video>
+                        <p class="video-caption">Des tests réalisés avec <span class="explain-trigger" data-explain="moveit">MoveIt</span>, qui génère différentes trajectoires vers le point choisi, ainsi que les données de vitesse et d'accélération.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="experience" id="experience">
+    <h2 class="section-title">Expérience</h2>
+
+    <div class="experience-content">
+            <div class="job-list">
+
+                <div class="job-company-description">
+                    <div class="job-descritpion-header">
+                        <div class="company-info">
+                            <div class="job-company-logo"><img src="images\images-experience\post-craft-logo.svg" alt="post-craft-logo"></div>
+                            <div class="job-title-place">
+                                <div class="job-title">Modérateur du serveur Minecraft</div>
+                            </div>
+                        </div>
+                        
+                        <div class="job-duration"><span class="date-inline">Mars 2018 - Août 2018</span></div>                    
+                    </div>
+
+                    <div class="requirements-skills">
+                        <ul>
+                            <li>Communication</li>
+                            <li>Débogage technique</li>
+                        </ul>
+                    </div>
+
+                    <div class="duties-desctiption">
+                        <div class="my-duties">Mes responsabilités ?</div>
+                        <div class="duties-list">
+                            <ul>
+                            <li>● Maintenance de l'ordre sur le serveur</li>
+                            <li>● Assurer une communication claire entre l'administration et les joueurs</li>
+                            <li>● Correction des problèmes techniques mineurs dès leur apparition</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-company-description">
+                    <div class="job-descritpion-header">
+                        <div class="company-info">
+                            <div class="job-company-logo"><img src="https://pbs.twimg.com/profile_images/1407254186278932484/v1W52z4N_400x400.jpg" alt="trashbox-logo"></div>
+                            <div class="job-title-place">
+                                <div class="job-title">Rédactrice</div>
+                                <div class="job-place">Portail web «Trashbox»</div>
+                            </div>
+                        </div>
+                        <div class="job-duration">2021 - 2023</div>                    
+                    </div>
+
+                    <div class="requirements-skills">
+                        <ul>
+                            <li>Écriture technique</li>
+                            <li>Analyse et Recherche d'informations</li>
+                            <li>Traduction</li>
+                        </ul>
+                    </div>
+
+                    <div class="duties-desctiption">
+                        <div class="my-duties">Mes responsabilités ?</div>
+                        <div class="duties-list">
+                            <ul>
+                            <li>● Ecrit sur différents sujets liés à la technologie</li>
+                            <li>● Collecte et analyse d'informations afin de créer des articles appropriés</li>
+                            <li>● Traductions d'articles de l'anglais vers le russe</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+</section>
 
 <!-- ================= EDUCATION ================= -->
 <section class="education" id="education">
@@ -132,79 +351,6 @@
 </section>
 
 
-<!-- ================= EXPERIENCE ================= -->
-<section class="experience" id="experience">
-    <h2 class="section-title">Expérience</h2>
-
-    <div class="experience-content">
-            <div class="job-list">
-
-                <div class="job-company-description">
-                    <div class="job-descritpion-header">
-                        <div class="company-info">
-                            <div class="job-company-logo"><img src="images\images-experience\post-craft-logo.svg" alt="post-craft-logo"></div>
-                            <div class="job-title-place">
-                                <div class="job-title">Modérateur du serveur Minecraft</div>
-                            </div>
-                        </div>
-                        
-                        <div class="job-duration"><span class="date-inline">Mars 2018 - Août 2018</span></div>                    
-                    </div>
-
-                    <div class="requirements-skills">
-                        <ul>
-                            <li>Communication</li>
-                            <li>Débogage technique</li>
-                        </ul>
-                    </div>
-
-                    <div class="duties-desctiption">
-                        <div class="my-duties">Mes responsabilités ?</div>
-                        <div class="duties-list">
-                            <ul>
-                            <li>● Maintenance de l'ordre sur le serveur</li>
-                            <li>● Assurer une communication claire entre l'administration et les joueurs</li>
-                            <li>● Correction des problèmes techniques mineurs dès leur apparition</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="job-company-description">
-                    <div class="job-descritpion-header">
-                        <div class="company-info">
-                            <div class="job-company-logo"><img src="https://pbs.twimg.com/profile_images/1407254186278932484/v1W52z4N_400x400.jpg" alt="trashbox-logo"></div>
-                            <div class="job-title-place">
-                                <div class="job-title">Rédactrice</div>
-                                <div class="job-place">Portail web «Trashbox»</div>
-                            </div>
-                        </div>
-                        <div class="job-duration">2021 - 2023</div>                    
-                    </div>
-
-                    <div class="requirements-skills">
-                        <ul>
-                            <li>Écriture technique</li>
-                            <li>Analyse et Recherche d'informations</li>
-                            <li>Traduction</li>
-                        </ul>
-                    </div>
-
-                    <div class="duties-desctiption">
-                        <div class="my-duties">Mes responsabilités ?</div>
-                        <div class="duties-list">
-                            <ul>
-                            <li>● Ecrit sur différents sujets liés à la technologie</li>
-                            <li>● Collecte et analyse d'informations afin de créer des articles appropriés</li>
-                            <li>● Traductions d'articles de l'anglais vers le russe</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-</section>
 
 
 <footer class="footer">
@@ -212,6 +358,7 @@
 </footer>
 
 <script src="funny-inventory.js"></script>
+<script src="explanation-blocks.js"></script>
 
 </body>
 </html>

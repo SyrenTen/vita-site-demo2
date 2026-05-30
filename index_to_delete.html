@@ -12,20 +12,17 @@
 
 <div class="explain-overlay" id="explainOverlay">
     <div class="explain-box" id="explainBox">
-        <button class="explain-close" type="button" onclick="closeExplain()">×</button>
+        <button class="explain-close" onclick="closeExplain()">×</button>
 
-        <div class="explain-head">
-            <img id="explainImage" src="" alt="Explanation logo">
-            <div class="explain-head-text">
-                <h2 id="explainTitle"></h2>
-            </div>
-        </div>
+        <img id="explainImage" src="" alt="Explanation Image">
+
+        <h2 id="explainTitle"></h2>
 
         <div id="explainText"></div>
 
         <div class="explain-buttons">
-            <a id="explainSite" target="_blank" class="explain-btn">Site web</a>
-            <a id="explainProject" target="_blank" class="explain-btn explain-project">Projet</a>
+            <a id="explainSite" target="_blank" class="explain-btn">Website</a>
+            <a id="explainProject" target="_blank" class="explain-btn">My Project</a>
         </div>
     </div>
 </div>
@@ -70,9 +67,8 @@
             <p>
                 Étudiante en <span class="highlight">Génie Électrique et Informatique Industrielle (GEII)</span>,
                 passionnée par l’intelligence artificielle, robotique, l’automatisation
-                et les systèmes intelligents. <span class="highlight">Actuellement en stage en Centre Inria de l'université de Bordeaux: equipe-projet AUCTUS</span>
+                et les systèmes intelligents.
             </p>
-            
 
             <div class="hero-actions">
                 <a href="#personnage" class="hero-btn">Découvrir mon profil</a>
@@ -118,28 +114,12 @@
 
     <!-- JOURNAL -->
     <div class="quest-log">
-            <div class="quest-label">Journal <span class="sub-label">Objectifs à réaliser</span></div>
-            <ul>
-                <li>Terminer le stage en INRIA equipe AUCTUS</li>
-                <li>Améliorer mode pour le jeux Dragon's Dogma 2</li>
-                <li>Ajouter les donnees en projet "Bot de navigation du groupe"</li>
-            </ul>
-        </div>
-
-        <div class="quest-log internship-card">
-        <div class="quest-label">Stage <span class="sub-label">Inria Bordeaux — AUCTUS</span></div>
-
-        <p>
-            En ce moment, je fais le stage sur projet "Human-Robot Physical Collaboration: Robotic Arm Integration and Agency Assessment"
-             liés à la robotique. J'utilise l'espace de travail fourni pour programmer le robot afin qu'il se déplace selon la trajectoire generé, en utilisant les données de vitesse et d'accélération générées, et je connecte également le capteur de force/couple au bras du robot pour bénéficier d'un meilleur contrôle sur celui-ci.
-            Je réalise tout cela tout en améliorant le système de commande et en garantissant la sécurité de l'opérateur.
-        </p>
-
-        <div class="internship-media">
-            <video class="internship-video" controls preload="metadata">
-                <source src="files\projects-files\moving_robot.mp4" type="video/mp4">
-            </video>
-        </div>
+        <div class="quest-label">Journal <span class="sub-label">Objectifs à réaliser</span></div>
+        <ul>
+            <li>Terminer le stage en INRIA equipe AUCTUS</li>
+            <li>Améliorer mode pour le jeux DD2</li>
+            <li>Ajouter les donnees en projet "Navigation Bot"</li>
+        </ul>
     </div>
 
     <!-- HOBBIES -->
@@ -250,7 +230,7 @@
                                             <ul>
                                                 <li><span class="explain-trigger" data-explain="python">Python</span></li>
                                                 <li><span class="explain-trigger" data-explain="cplus">C++</span>, <span class="explain-trigger" data-explain="qt">Qt</span>, <span class="explain-trigger" data-explain="arduino">Arduino</span></li>
-                                                <li><span class="explain-trigger" data-explain="ros2">ROS2</span> Humble</li>
+                                                <li>ROS2</li>
                                             </ul>
                                     </div>
 
@@ -280,10 +260,11 @@
                                             <ul>
                                                 <li>PyCharm</li>
                                                 <li>Visual Studio Code</li>
-                                                <li><span class="explain-trigger" data-explain="proteus">ARES, ISIS</span>, <span class="explain-trigger" data-explain="kicad">KiCad</span></li>
-                                                <li><span class="explain-trigger" data-explain="tiaportal">TIA Portal</span></li>
-                                                <li><span class="explain-trigger" data-explain="rviz">rviz</span>, <span class="explain-trigger" data-explain="rqt">rqt</span></li>
-                                                <li><span class="explain-trigger" data-explain="qontrol">Qontrol</span>, <span class="explain-trigger" data-explain="mujoco">MuJoCo</span></li>
+                                                <li>ARES, ISIS</li>
+                                                <li>KiCad</li>
+                                                <li>TIA Portal</li>
+                                                <li>rviz</li>
+                                                <li>qontrol</li>
                                             </ul>
                                         </div>
 
@@ -344,7 +325,7 @@
                     <div class="section-title">Projects</div>
 
                     <div class="projects-main-card">
-                        <div class="faction-label">Mes projets</div>
+                        <div class="faction-label">My Projects</div>
 
                         <p>Pendant mes études, j'ai travaillé sur de nombreux projets, individuellement et en équipe.
                             Ces expériences m'ont permis de développer mes compétences professionnelles et d'enrichir mes connaissances.
@@ -352,10 +333,10 @@
                         
                         <p>Voici quelques exemples de projets auxquels j'ai fait:</p>
                         <ul>
-                            <li>Réseau neuronal pour classfication les textes d'auteur</li>
+                            <li>Neural Network Author Classification</li>
                             <li>Robot SUMO</li>
                             <li>Kart A Hélice télécommandé</li>
-                            <li>Bot de navigation du groupe</li>
+                            <li>Group Navigation Bot</li>
                         </ul>
 
                         <p>Pour en savoir plus, consultez la page Projets ou visitez la page Compétences GEII pour découvrir en détail les projets réalisés à l'IUT de Bordeaux.</p>
