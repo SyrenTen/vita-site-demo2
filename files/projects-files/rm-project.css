@@ -22,43 +22,7 @@ body{
     color: var(--text-color);
     overflow-x: hidden;
 }
-.header{
-    position: fixed;
-    background-color: var(--bg-color);
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 17px 15%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-}
-.navbar a{
-    font-size: 16px;
-    color: var(--main-color);
-    margin-left: 39px;
-    font-weight: normal;
-    transition: 0.3s ease-in-out;
-    border-bottom: 3px solid transparent;
-}
-.navbar a:hover{
-    color: var(--text-color);
-}
-.head-button{
-    font-size: 16px;
-    padding: 7px 14px;
-    border-radius: 20px;
-    color: var(--main-color);
-    background: var(--second-bg-color);
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    border: none;
-    text-wrap: nowrap;
-}
-.head-button:hover{
-    transform: scale(1.03);
-}
+
 .footer .copyright{
     font-size: 12px;
     text-align: center;
